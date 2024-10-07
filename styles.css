@@ -8,6 +8,7 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #ffffff; /* Beyaz arka plan */
     overflow-x: hidden;
+    scroll-behavior: smooth; /* Sayfalar arası yumuşak kayma eklendi */
 }
 
 /* Geometrik Arka Plan */
@@ -31,7 +32,7 @@ body {
     display: flex;
     justify-content: flex-end;
     z-index: 1000;
-    border-bottom: 5px solid #f5f5f5; /* Sayfanın en üstünü kaplayan beyaz şerit */
+    border-bottom: 5px solid #e4e4e3; /* Sayfanın en üstünü kaplayan bar rengi */
 }
 
 .navbar nav ul {
@@ -106,22 +107,61 @@ body {
     transform: scale(1.1);
 }
 
-/* Resim ve hover */
-.image {
+/* About Bölümü */
+.about-section {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    margin-right: 100px;
+    padding: 100px 50px;
+    background-color: #f8f8f8;
 }
 
-.image img {
-    max-width: 400px; /* Resim boyutunu 400px yaptık */
-    border-radius: 50%;
-    transition: transform 0.3s ease;
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
-.image img:hover {
-    transform: scale(1.05);
+.about-image img {
+    max-width: 350px;
+    border-radius: 10px;
+}
+
+.about-text {
+    max-width: 50%;
+}
+
+.about-text h2 {
+    font-size: 3rem;
+    color: #001f59;
+    margin-bottom: 10px;
+}
+
+.about-text h3 {
+    font-size: 2rem;
+    color: #ff9800;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.resume-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #001f59;
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.resume-btn:hover {
+    background-color: #ff9800;
 }
 
 /* Sosyal Medya İkonları */
