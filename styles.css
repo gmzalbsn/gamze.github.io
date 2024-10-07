@@ -58,6 +58,7 @@ body {
 .content {
     max-width: 50%;
     margin-left: 100px; /* Metni sağa kaydırdık */
+    position: relative;
 }
 
 .content h1 {
@@ -93,14 +94,15 @@ body {
 /* Sabit About Me butonu */
 .btn {
     display: inline-block;
-    margin-top: 50px; /* "Unity Developer" ile About Me arasına boşluk bırakıyoruz */
+    margin-top: 30px; /* "Unity Developer" ile About Me arasına boşluk bırakıyoruz */
     padding: 10px 20px;
     background-color: #6191eb; /* About Me rengi #6191eb */
     color: white;
     border-radius: 5px;
     text-decoration: none;
     font-size: 1.2rem;
-    position: relative; /* Sabit durması için pozisyon ayarlandı */
+    position: absolute; /* Absolute yaparak sabitliyoruz */
+    bottom: 0; /* Butonun hareket etmesini engelliyoruz */
     transition: background-color 0.3s ease;
 }
 
@@ -158,5 +160,10 @@ body {
 
     .image img {
         margin: 20px 0;
+    }
+
+    .btn {
+        position: static; /* Mobilde butonun konumunu sabitliyoruz */
+        margin-top: 20px;
     }
 }
