@@ -116,7 +116,7 @@ body {
 }
 
 .image img {
-    max-width: 300px; /* Resim boyutunu küçültüyoruz */
+    max-width: 400px; /* Resim boyutunu küçültüyoruz */
     height: auto; /* Yükseklik otomatik ayarlanacak */
     border-radius: 50%;
     transition: transform 0.3s ease;
