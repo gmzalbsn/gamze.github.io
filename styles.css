@@ -62,23 +62,29 @@ body {
 
 .content h1 {
     font-size: 3.5rem; /* Yazı boyutunu büyüttük */
-    color: #001f59; /* Hi There ve About Me rengi #001f59 */
+    color: #001f59; /* Hi There rengi #001f59 */
     margin-bottom: 20px; /* "Hi There" ve "I'm Gamze Albasan" altına boşluk */
+}
+
+.highlight {
+    color: #6191eb; /* Gamze Albasan rengi #6191eb */
 }
 
 .unity-developer {
     font-size: 2.5rem; /* Biraz daha büyük font */
     color: #692c31; /* Unity Developer rengi #692c31 */
+    display: inline-block;
     opacity: 0;
-    animation: wordAnimation 5s forwards; /* Kelime kelime animasyon */
+    animation: typing 4s steps(20, end) forwards; /* Harf harf yavaşça gelen animasyon */
+    white-space: nowrap;
+    overflow: hidden; /* Harf harf gelmesi için overflow gizlendi */
+    border-right: 2px solid #692c31; /* Yazıya hareketli imleç efekti ekliyoruz */
 }
 
-/* Kelime kelime gelen animasyon */
-@keyframes wordAnimation {
-    0% { opacity: 0; }
-    33% { opacity: 1; content: "Unity"; }
-    66% { content: "Developer"; }
-    100% { opacity: 1; }
+/* Unity Developer yazısı için harf harf gelen animasyon */
+@keyframes typing {
+    0% { width: 0; opacity: 1; }
+    100% { width: 100%; opacity: 1; }
 }
 
 /* Resim ve hover */
@@ -105,7 +111,7 @@ body {
     display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #ff5722;
+    background-color: #6191eb; /* About Me rengi #6191eb */
     color: white;
     border-radius: 5px;
     text-decoration: none;
