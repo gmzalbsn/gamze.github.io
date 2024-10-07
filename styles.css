@@ -92,7 +92,7 @@ body {
 
 /* Buton Ayarları */
 .btn {
-    margin-top: 40px; /* "Unity Developer" ile About Me arasına daha fazla boşluk ekleniyor */
+    margin-top: 40px; /* "Unity Developer" ile About Me arasına daha fazla boşluk eklendi */
     padding: 10px 20px;
     background-color: #001f59; /* Koyu lacivert buton */
     color: white;
@@ -105,6 +105,25 @@ body {
 .btn:hover {
     background-color: #ff9800; /* Hover sırasında turuncu */
     transform: scale(1.1);
+}
+
+/* Resim ve hover */
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 100px;
+}
+
+.image img {
+    max-width: 300px; /* Resim boyutunu küçültüyoruz */
+    height: auto; /* Yükseklik otomatik ayarlanacak */
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.image img:hover {
+    transform: scale(1.05); /* Hover efekti */
 }
 
 /* About Bölümü */
