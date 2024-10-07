@@ -53,6 +53,10 @@ body {
 }
 
 /* Başlık ve Alt Başlık */
+.content {
+    margin-left: 50px; /* Bütün yazıları biraz sağa kaydırıyoruz */
+}
+
 .content h1 {
     font-size: 4rem;
     color: #001f59; /* Koyu lacivert */
@@ -60,11 +64,7 @@ body {
 }
 
 .highlight {
-    color: #ff9800; /* Albasan turuncu */
-}
-
-.content h1 .highlight:first-of-type {
-    color: #001f59; /* Gamze, I am ile aynı renk */
+    color: #ff9800; /* Gamze Albasan turuncu */
 }
 
 .unity-developer {
