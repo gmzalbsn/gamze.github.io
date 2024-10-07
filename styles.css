@@ -6,34 +6,60 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     background-color: #f4f4f4;
     color: #333;
-    text-align: center;
+    line-height: 1.6;
 }
 
+/* Header ve Navigasyon Stili */
 .header {
-    background-color: #333;
-    width: 100%;
-    padding: 20px 0;
+    background: url('background-image.jpg') no-repeat center center/cover;
     color: white;
+    padding: 40px 0;
+    text-align: center;
+    height: 100vh; /* Tam ekran kaplasın */
 }
 
 .header h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    margin-bottom: 10px;
 }
 
 .header p {
-    font-size: 1.2rem;
-    margin-top: 10px;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
 }
 
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: white;
+    color: #333;
+}
+
+/* Hero (Başlık Bölümü) */
 .hero {
-    padding: 100px 20px;
+    padding: 80px 20px;
+    text-align: center;
 }
 
 .hero h2 {
@@ -43,12 +69,34 @@ body {
 
 .hero p {
     font-size: 1.2rem;
-    line-height: 1.5;
     max-width: 600px;
     margin: 0 auto;
+    line-height: 1.5;
 }
 
 .highlight {
     color: #ff5722;
     font-weight: bold;
+}
+
+/* Diğer bölümler için stiller */
+section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.about, .experience, .projects, .contact {
+    background-color: #f4f4f4;
+}
+
+.about h2, .experience h2, .projects h2, .contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
 }
