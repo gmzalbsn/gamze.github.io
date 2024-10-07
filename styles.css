@@ -70,11 +70,12 @@ body {
 .unity-developer {
     font-size: 2.5rem;
     color: #86edbc; /* Unity Developer yazısı için yeni renk */
-    animation: typing 4s steps(20, end), blink-caret 0.75s step-end infinite;
+    animation: typing 2s steps(20, end), blink-caret 0.75s step-end 3; /* İmleç animasyonu kısa süreli olacak */
     border-right: 2px solid transparent; /* İmleç animasyonu son harften sonra yok olacak */
     white-space: nowrap;
     overflow: hidden;
     margin-bottom: 60px; /* "Unity Developer" ile "About Me" butonu arasına ekstra boşluk eklendi */
+    animation-fill-mode: forwards; /* Animasyon bittiğinde imleci gizle */
 }
 
 @keyframes typing {
