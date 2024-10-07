@@ -6,41 +6,8 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f2f2f2; /* Düz açık bir arka plan rengi */
+    background: linear-gradient(135deg, #f3f3f3 30%, #ffffff 100%);
     overflow-x: hidden;
-}
-
-/* Navigasyon Menüsü */
-.navbar {
-    background-color: white;
-    padding: 20px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-}
-
-.navbar nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    padding: 0;
-}
-
-.navbar nav ul li {
-    margin-left: 20px;
-}
-
-.navbar nav ul li a {
-    text-decoration: none;
-    font-size: 1.2rem;
-    color: #333;
-    padding: 10px 20px;
-    border-radius: 5px;
-}
-
-.navbar nav ul li a:hover {
-    background-color: #f0f0f0; /* Arka plan rengini değiştirelim, turuncu olmadan */
 }
 
 /* Hero Bölümü */
@@ -50,36 +17,28 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 100px 50px;
-    background-color: #f2f2f2; /* Düz açık gri arka plan */
+    padding: 50px;
+    background-color: #f2f2f2;
 }
 
-/* İçerik (Metin) */
-.content {
-    max-width: 50%;
-    margin-left: 100px; /* Metni sağa kaydırdık */
-    position: relative;
-}
-
+/* Başlık ve Alt Başlık */
 .content h1 {
-    font-size: 3.5rem; /* Yazı boyutunu büyüttük */
-    color: #001f59; /* Hi There rengi #001f59 */
-    margin-bottom: 20px; /* "Hi There" ve "I'm Gamze Albasan" altına boşluk */
+    font-size: 4rem;
+    color: #001f59;
+    margin-bottom: 10px;
 }
 
 .highlight {
-    color: #6191eb; /* Gamze Albasan rengi #6191eb */
+    color: #6191eb;
 }
 
 .unity-developer {
-    font-size: 2.5rem; /* Biraz daha büyük font */
-    color: #692c31; /* Unity Developer rengi #692c31 */
-    display: inline-block;
-    opacity: 1;
+    font-size: 2.5rem;
+    color: #692c31;
+    animation: typing 4s steps(20, end), blink-caret 0.75s step-end infinite;
+    border-right: 2px solid #692c31;
     white-space: nowrap;
-    overflow: hidden; /* Harf harf gelmesi için overflow gizlendi */
-    border-right: 2px solid #692c31; /* Yazıya hareketli imleç efekti ekliyoruz */
-    animation: typing 4s steps(20, end), blink-caret 0.75s step-end infinite; /* Harf harf animasyon ve caret blink ekledik */
+    overflow: hidden;
 }
 
 @keyframes typing {
@@ -91,23 +50,39 @@ body {
     50% { border-color: transparent; }
 }
 
-/* Sabit About Me butonu */
+/* Buton Ayarları */
 .btn {
-    display: inline-block;
-    margin-top: 30px; /* "Unity Developer" ile About Me arasına boşluk bırakıyoruz */
+    margin-top: 20px;
     padding: 10px 20px;
-    background-color: #6191eb; /* About Me rengi #6191eb */
+    background-color: #6191eb;
     color: white;
-    border-radius: 5px;
-    text-decoration: none;
+    border-radius: 50px;
     font-size: 1.2rem;
-    position: absolute; /* Absolute yaparak sabitliyoruz */
-    bottom: 0; /* Butonun hareket etmesini engelliyoruz */
-    transition: background-color 0.3s ease;
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #0056b3; /* Hover sırasında başka bir renk kullan, turuncu olmadan */
+    background-color: #4178e8;
+    transform: scale(1.1);
+}
+
+/* Resim ve hover */
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 100px;
+}
+
+.image img {
+    max-width: 350px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.image img:hover {
+    transform: scale(1.05);
 }
 
 /* Sosyal Medya İkonları */
@@ -116,33 +91,14 @@ body {
 }
 
 .social-icons a {
-    margin-right: 10px;
     font-size: 1.5rem;
     color: #333;
-    text-decoration: none;
+    margin-right: 10px;
+    transition: color 0.3s;
 }
 
 .social-icons a:hover {
-    color: #6191eb; /* Linklerin hover rengi turuncu olmadan mavi */
-}
-
-/* Resim ve hover */
-.image {
-    margin-right: 200px; /* Resmi biraz daha sola kaydırdık */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.image img {
-    max-width: 350px; /* Resmi biraz büyüttük */
-    border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
-}
-
-/* Resmin üzerine gelince hafif hareket efekti */
-.image img:hover {
-    transform: scale(1.08); /* Yavaşça büyüme efekti */
+    color: #6191eb;
 }
 
 /* Responsive ayarlar */
@@ -150,20 +106,13 @@ body {
     .home {
         flex-direction: column;
         text-align: center;
-        padding: 50px 20px;
     }
 
-    .content {
-        max-width: 100%;
-        margin-left: 0;
-    }
-
-    .image img {
+    .image {
         margin: 20px 0;
     }
 
-    .btn {
-        position: static; /* Mobilde butonun konumunu sabitliyoruz */
-        margin-top: 20px;
+    .content {
+        margin-left: 0;
     }
 }
