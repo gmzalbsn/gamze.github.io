@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f9f9f9; /* Daha açık bir arka plan rengi */
     overflow-x: hidden;
 }
 
@@ -51,7 +51,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 100px 50px;
-    background-color: #282c34; /* Daha koyu bir arka plan */
+    background-color: #f9f9f9; /* Daha açık arka plan */
 }
 
 /* Particles.js Arka Planı */
@@ -67,18 +67,30 @@ body {
 /* İçerik (Metin) */
 .content {
     max-width: 50%;
-    margin-left: 50px; /* Metni sağa kaydır */
+    margin-left: 50px;
 }
 
 .content h1 {
     font-size: 3rem;
-    color: #ffffff; /* Beyaz yazı */
+    color: #333;
+    margin-bottom: 20px; /* "Hi There" ve "I'm Gamze Albasan" altına boşluk */
 }
 
-.content p {
-    font-size: 1.5rem;
-    margin-top: 20px;
-    color: #ffffff; /* Beyaz yazı */
+.unity-developer {
+    font-size: 2rem;
+    color: #ff5722;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Efekt */
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+/* Efekt: Glow */
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #ff5722, 0 0 20px #ff5722, 0 0 30px #ff5722;
+    }
+    to {
+        text-shadow: 0 0 20px #ff5722, 0 0 30px #ff5722, 0 0 40px #ff5722;
+    }
 }
 
 .highlight {
@@ -107,7 +119,7 @@ body {
 .social-icons a {
     margin-right: 10px;
     font-size: 1.5rem;
-    color: #ffffff;
+    color: #333;
     text-decoration: none;
 }
 
@@ -119,10 +131,10 @@ body {
 .image img {
     max-width: 300px;
     border-radius: 10px;
-    margin-right: 50px; /* Resmi sola kaydır */
+    margin-right: 50px;
 }
 
-/* Küçük ekranlar için responsive ayarlar */
+/* Responsive ayarlar */
 @media (max-width: 768px) {
     .home {
         flex-direction: column;
