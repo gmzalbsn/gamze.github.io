@@ -57,47 +57,49 @@ body {
 /* İçerik (Metin) */
 .content {
     max-width: 50%;
-    margin-left: 50px;
+    margin-left: 100px; /* Metni biraz sağa kaydırdık */
 }
 
 .content h1 {
-    font-size: 3rem;
-    color: #333;
+    font-size: 3.5rem; /* Yazı boyutunu büyüttük */
+    color: #001f3f; /* Lacivert renk */
     margin-bottom: 20px; /* "Hi There" ve "I'm Gamze Albasan" altına boşluk */
 }
 
 .unity-developer {
-    font-size: 2rem;
-    color: #ff5722;
-    animation: fade 3s ease-in-out infinite;
-}
-
-/* Unity Developer yazısı için fade in/fade out animasyonu */
-@keyframes fade {
-    0% { opacity: 0; }
-    50% { opacity: 1; }
-    100% { opacity: 0; }
-}
-
-.highlight {
-    color: #ff5722;
-}
-
-.btn {
+    font-size: 2.5rem; /* Biraz daha büyük font */
+    color: #001f3f; /* Lacivert renk */
     display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #ff5722;
-    color: white;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1.2rem;
+    opacity: 0;
+    animation: typing 4s steps(30, end) forwards; /* Harf harf animasyon */
 }
 
-.btn:hover {
-    background-color: #e64a19;
+/* Unity Developer yazısı için harf harf gelen animasyon */
+@keyframes typing {
+    from { width: 0; opacity: 1; }
+    to { width: 100%; opacity: 1; }
 }
 
+/* Resim ve hover */
+.image {
+    margin-right: 100px; /* Resmi biraz daha sola kaydırdık */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image img {
+    max-width: 350px; /* Resmi biraz büyüttük */
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Resmin üzerine gelince hafif hareket efekti */
+.image img:hover {
+    transform: scale(1.08); /* Yavaşça büyüme efekti */
+}
+
+/* Sosyal Medya İkonları */
 .social-icons {
     margin-top: 20px;
 }
@@ -111,22 +113,6 @@ body {
 
 .social-icons a:hover {
     color: #ff5722;
-}
-
-/* Resim Stili */
-.image {
-    margin-right: 100px; /* Resmi sola kaydır */
-}
-
-.image img {
-    max-width: 300px;
-    border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
-}
-
-/* Resmin üzerine gelince hareket ettirme efekti */
-.image img:hover {
-    transform: scale(1.05) rotate(5deg); /* Resmi biraz büyütüp döndürüyoruz */
 }
 
 /* Responsive ayarlar */
