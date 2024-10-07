@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f9f9f9; /* Daha açık bir arka plan rengi */
+    background-color: #f2f2f2; /* Düz açık bir arka plan rengi */
     overflow-x: hidden;
 }
 
@@ -51,17 +51,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 100px 50px;
-    background-color: #f9f9f9; /* Daha açık arka plan */
-}
-
-/* Particles.js Arka Planı */
-#particles-js {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1; /* Arka planda kalacak */
+    background-color: #f2f2f2; /* Düz açık gri arka plan */
 }
 
 /* İçerik (Metin) */
@@ -79,18 +69,14 @@ body {
 .unity-developer {
     font-size: 2rem;
     color: #ff5722;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Efekt */
-    animation: glow 1.5s ease-in-out infinite alternate;
+    animation: fade 3s ease-in-out infinite;
 }
 
-/* Efekt: Glow */
-@keyframes glow {
-    from {
-        text-shadow: 0 0 10px #ff5722, 0 0 20px #ff5722, 0 0 30px #ff5722;
-    }
-    to {
-        text-shadow: 0 0 20px #ff5722, 0 0 30px #ff5722, 0 0 40px #ff5722;
-    }
+/* Unity Developer yazısı için fade in/fade out animasyonu */
+@keyframes fade {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
 }
 
 .highlight {
@@ -128,10 +114,19 @@ body {
 }
 
 /* Resim Stili */
+.image {
+    margin-right: 100px; /* Resmi sola kaydır */
+}
+
 .image img {
     max-width: 300px;
     border-radius: 10px;
-    margin-right: 50px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Resmin üzerine gelince hareket ettirme efekti */
+.image img:hover {
+    transform: scale(1.05) rotate(5deg); /* Resmi biraz büyütüp döndürüyoruz */
 }
 
 /* Responsive ayarlar */
