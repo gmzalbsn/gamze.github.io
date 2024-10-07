@@ -74,6 +74,7 @@ body {
     border-right: 2px solid transparent; /* İmleç animasyonu son harften sonra yok olacak */
     white-space: nowrap;
     overflow: hidden;
+    margin-bottom: 60px; /* "Unity Developer" ile "About Me" butonu arasına ekstra boşluk eklendi */
 }
 
 @keyframes typing {
