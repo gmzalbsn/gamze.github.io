@@ -6,37 +6,37 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #f3f3f3 30%, #ffffff 100%);
+    background-color: #ffffff; /* Beyaz arka plan */
     overflow-x: hidden;
 }
 
-/* Hero Bölümü */
+/* Geometrik Arka Plan */
 .home {
     position: relative;
     height: 100vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 50px;
-    background-color: #f2f2f2;
+    padding: 100px 50px;
+    background: url('https://cdn.pixabay.com/photo/2017/11/22/21/18/network-2972394_960_720.png') center/cover no-repeat; /* Arka plan resmi */
 }
 
 /* Başlık ve Alt Başlık */
 .content h1 {
     font-size: 4rem;
-    color: #001f59;
+    color: #001f59; /* Koyu lacivert */
     margin-bottom: 10px;
 }
 
 .highlight {
-    color: #6191eb;
+    color: #6191eb; /* Mavi tonlu */
 }
 
 .unity-developer {
     font-size: 2.5rem;
-    color: #692c31;
+    color: #ff9800; /* Turuncu */
     animation: typing 4s steps(20, end), blink-caret 0.75s step-end infinite;
-    border-right: 2px solid #692c31;
+    border-right: 2px solid #ff9800;
     white-space: nowrap;
     overflow: hidden;
 }
@@ -54,7 +54,7 @@ body {
 .btn {
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #6191eb;
+    background-color: #001f59; /* Koyu lacivert buton */
     color: white;
     border-radius: 50px;
     font-size: 1.2rem;
@@ -63,7 +63,7 @@ body {
 }
 
 .btn:hover {
-    background-color: #4178e8;
+    background-color: #ff9800; /* Hover sırasında turuncu */
     transform: scale(1.1);
 }
 
@@ -98,7 +98,7 @@ body {
 }
 
 .social-icons a:hover {
-    color: #6191eb;
+    color: #001f59;
 }
 
 /* Responsive ayarlar */
