@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f2f2f2; /* Düz açık bir arka plan rengi */
+    background-color: #f2f2f2; 
     overflow-x: hidden;
 }
 
@@ -51,27 +51,27 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 100px 50px;
-    background-color: #f2f2f2; /* Düz açık gri arka plan */
+    background-color: #f2f2f2;
 }
 
 /* İçerik (Metin) */
 .content {
     max-width: 50%;
-    margin-left: 100px; /* Metni biraz sağa kaydırdık */
+    margin-left: 100px;
 }
 
 .content h1 {
-    font-size: 3.5rem; /* Yazı boyutunu büyüttük */
-    color: #001f3f; /* Lacivert renk */
-    margin-bottom: 20px; /* "Hi There" ve "I'm Gamze Albasan" altına boşluk */
+    font-size: 3.5rem; 
+    color: #6191eb; /* Gamze Albasan rengi */
+    margin-bottom: 20px;
 }
 
 .unity-developer {
-    font-size: 2.5rem; /* Biraz daha büyük font */
-    color: #001f3f; /* Lacivert renk */
+    font-size: 2.5rem; 
+    color: #692c31; /* Unity Developer rengi */
     display: inline-block;
     opacity: 0;
-    animation: typing 4s steps(30, end) forwards; /* Harf harf animasyon */
+    animation: typing 6s steps(30, end) forwards; /* Harf harf animasyon */
 }
 
 /* Unity Developer yazısı için harf harf gelen animasyon */
@@ -82,21 +82,38 @@ body {
 
 /* Resim ve hover */
 .image {
-    margin-right: 100px; /* Resmi biraz daha sola kaydırdık */
+    margin-right: 200px; /* Resmi daha fazla sola kaydırdık */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .image img {
-    max-width: 350px; /* Resmi biraz büyüttük */
+    max-width: 350px; 
     border-radius: 10px;
     transition: transform 0.3s ease-in-out;
 }
 
 /* Resmin üzerine gelince hafif hareket efekti */
 .image img:hover {
-    transform: scale(1.08); /* Yavaşça büyüme efekti */
+    transform: scale(1.08); 
+}
+
+/* Buton */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff5722;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    position: relative; /* Sabit bir pozisyon */
+}
+
+.btn:hover {
+    background-color: #e64a19;
 }
 
 /* Sosyal Medya İkonları */
