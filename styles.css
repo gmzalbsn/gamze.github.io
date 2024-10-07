@@ -6,8 +6,19 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #ffffff;
+    background-color: #ffffff; /* Beyaz arka plan */
     overflow-x: hidden;
+}
+
+/* Geometrik Arka Plan */
+.home {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 50px;
+    background: url('https://cdn.pixabay.com/photo/2017/11/22/21/18/network-2972394_960_720.png') center/cover no-repeat;
 }
 
 /* Navigasyon Menüsü */
@@ -41,74 +52,106 @@ body {
     color: white;
 }
 
-/* Hero Bölümü */
-.home {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 100px 50px;
+/* Başlık ve Alt Başlık */
+.content {
+    margin-left: 50px; /* Bütün yazıları biraz sağa kaydırıyoruz */
 }
 
-/* About Section */
-.about-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 100px 50px;
-    background-color: #f8f8f8;
-}
-
-.about-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-.about-image img {
-    max-width: 350px;
-    border-radius: 10px;
-}
-
-.about-text {
-    max-width: 50%;
-}
-
-.about-text h2 {
-    font-size: 3rem;
-    color: #001f59;
+.content h1 {
+    font-size: 4rem;
+    color: #001f59; /* Koyu lacivert */
     margin-bottom: 10px;
 }
 
-.about-text h3 {
-    font-size: 2rem;
-    color: #ff9800;
-    margin-bottom: 20px;
+.highlight {
+    color: #ff9800; /* Gamze Albasan turuncu */
 }
 
-.about-text p {
-    font-size: 1.2rem;
-    color: #333;
-    margin-bottom: 10px;
+.unity-developer {
+    font-size: 2.5rem;
+    color: #86edbc; /* Unity Developer yazısı için yeni renk */
+    animation: typing 2s steps(20, end), blink-caret 0.75s step-end 3; /* İmleç animasyonu kısa süreli olacak */
+    border-right: 2px solid transparent; /* İmleç animasyonu son harften sonra yok olacak */
+    white-space: nowrap;
+    overflow: hidden;
+    margin-bottom: 60px; /* "Unity Developer" ile "About Me" butonu arasına ekstra boşluk eklendi */
+    animation-fill-mode: forwards; /* Animasyon bittiğinde imleci gizle */
 }
 
-.resume-btn {
-    margin-top: 20px;
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    0%, 100% { border-color: transparent; }
+    50% { border-color: #86edbc; } /* Yeni renk */
+}
+
+/* Buton Ayarları */
+.btn {
+    margin-top: 40px; /* "Unity Developer" ile About Me arasına daha fazla boşluk ekleniyor */
     padding: 10px 20px;
-    background-color: #001f59;
+    background-color: #001f59; /* Koyu lacivert buton */
     color: white;
     border-radius: 50px;
-    text-decoration: none;
     font-size: 1.2rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
-.resume-btn:hover {
-    background-color: #ff9800;
+.btn:hover {
+    background-color: #ff9800; /* Hover sırasında turuncu */
+    transform: scale(1.1);
 }
 
-/* Smooth Scrolling */
-html {
-    scroll-behavior: smooth;
+/* Resim ve hover */
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 100px;
+}
+
+.image img {
+    max-width: 400px; /* Resim boyutunu 400px yaptık */
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.image img:hover {
+    transform: scale(1.05);
+}
+
+/* Sosyal Medya İkonları */
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ff9800;
+}
+
+/* Responsive ayarlar */
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image {
+        margin: 20px 0;
+    }
+
+    .content {
+        margin-left: 0;
+    }
 }
