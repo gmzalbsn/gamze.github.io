@@ -32,7 +32,7 @@ body {
     display: flex;
     justify-content: flex-end;
     z-index: 1000;
-    border-bottom: 5px solid #e4e4e3; /* Sayfanın en üstünü kaplayan bar rengi */
+    border-bottom: 5px solid ##f8f8f8; /* Sayfanın en üstünü kaplayan bar rengi */
 }
 
 .navbar nav ul {
@@ -50,7 +50,7 @@ body {
 }
 
 .navbar nav ul li a:hover {
-    background-color: #ff9800;
+    background-color: #f8f8f8;
     color: white;
 }
 
