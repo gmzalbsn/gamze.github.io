@@ -31,6 +31,7 @@ body {
     display: flex;
     justify-content: flex-end;
     z-index: 1000;
+    border-bottom: 5px solid #f5f5f5; /* Sayfanın en üstünü kaplayan beyaz şerit */
 }
 
 .navbar nav ul {
@@ -70,7 +71,7 @@ body {
 .unity-developer {
     font-size: 2.5rem;
     color: #86edbc; /* Unity Developer yazısı için yeni renk */
-    animation: typing 2s steps(20, end), blink-caret 0.75s step-end 3; /* İmleç animasyonu kısa süreli olacak */
+    animation: typing 1.5s steps(20, end), blink-caret 0.5s step-end 2; /* İmleç animasyonu daha kısa süreli olacak */
     border-right: 2px solid transparent; /* İmleç animasyonu son harften sonra yok olacak */
     white-space: nowrap;
     overflow: hidden;
@@ -131,7 +132,7 @@ body {
 }
 
 .social-icons a {
-    font-size: 1.5rem;
+    font-size: 2.5rem; /* İkonlar büyütüldü */
     color: #333;
     transition: color 0.3s;
 }
