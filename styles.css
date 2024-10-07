@@ -60,12 +60,16 @@ body {
 }
 
 .highlight {
-    color: #ff9800; /* Turuncu */
+    color: #ff9800; /* Albasan turuncu */
+}
+
+.content h1 .highlight:first-of-type {
+    color: #001f59; /* Gamze, I am ile aynı renk */
 }
 
 .unity-developer {
     font-size: 2.5rem;
-    color: #ff9800;
+    color: #4CAF50; /* Yeşilimsi ton (uyumlu bir renk) */
     animation: typing 4s steps(20, end), blink-caret 0.75s step-end infinite;
     border-right: 2px solid transparent; /* İmleç animasyonu son harften sonra yok olacak */
     white-space: nowrap;
@@ -79,12 +83,12 @@ body {
 
 @keyframes blink-caret {
     0%, 100% { border-color: transparent; }
-    50% { border-color: #ff9800; } /* Turuncu imleç */
+    50% { border-color: #4CAF50; } /* Yeşilimsi imleç */
 }
 
 /* Buton Ayarları */
 .btn {
-    margin-top: 30px; /* "Unity Developer" ile About Me arasına boşluk ekleniyor */
+    margin-top: 50px; /* "Unity Developer" ile About Me arasına daha fazla boşluk ekleniyor */
     padding: 10px 20px;
     background-color: #001f59; /* Koyu lacivert buton */
     color: white;
@@ -108,7 +112,7 @@ body {
 }
 
 .image img {
-    max-width: 350px;
+    max-width: 200px; /* Resim boyutunu 200px yaptık */
     border-radius: 50%;
     transition: transform 0.3s ease;
 }
