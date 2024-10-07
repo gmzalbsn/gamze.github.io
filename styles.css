@@ -50,10 +50,12 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 100px 50px;
+    position: relative;
 }
 
 .content {
     max-width: 50%;
+    margin-left: 50px; /* Metni sağa kaydır */
 }
 
 .content h1 {
@@ -102,12 +104,23 @@ body {
 
 /* Resim Stili */
 .image img {
-    max-width: 400px;
+    max-width: 300px;
     border-radius: 10px;
+    margin-right: 50px; /* Resmi sola kaydır */
 }
 
-/* Vurgulu metin */
-.highlight {
-    color: #ff5722;
-    font-weight: bold;
+/* Background Animasyonu */
+@keyframes moveBackground {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+/* Arka plan animasyonu */
+.home {
+    background: url('path/to/your/animated-background.jpg') no-repeat center center/cover;
+    animation: moveBackground 20s linear infinite;
 }
