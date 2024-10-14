@@ -8,7 +8,18 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #f5f5f5;
     overflow-x: hidden;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /* Yumuşak kaydırma efekti */
+}
+
+/* Home Section */
+.home {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 50px;
+    background: #f5f5f5;
 }
 
 .navbar {
@@ -42,16 +53,7 @@ body {
     color: #4b0082;
 }
 
-.home {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 100px 50px;
-    background: #f5f5f5;
-}
-
+/* About Section */
 .about-section {
     display: flex;
     justify-content: space-between;
@@ -103,4 +105,90 @@ body {
 
 .about-text a:hover {
     background-color: #32006a;
+}
+
+/* Portfolio Section */
+.portfolio-section {
+    padding: 100px 50px;
+    text-align: center;
+    background-color: #f8f8f8;
+}
+
+.portfolio-section h2 {
+    font-size: 2.5rem;
+    color: #4b0082;
+    margin-bottom: 50px;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 100px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.contact-form {
+    width: 50%;
+}
+
+.contact-form h2 {
+    font-size: 2.5rem;
+    color: #4b0082;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 1.5rem;
+    color: #4b0082;
+    margin-right: 10px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #4b0082;
+}
+
+.btn-submit {
+    padding: 10px 30px;
+    background-color: #4b0082;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #32006a;
+}
+
+.contact-image img {
+    max-width: 400px;
+    border-radius: 10px;
 }
