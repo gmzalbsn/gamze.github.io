@@ -22,7 +22,7 @@ body {
 }
 
 .image {
-    margin-right: 50; /* Önceki margin-right kaldırılacak */
+    margin-right: 0; /* Önceki margin-right kaldırılacak */
 }
 
 /* Canvas kullanarak arka planda dinamik şekiller oluşturacağız */
@@ -81,7 +81,7 @@ body {
 
 /* Başlık ve Alt Başlık */
 .content {
-    margin-left: 50px; /* Bütün yazıları biraz sağa kaydırıyoruz */
+    margin-left: 120px; /* Bütün yazıları biraz sağa kaydırıyoruz */
 }
 
 .content h1 {
