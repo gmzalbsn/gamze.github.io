@@ -15,54 +15,40 @@ body {
     position: relative;
     height: 100vh;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    padding: 100px 50px;
     background-color: #001f59; /* Düz arka plan rengi */
-    overflow: hidden; /* Şekillerin ekran dışına çıkmasını engeller */
+    overflow: hidden;
 }
 
-/* Animasyonlu daireler */
-.circle {
+/* Kod satırlarını stilize ediyoruz */
+.code-line {
     position: absolute;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.15); /* Beyaz, yarı şeffaf daireler */
-    animation: move 20s infinite ease-in-out;
+    top: -50px;
+    width: 100%;
+    color: rgba(255, 255, 255, 0.2); /* Yarı şeffaf beyaz */
+    font-family: 'Courier New', monospace; /* Kod yazı tipi */
+    font-size: 1.2rem;
+    animation: scroll 10s linear infinite;
+    white-space: nowrap; /* Tek satırda görünüm */
+    overflow: hidden;
 }
 
-.circle-1 {
-    width: 150px;
-    height: 150px;
-    bottom: -50px;
-    left: 10%;
-    animation-duration: 25s;
-}
-
-.circle-2 {
-    width: 200px;
-    height: 200px;
-    top: -100px;
-    right: 20%;
-    animation-duration: 30s;
-}
-
-.circle-3 {
-    width: 100px;
-    height: 100px;
-    top: 20%;
-    left: 50%;
-    animation-duration: 18s;
-}
-
-@keyframes move {
+@keyframes scroll {
     0% {
-        transform: translateY(0) scale(1);
-    }
-    50% {
-        transform: translateY(-50px) scale(1.5); /* Yukarıya doğru hareket ederken büyüyor */
+        top: 100vh; /* Sayfanın dışından başlar */
     }
     100% {
-        transform: translateY(0) scale(1); /* Orijinal konuma ve boyuta geri döner */
+        top: -100px; /* Yukarı doğru kayar */
     }
+}
+
+/* İçerik kısmı */
+.content {
+    z-index: 2; /* İçeriği ön plana çıkarıyoruz */
+    position: relative;
+    color: white;
 }
 .navbar {
     background-color: white;
