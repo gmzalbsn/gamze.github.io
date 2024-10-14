@@ -9,6 +9,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <!-- Particles.js Kütüphanesi -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <style>
+        /* Yumuşak kaydırma efekti */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Home sayfası (tam ekran) */
+        .home {
+            height: 100vh; /* Home bölümü tam ekran */
+            background-color: #f5f5f5; /* Açık gri arka plan */
+        }
+
+        /* About Me sayfası daha büyük */
+        .about-section {
+            min-height: 110vh; /* %110 ekran boyutu kadar yer kaplayacak */
+        }
+    </style>
 </head>
 <body>
 
@@ -18,7 +35,7 @@
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -44,64 +61,25 @@
         </div>
     </section>
 
-    <!-- About Me Bölümü -->
-    <section id="about" class="about-section">
-        <div class="about-content">
-            <div class="about-image">
-                <img src="Assets/myphoto.png" alt="Gamze Albasan">
-            </div>
-            <div class="about-text">
-                <h2>About Me</h2>
-                <h3>I'm Gamze Albasan</h3>
-                <h3>Unity Developer</h3>
-                <p>
-                    I am a Unity Developer based in Ankara, Turkey. I have extensive experience in developing interactive and immersive gaming experiences using Unity. My focus is on creating seamless and enjoyable gameplay experiences. From hyper-casual games to augmented and virtual reality projects, I continuously strive to push the boundaries of game design and development. I enjoy crafting intuitive mechanics and engaging worlds that leave a lasting impact on players.
-                </p>
-                <p><strong>Email:</strong> gamzealbsn@gmail.com</p>
-                <p><strong>Location:</strong> Ankara, Turkey</p>
-                <a href="https://drive.google.com/file/d/1VjcqCLTXSiatyZ7qbbhTM4lo-s6qb7C9/view?usp=sharing" class="resume-btn" target="_blank">Resume</a>
-            </div>
+    <!-- About Bölümü -->
+   <section id="about" class="about-section">
+    <div class="about-content">
+        <div class="about-image">
+            <img src="Assets/myphoto.png" alt="Gamze Albasan">
         </div>
-    </section>
-
-    <!-- Portfolio Bölümü -->
-    <section id="portfolio" class="portfolio-section">
-        <div class="portfolio-content">
-            <h2>Portfolio</h2>
-            <!-- Bu alan şimdilik boş bırakıldı -->
+        <div class="about-text">
+            <h2>About Me</h2>
+            <h3>I'm Gamze Albasan</h3>
+            <h3>Unity Developer</h3>
+            <p>
+                I am a Unity Developer based in Ankara, Turkey. I have extensive experience in developing interactive and immersive gaming experiences using Unity. My focus is on creating seamless and enjoyable gameplay experiences. From hyper-casual games to augmented and virtual reality projects, I continuously strive to push the boundaries of game design and development. I enjoy crafting intuitive mechanics and engaging worlds that leave a lasting impact on players.
+            </p>
+            <p><strong>Email:</strong> gamzealbsn@gmail.com</p>
+            <p><strong>Location:</strong> Ankara, Turkey</p>
+            <a href="https://drive.google.com/file/d/1VjcqCLTXSiatyZ7qbbhTM4lo-s6qb7C9/view?usp=sharing" class="resume-btn" target="_blank">Resume</a>
         </div>
-    </section>
-
-    <!-- Contact Bölümü -->
-    <section id="contact" class="contact-section">
-        <div class="contact-content">
-            <div class="contact-form">
-                <h2>Contact Me</h2>
-                <form>
-                    <div class="form-group">
-                        <label for="name"><i class="fas fa-user"></i></label>
-                        <input type="text" id="name" placeholder="Name">
-                    </div>
-                    <div class="form-group">
-                        <label for="email"><i class="fas fa-envelope"></i></label>
-                        <input type="email" id="email" placeholder="Email">
-                    </div>
-                    <div class="form-group">
-                        <label for="phone"><i class="fas fa-phone"></i></label>
-                        <input type="tel" id="phone" placeholder="Phone">
-                    </div>
-                    <div class="form-group">
-                        <label for="message"><i class="fas fa-comment"></i></label>
-                        <textarea id="message" rows="4" placeholder="Message"></textarea>
-                    </div>
-                    <button type="submit" class="btn-submit">Submit <i class="fas fa-paper-plane"></i></button>
-                </form>
-            </div>
-            <div class="contact-image">
-                <img src="Assets/contact-image.png" alt="Contact Image">
-            </div>
-        </div>
-    </section>
+    </div>
+</section>
 
     <!-- Particles.js Ayarları -->
     <script>
