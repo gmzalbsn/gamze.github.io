@@ -170,6 +170,21 @@ body {
 .about-text {
     max-width: 65%; /* Yazı alanını genişletin */
 }
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column; /* Küçük ekranlarda resim ve yazılar alt alta gelir */
+        text-align: center;
+    }
+
+    .about-image {
+        max-width: 100%;   /* Mobilde resim tam genişlikte görünür */
+        margin: 0 0 20px 0; /* Yazılar ve resim arasında boşluk bırakılır */
+    }
+
+    .about-text {
+        max-width: 100%;   /* Mobilde yazılar tam genişlikte görünür */
+    }
+}
 
 .about-text h2 {
     font-size: 2.5rem; /* Başlık boyutu */
