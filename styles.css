@@ -22,7 +22,7 @@ body {
 }
 
 .image {
-    margin-right: 0; /* Önceki margin-right kaldırılacak */
+    margin-right: 50; /* Önceki margin-right kaldırılacak */
 }
 
 /* Canvas kullanarak arka planda dinamik şekiller oluşturacağız */
