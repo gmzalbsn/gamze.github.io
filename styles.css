@@ -96,7 +96,7 @@ body {
 
 .unity-developer {
     font-size: 2.5rem;
-    color: #86edbc; /* Unity Developer yazısı için yeni renk */
+    color: #86edbc !important; /* Unity Developer yazısı için yeni renk */
     animation: typing 1.5s steps(20, end), blink-caret 0.5s step-end 2;
     border-right: 2px solid transparent;
     white-space: nowrap;
@@ -160,7 +160,7 @@ body {
     align-items: center;
     flex-direction: row; /* Yatay hizalama */
     padding: 100px 50px;
-    background-color: #86edbc;
+    background-color: #f0f0f0;
 }
 
 .about-image {
