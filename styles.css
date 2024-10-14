@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    overflow-x: hidden;
+    scroll-behavior: smooth; /* Sayfalar arası yumuşak kayma eklendi */
+}
+
+.home {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #001f59; /* Koyu arka plan rengi */
+    overflow: hidden;
+}
+
+/* Canvas kullanarak arka planda dinamik şekiller oluşturacağız */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    pointer-events: none; /* Tıklamayı engeller */
+}
+
+/* İçerik kısmı */
+.content {
+    z-index: 2; /* İçeriği ön plana çıkarıyoruz */
+    position: relative; /* Z-index çalışması için relative pozisyon verdik */
+    color: white;
+}
+
+/* Butonlar ve diğer içerikler */
+.content h1, .content h2, .content a {
+    color: white;
+}
+.navbar {
+    background-color: white;
+    padding: 10px 50px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 1000;
+    border-bottom: 5px solid #f8f8f8; /* Alt şerit rengini about bölümünün arka planı ile eşleştiriyoruz */
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #001f59;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.navbar nav ul li a:hover {
+    background-color: transparent; /* Arkaplanı transparan yapıyoruz */
+    color: #ff9800; /* Turuncu renk */
+    border-bottom: 2px solid #ff9800; /* Hover sırasında turuncu alt çizgi */
+}
+
+/* Başlık ve Alt Başlık */
+.content {
+    margin-left: 50px; /* Bütün yazıları biraz sağa kaydırıyoruz */
+}
+
+.content h1 {
+    font-size: 4rem;
+    color: #001f59; /* Koyu lacivert */
+    margin-bottom: 10px;
+}
+
+.highlight {
+    color: #ff9800; /* Gamze Albasan turuncu */
+}
+
+.unity-developer {
+    font-size: 2.5rem;
+    color: #86edbc; /* Unity Developer yazısı için yeni renk */
+    animation: typing 1.5s steps(20, end), blink-caret 0.5s step-end 2; /* İmleç animasyonu daha kısa süreli olacak */
+    border-right: 2px solid transparent; /* İmleç animasyonu son harften sonra yok olacak */
+    white-space: nowrap;
+    overflow: hidden;
+    margin-bottom: 60px; /* "Unity Developer" ile "About Me" butonu arasına ekstra boşluk eklendi */
+    animation-fill-mode: forwards; /* Animasyon bittiğinde imleci gizle */
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    0%, 100% { border-color: transparent; }
+    50% { border-color: #86edbc; } /* Yeni renk */
+}
+
+/* Buton Ayarları */
+.btn {
+    margin-top: 40px; /* "Unity Developer" ile About Me arasına daha fazla boşluk eklendi */
+    padding: 10px 20px;
+    background-color: #001f59; /* Koyu lacivert buton */
+    color: white;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff9800; /* Hover sırasında turuncu */
+    transform: scale(1.1);
+}
+
+/* Resim ve hover */
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 100px;
+}
+
+.image img {
+    max-width: 400px; /* Resim boyutunu küçültüyoruz */
+    height: auto; /* Yükseklik otomatik ayarlanacak */
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.image img:hover {
+    transform: scale(1.05); /* Hover efekti */
+}
+
+/* About Bölümü */
+.about-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 50px; /* Kenar boşlukları */
+    background-color: #ffffff; /* Arka plan beyaz */
+    min-height: 110vh; /* Yüksekliği koruyoruz */
+}
+
+.about-image img {
+    max-width: 350px; /* Resim genişliği */
+    border-radius: 15px; /* Köşeleri yuvarlat */
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+}
+
+.about-text {
+    max-width: 50%; /* Yazıların genişliğini ayarlıyoruz */
+}
+
+.about-text h2 {
+    font-size: 2.5rem; /* Başlık boyutu */
+    font-weight: bold;
+    color: #6b00b6; /* Mor tonunda başlık rengi */
+    margin-bottom: 20px;
+}
+
+.about-text h3 {
+    font-size: 1.8rem; /* Alt başlık boyutu */
+    color: #333; /* Koyu gri renk */
+    margin-bottom: 10px;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    color: #555; /* Paragrafların rengi */
+    margin-bottom: 20px;
+    line-height: 1.6; /* Yazılar arası boşluk */
+}
+
+.about-text a {
+    font-size: 1.2rem; /* Buton metin boyutu */
+    color: white;
+    background-color: #4b0082; /* Buton rengi - koyu mor */
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius: 50px; /* Buton köşeleri yuvarlatıldı */
+    transition: background-color 0.3s ease;
+}
+
+.about-text a:hover {
+    background-color: #32006a; /* Hover'da butonun koyulaşan rengi */
+}
+
+.about-text p strong {
+    color: #4b0082; /* E-posta ve konum için vurgulu renk */
+}
+
+.resume-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #001f59;
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.resume-btn:hover {
+    background-color: #ff9800;
+}
+
+/* Sosyal Medya İkonları */
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    font-size: 2.5rem; /* İkonlar büyütüldü */
+    color: #333;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ff9800;
+}
+
+/* Responsive ayarlar */
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image {
+        margin: 20px 0;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+}

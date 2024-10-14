@@ -1,12 +1,191 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Website</title>
+    <title>Gamze Albasan - Unity Developer</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- FontAwesome for Social Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Particles.js Kütüphanesi -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <style>
+        /* Yumuşak kaydırma efekti */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Home sayfası (tam ekran) */
+        .home {
+            height: 100vh; /* Home bölümü tam ekran */
+            background-color: #f5f5f5; /* Açık gri arka plan */
+        }
+
+        /* About Me sayfası daha büyük */
+        .about-section {
+            min-height: 110vh; /* %110 ekran boyutu kadar yer kaplayacak */
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to My Website</h1>
-    <p>Hello, this is my first GitHub Pages website!</p>
+
+    <!-- Navigasyon Menüsü -->
+    <header class="navbar">
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Bölümü (Home) -->
+    <section class="home" id="home">
+        <!-- Particles arka planı -->
+        <div id="particles-js"></div>
+        <div class="content">
+            <h1>Hi There, <br> I'm <span class="highlight">Gamze Albasan</span></h1>
+            <h2 class="unity-developer">Unity Developer</h2>
+            <a href="#about" class="btn">About Me</a>
+            <!-- Sosyal Medya İkonları -->
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/gamze-albasan-1aa346187/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/gmzalbsn" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        <!-- Sağ tarafta resim -->
+        <div class="image">
+            <img src="Assets/cartoon_photo_converted.jpg" alt="Gamze Albasan">
+        </div>
+    </section>
+
+    <!-- About Bölümü -->
+   <section id="about" class="about-section">
+    <div class="about-content">
+        <div class="about-image">
+            <img src="Assets/myphoto.png" alt="Gamze Albasan">
+        </div>
+        <div class="about-text">
+            <h2>About Me</h2>
+            <h3>I'm Gamze Albasan</h3>
+            <h3>Unity Developer</h3>
+            <p>
+                I am a Unity Developer based in Ankara, Turkey. I have extensive experience in developing interactive and immersive gaming experiences using Unity. My focus is on creating seamless and enjoyable gameplay experiences. From hyper-casual games to augmented and virtual reality projects, I continuously strive to push the boundaries of game design and development. I enjoy crafting intuitive mechanics and engaging worlds that leave a lasting impact on players.
+            </p>
+            <p><strong>Email:</strong> gamzealbsn@gmail.com</p>
+            <p><strong>Location:</strong> Ankara, Turkey</p>
+            <a href="https://drive.google.com/file/d/1VjcqCLTXSiatyZ7qbbhTM4lo-s6qb7C9/view?usp=sharing" class="resume-btn" target="_blank">Resume</a>
+        </div>
+    </div>
+</section>
+
+    <!-- Particles.js Ayarları -->
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 80,  /* Nokta sayısı */
+                    "density": {
+                        "enable": true,
+                        "value_area": 800  /* Alan genişliği */
+                    }
+                },
+                "color": {
+                    "value": "#000000"  /* Noktaların rengi siyah olacak */
+                },
+                "shape": {
+                    "type": "circle", /* Noktaların şekli */
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    }
+                },
+                "opacity": {
+                    "value": 0.5, /* Şeffaflık */
+                    "random": false,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3, /* Nokta boyutu */
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150, /* Noktalar arasındaki çizgi mesafesi */
+                    "color": "#000000", /* Çizgiler de siyah olacak */
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 6, /* Hareket hızı */
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 400,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+
 </body>
 </html>
