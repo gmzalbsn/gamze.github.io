@@ -163,30 +163,30 @@ body {
     background-color: #f0f0f0;
 }
 
-.about-image {
-    max-width: 30%; /* Resmi küçültün */
-    height: auto; /* Yükseklik otomatik */
-    margin-right: 20px; /* Resim ve yazı arasına boşluk koyun */
+about-image {
+    max-width: 30%; 
+    height: auto; 
+    margin-right: 20px; 
+    position: relative; /* Z-index çalışması için relative yapın */
+    z-index: 1; /* Öne çıkarmak için z-index ayarı */
 }
 
 .about-text {
     max-width: 65%; /* Yazı alanını genişletin */
 }
-
-/* Medya sorgusu - Küçük ekranlar */
 @media (max-width: 768px) {
     .about-section {
-        flex-direction: column; /* Küçük ekranlarda resim ve yazılar alt alta gelir */
+        flex-direction: column;
         text-align: center;
     }
 
     .about-image {
-        max-width: 100%;   /* Mobilde resim tam genişlikte görünür */
-        margin: 0 0 20px 0; /* Yazılar ve resim arasında boşluk bırakılır */
+        max-width: 100%;
+        margin: 0 0 20px 0;
     }
 
     .about-text {
-        max-width: 100%;   /* Mobilde yazılar tam genişlikte görünür */
+        max-width: 100%;
     }
 }
 
