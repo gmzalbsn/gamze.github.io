@@ -154,19 +154,21 @@ body {
 /* About Bölümü */
 .about-section {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start; /* Resim ve yazıları yan yana hizalar */
     align-items: center;
-    flex-wrap: nowrap; /* Yazı ve resmin alt alta düşmesini engelle */
+    flex-direction: row; /* Yatay hizalama */
     padding: 100px 50px;
     background-color: #ffffff;
 }
 
 .about-image {
-    max-width: 40%; /* Resmin genişliği */
+    max-width: 30%; /* Resmi küçültün */
+    height: auto; /* Yükseklik otomatik */
+    margin-right: 20px; /* Resim ve yazı arasına boşluk koyun */
 }
 
 .about-text {
-    max-width: 55%; /* Yazıların genişliği */
+    max-width: 65%; /* Yazı alanını genişletin */
 }
 
 .about-text h2 {
