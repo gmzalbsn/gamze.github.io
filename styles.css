@@ -11,6 +11,18 @@ body {
     scroll-behavior: smooth; /* Sayfalar arası yumuşak kayma eklendi */
 }
 
+@keyframes animatedGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .home {
     position: relative;
     height: 100vh;
@@ -18,7 +30,9 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 100px 50px;
-    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%); /* Pembe ve pastel tonlardan oluşan geçiş */
+    background: linear-gradient(270deg, #ff9a9e, #fad0c4, #fad0c4, #ff9a9e);
+    background-size: 600% 600%;
+    animation: animatedGradient 10s ease infinite;
 }
 
 /* Navigasyon Menüsü */
