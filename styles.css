@@ -32,7 +32,7 @@ body {
     display: flex;
     justify-content: flex-end;
     z-index: 1000;
-    border-bottom: 5px solid ##f8f8f8; /* Sayfanın en üstünü kaplayan bar rengi */
+    border-bottom: 5px solid #f8f8f8; /* Alt şerit rengini about bölümünün arka planı ile eşleştiriyoruz */
 }
 
 .navbar nav ul {
@@ -50,8 +50,9 @@ body {
 }
 
 .navbar nav ul li a:hover {
-    background-color: #f8f8f8;
-    color: white;
+    background-color: transparent; /* Arkaplanı transparan yapıyoruz */
+    color: #ff9800; /* Turuncu renk */
+    border-bottom: 2px solid #ff9800; /* Hover sırasında turuncu alt çizgi */
 }
 
 /* Başlık ve Alt Başlık */
