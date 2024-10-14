@@ -15,39 +15,32 @@ body {
     position: relative;
     height: 100vh;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 100px 50px;
-    background-color: #001f59; /* Düz arka plan rengi */
+    background-color: #001f59; /* Koyu arka plan rengi */
     overflow: hidden;
 }
 
-/* Kod satırlarını stilize ediyoruz */
-.code-line {
+/* Canvas kullanarak arka planda dinamik şekiller oluşturacağız */
+#particles-js {
     position: absolute;
-    top: -50px;
     width: 100%;
-    color: rgba(255, 255, 255, 0.2); /* Yarı şeffaf beyaz */
-    font-family: 'Courier New', monospace; /* Kod yazı tipi */
-    font-size: 1.2rem;
-    animation: scroll 10s linear infinite;
-    white-space: nowrap; /* Tek satırda görünüm */
-    overflow: hidden;
-}
-
-@keyframes scroll {
-    0% {
-        top: 100vh; /* Sayfanın dışından başlar */
-    }
-    100% {
-        top: -100px; /* Yukarı doğru kayar */
-    }
+    height: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    pointer-events: none; /* Tıklamayı engeller */
 }
 
 /* İçerik kısmı */
 .content {
     z-index: 2; /* İçeriği ön plana çıkarıyoruz */
-    position: relative;
+    position: relative; /* Z-index çalışması için relative pozisyon verdik */
+    color: white;
+}
+
+/* Butonlar ve diğer içerikler */
+.content h1, .content h2, .content a {
     color: white;
 }
 .navbar {
