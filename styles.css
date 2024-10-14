@@ -6,12 +6,11 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #ffffff; /* Beyaz arka plan */
+    background-color: #f0f0f0;
     overflow-x: hidden;
     scroll-behavior: smooth; /* Sayfalar arası yumuşak kayma eklendi */
 }
 
-/* Geometrik Arka Plan */
 .home {
     position: relative;
     height: 100vh;
@@ -19,7 +18,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 100px 50px;
-    background: url('https://cdn.pixabay.com/photo/2017/11/22/21/18/network-2972394_960_720.png') center/cover no-repeat;
+    background: linear-gradient(to bottom, #ffffff, #e0e0e0); /* Beyazdan griye geçişli arka plan */
 }
 
 /* Navigasyon Menüsü */
