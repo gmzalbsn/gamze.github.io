@@ -152,42 +152,57 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 100px 50px;
-    background-color: #f8f8f8;
-}
-
-.about-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+    padding: 100px 50px; /* Kenar boşlukları */
+    background-color: #ffffff; /* Arka plan beyaz */
+    min-height: 110vh; /* Yüksekliği koruyoruz */
 }
 
 .about-image img {
-    max-width: 350px;
-    border-radius: 10px;
+    max-width: 350px; /* Resim genişliği */
+    border-radius: 15px; /* Köşeleri yuvarlat */
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); /* Hafif gölge */
 }
 
 .about-text {
-    max-width: 50%;
+    max-width: 50%; /* Yazıların genişliğini ayarlıyoruz */
 }
 
 .about-text h2 {
-    font-size: 3rem;
-    color: #001f59;
-    margin-bottom: 10px;
+    font-size: 2.5rem; /* Başlık boyutu */
+    font-weight: bold;
+    color: #6b00b6; /* Mor tonunda başlık rengi */
+    margin-bottom: 20px;
 }
 
 .about-text h3 {
-    font-size: 2rem;
-    color: #ff9800;
-    margin-bottom: 20px;
+    font-size: 1.8rem; /* Alt başlık boyutu */
+    color: #333; /* Koyu gri renk */
+    margin-bottom: 10px;
 }
 
 .about-text p {
     font-size: 1.2rem;
-    color: #333;
-    margin-bottom: 10px;
+    color: #555; /* Paragrafların rengi */
+    margin-bottom: 20px;
+    line-height: 1.6; /* Yazılar arası boşluk */
+}
+
+.about-text a {
+    font-size: 1.2rem; /* Buton metin boyutu */
+    color: white;
+    background-color: #4b0082; /* Buton rengi - koyu mor */
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius: 50px; /* Buton köşeleri yuvarlatıldı */
+    transition: background-color 0.3s ease;
+}
+
+.about-text a:hover {
+    background-color: #32006a; /* Hover'da butonun koyulaşan rengi */
+}
+
+.about-text p strong {
+    color: #4b0082; /* E-posta ve konum için vurgulu renk */
 }
 
 .resume-btn {
