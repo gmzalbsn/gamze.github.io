@@ -11,6 +11,7 @@ body {
     scroll-behavior: smooth; /* Sayfalar arası yumuşak kayma eklendi */
 }
 
+/* Home Sayfası */
 .home {
     position: relative;
     height: 100vh;
@@ -21,11 +22,6 @@ body {
     overflow: hidden;
 }
 
-.image {
-    margin-right: 0; /* Önceki margin-right kaldırılacak */
-}
-
-/* Canvas kullanarak arka planda dinamik şekiller oluşturacağız */
 #particles-js {
     position: absolute;
     width: 100%;
@@ -39,48 +35,8 @@ body {
 /* İçerik kısmı */
 .content {
     z-index: 2; /* İçeriği ön plana çıkarıyoruz */
-    position: relative; /* Z-index çalışması için relative pozisyon verdik */
+    position: relative;
     color: white;
-}
-
-/* Butonlar ve diğer içerikler */
-.content h1, .content h2, .content a {
-    color: white;
-}
-.navbar {
-    background-color: white;
-    padding: 10px 50px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    z-index: 1000;
-    border-bottom: 5px solid #f8f8f8; /* Alt şerit rengini about bölümünün arka planı ile eşleştiriyoruz */
-}
-
-.navbar nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.navbar nav ul li a {
-    text-decoration: none;
-    font-size: 1.2rem;
-    color: #001f59;
-    padding: 10px 20px;
-    border-radius: 5px;
-}
-
-.navbar nav ul li a:hover {
-    background-color: transparent; /* Arkaplanı transparan yapıyoruz */
-    color: #ff9800; /* Turuncu renk */
-    border-bottom: 2px solid #ff9800; /* Hover sırasında turuncu alt çizgi */
-}
-
-/* Başlık ve Alt Başlık */
-.content {
     margin-left: 120px; /* Bütün yazıları biraz sağa kaydırıyoruz */
 }
 
@@ -153,7 +109,7 @@ body {
     transform: scale(1.05); /* Hover efekti */
 }
 
-/* About Bölümü */
+/* About Me Bölümü */
 .about-section {
     display: flex;
     justify-content: flex-start; /* Resim ve yazıları yan yana hizalar */
@@ -163,31 +119,16 @@ body {
     background-color: #f0f0f0;
 }
 
-about-image {
-    max-width: 30%; 
-    height: auto; 
-    margin-right: 20px; 
-    position: relative; /* Z-index çalışması için relative yapın */
-    z-index: 1; /* Öne çıkarmak için z-index ayarı */
+.about-image {
+    max-width: 30%; /* Resmi küçültün */
+    height: auto; /* Yükseklik otomatik */
+    margin-right: 20px; /* Resim ve yazı arasına boşluk koyun */
+    position: relative;
+    z-index: 1;
 }
 
 .about-text {
     max-width: 65%; /* Yazı alanını genişletin */
-}
-@media (max-width: 768px) {
-    .about-section {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about-image {
-        max-width: 100%;
-        margin: 0 0 20px 0;
-    }
-
-    .about-text {
-        max-width: 100%;
-    }
 }
 
 /* About Me başlık ve metin stilleri */
@@ -261,6 +202,22 @@ about-image {
 }
 
 /* Responsive ayarlar */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column; /* Küçük ekranlarda resim ve yazılar alt alta gelir */
+        text-align: center;
+    }
+
+    .about-image {
+        max-width: 100%;   /* Mobilde resim tam genişlikte görünür */
+        margin: 0 0 20px 0; /* Yazılar ve resim arasında boşluk bırakılır */
+    }
+
+    .about-text {
+        max-width: 100%;   /* Mobilde yazılar tam genişlikte görünür */
+    }
+}
+
 @media (max-width: 768px) {
     .home {
         flex-direction: column;
