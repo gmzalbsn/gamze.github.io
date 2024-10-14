@@ -11,18 +11,6 @@ body {
     scroll-behavior: smooth; /* Sayfalar arası yumuşak kayma eklendi */
 }
 
-@keyframes animatedGradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
 .home {
     position: relative;
     height: 100vh;
@@ -30,12 +18,8 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 100px 50px;
-    background: linear-gradient(270deg, #ff9a9e, #fad0c4, #fad0c4, #ff9a9e);
-    background-size: 600% 600%;
-    animation: animatedGradient 10s ease infinite;
+    background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%), url('https://www.toptal.com/designers/subtlepatterns/patterns/memphis-mini.png');
 }
-
-/* Navigasyon Menüsü */
 .navbar {
     background-color: white;
     padding: 10px 50px;
