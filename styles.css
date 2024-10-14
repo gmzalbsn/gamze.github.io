@@ -15,10 +15,54 @@ body {
     position: relative;
     height: 100vh;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 100px 50px;
-    background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%), url('https://www.toptal.com/designers/subtlepatterns/patterns/memphis-mini.png');
+    background-color: #001f59; /* Düz arka plan rengi */
+    overflow: hidden; /* Şekillerin ekran dışına çıkmasını engeller */
+}
+
+/* Animasyonlu daireler */
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15); /* Beyaz, yarı şeffaf daireler */
+    animation: move 20s infinite ease-in-out;
+}
+
+.circle-1 {
+    width: 150px;
+    height: 150px;
+    bottom: -50px;
+    left: 10%;
+    animation-duration: 25s;
+}
+
+.circle-2 {
+    width: 200px;
+    height: 200px;
+    top: -100px;
+    right: 20%;
+    animation-duration: 30s;
+}
+
+.circle-3 {
+    width: 100px;
+    height: 100px;
+    top: 20%;
+    left: 50%;
+    animation-duration: 18s;
+}
+
+@keyframes move {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-50px) scale(1.5); /* Yukarıya doğru hareket ederken büyüyor */
+    }
+    100% {
+        transform: translateY(0) scale(1); /* Orijinal konuma ve boyuta geri döner */
+    }
 }
 .navbar {
     background-color: white;
