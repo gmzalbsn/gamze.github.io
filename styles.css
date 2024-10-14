@@ -15,10 +15,14 @@ body {
     position: relative;
     height: 100vh;
     display: flex;
-    justify-content: center;
+    justify-content: space-between; /* İçerik sağa ve sola yayılacak */
     align-items: center;
-    background-color: #001f59; /* Koyu arka plan rengi */
+    background-color: #001f59;
     overflow: hidden;
+}
+
+.image {
+    margin-right: 0; /* Önceki margin-right kaldırılacak */
 }
 
 /* Canvas kullanarak arka planda dinamik şekiller oluşturacağız */
