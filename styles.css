@@ -149,17 +149,18 @@ body {
 /* About Section */
 .about-section {
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: row;
+    justify-content: flex-start; /* Align items starting from the left */
+    align-items: flex-start; /* Aligns the items at the top of the container */
+    flex-direction: row; /* Make sure image and text are side by side */
     padding: 100px 50px;
     background-color: #f0f0f0;
 }
 
 .about-image {
-    max-width: 30%;
+    flex: 0 0 30%; /* Ensures the image takes up 30% of the width */
+    max-width: 30%; /* Ensures the image doesn't grow beyond 30% */
     height: auto;
-    margin-right: 20px;
+    margin-right: 20px; /* Space between the image and the text */
 }
 
 .about-image img {
@@ -169,10 +170,9 @@ body {
 }
 
 .about-text {
-    max-width: 65%;
-    text-align: left;
+    flex: 1; /* This ensures the text takes up the rest of the space */
+    text-align: left; /* Align text to the left */
 }
-
 @media (max-width: 768px) {
     .about-section {
         flex-direction: column;
