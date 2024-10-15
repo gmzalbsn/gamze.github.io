@@ -161,7 +161,7 @@ body {
 .about-image img {
     width: 100%;
     height: auto;
-    border-radius: 15px; /* Keep the rounded corners */
+    border-radius: 200px; /* Keep the rounded corners */
     box-shadow: 0px 5px 15px rgba(0,0,0,0.1); /* Subtle shadow */
     position: relative;
     z-index: 1;
