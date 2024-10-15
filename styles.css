@@ -8,24 +8,23 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #f0f0f0;
     overflow-x: hidden;
-    scroll-behavior: smooth; /* Sayfalar arası yumuşak kayma eklendi */
+    scroll-behavior: smooth;
 }
 
 .home {
     position: relative;
     height: 100vh;
     display: flex;
-    justify-content: space-between; /* İçerik sağa ve sola yayılacak */
+    justify-content: space-between;
     align-items: center;
     background-color: #001f59;
     overflow: hidden;
 }
 
 .image {
-    margin-right: 0; /* Önceki margin-right kaldırılacak */
+    margin-right: 0;
 }
 
-/* Canvas kullanarak arka planda dinamik şekiller oluşturacağız */
 #particles-js {
     position: absolute;
     width: 100%;
@@ -33,20 +32,19 @@ body {
     z-index: 1;
     top: 0;
     left: 0;
-    pointer-events: none; /* Tıklamayı engeller */
+    pointer-events: none;
 }
 
-/* İçerik kısmı */
 .content {
-    z-index: 2; /* İçeriği ön plana çıkarıyoruz */
-    position: relative; /* Z-index çalışması için relative pozisyon verdik */
+    z-index: 2;
+    position: relative;
     color: white;
 }
 
-/* Butonlar ve diğer içerikler */
 .content h1, .content h2, .content a {
     color: white;
 }
+
 .navbar {
     background-color: white;
     padding: 10px 50px;
@@ -56,7 +54,7 @@ body {
     display: flex;
     justify-content: flex-end;
     z-index: 1000;
-    border-bottom: 5px solid #f8f8f8; /* Alt şerit rengini about bölümünün arka planı ile eşleştiriyoruz */
+    border-bottom: 5px solid #f8f8f8;
 }
 
 .navbar nav ul {
@@ -74,37 +72,36 @@ body {
 }
 
 .navbar nav ul li a:hover {
-    background-color: transparent; /* Arkaplanı transparan yapıyoruz */
-    color: #ff9800; /* Turuncu renk */
-    border-bottom: 2px solid #ff9800; /* Hover sırasında turuncu alt çizgi */
+    background-color: transparent;
+    color: #ff9800;
+    border-bottom: 2px solid #ff9800;
 }
 
-/* Başlık ve Alt Başlık */
 .content {
-    margin-left: 120px; /* Bütün yazıları biraz sağa kaydırıyoruz */
+    margin-left: 120px;
 }
 
 .content h1 {
     font-size: 4rem;
-    color: #001f59; /* Koyu lacivert */
+    color: #001f59;
     margin-bottom: 10px;
 }
 
 .highlight {
-    color: #ff9800; /* Gamze Albasan turuncu */
+    color: #ff9800;
 }
 
 .unity-developer {
     font-size: 2.5rem;
-    color: #86edbc !important; /* Unity Developer yazısı için yeni renk */
+    color: #86edbc !important;
     animation: typing 1.5s steps(20, end), blink-caret 0.5s step-end 2;
     border-right: 2px solid transparent;
     white-space: nowrap;
     overflow: hidden;
     margin-bottom: 60px;
     animation-fill-mode: forwards;
-    z-index: 2; /* Z-index ile öne çıkaralım */
-    position: relative; /* Z-index'in çalışması için relative pozisyon */
+    z-index: 2;
+    position: relative;
 }
 
 @keyframes typing {
@@ -114,14 +111,13 @@ body {
 
 @keyframes blink-caret {
     0%, 100% { border-color: transparent; }
-    50% { border-color: #86edbc; } /* Yeni renk */
+    50% { border-color: #86edbc; }
 }
 
-/* Buton Ayarları */
 .btn {
-    margin-top: 40px; /* "Unity Developer" ile About Me arasına daha fazla boşluk eklendi */
+    margin-top: 40px;
     padding: 10px 20px;
-    background-color: #001f59; /* Koyu lacivert buton */
+    background-color: #001f59;
     color: white;
     border-radius: 50px;
     font-size: 1.2rem;
@@ -130,11 +126,10 @@ body {
 }
 
 .btn:hover {
-    background-color: #ff9800; /* Hover sırasında turuncu */
+    background-color: #ff9800;
     transform: scale(1.1);
 }
 
-/* Resim ve hover */
 .image {
     display: flex;
     justify-content: center;
@@ -143,37 +138,44 @@ body {
 }
 
 .image img {
-    max-width: 400px; /* Resim boyutunu küçültüyoruz */
-    height: auto; /* Yükseklik otomatik ayarlanacak */
+    max-width: 400px;
+    height: auto;
     border-radius: 50%;
     transition: transform 0.3s ease;
 }
 
 .image img:hover {
-    transform: scale(1.05); /* Hover efekti */
+    transform: scale(1.05);
 }
 
-/* About Bölümü */
+/* About Section */
 .about-section {
     display: flex;
-    justify-content: flex-start; /* Resim ve yazıları yan yana hizalar */
+    justify-content: flex-start;
     align-items: center;
-    flex-direction: row; /* Yatay hizalama */
+    flex-direction: row;
     padding: 100px 50px;
     background-color: #f0f0f0;
 }
 
-about-image {
+.about-image {
     max-width: 30%; 
     height: auto; 
-    margin-right: 20px; 
-    position: relative; /* Z-index çalışması için relative yapın */
-    z-index: 1; /* Öne çıkarmak için z-index ayarı */
+    margin-right: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
 }
 
 .about-text {
-    max-width: 65%; /* Yazı alanını genişletin */
+    max-width: 65%;
 }
+
 @media (max-width: 768px) {
     .about-section {
         flex-direction: column;
@@ -190,43 +192,42 @@ about-image {
     }
 }
 
-/* About Me başlık ve metin stilleri */
 .about-text h2 {
-    font-size: 2.5rem; /* Başlık boyutu */
+    font-size: 2.5rem;
     font-weight: bold;
-    color: #6b00b6; /* Mor tonunda başlık rengi */
+    color: #6b00b6;
     margin-bottom: 20px;
 }
 
 .about-text h3 {
-    font-size: 1.8rem; /* Alt başlık boyutu */
-    color: #333; /* Koyu gri renk */
+    font-size: 1.8rem;
+    color: #333;
     margin-bottom: 10px;
 }
 
 .about-text p {
     font-size: 1.2rem;
-    color: #555; /* Paragrafların rengi */
+    color: #555;
     margin-bottom: 20px;
-    line-height: 1.6; /* Yazılar arası boşluk */
+    line-height: 1.6;
 }
 
 .about-text a {
-    font-size: 1.2rem; /* Buton metin boyutu */
+    font-size: 1.2rem;
     color: white;
-    background-color: #4b0082; /* Buton rengi - koyu mor */
+    background-color: #4b0082;
     padding: 10px 30px;
     text-decoration: none;
-    border-radius: 50px; /* Buton köşeleri yuvarlatıldı */
+    border-radius: 50px;
     transition: background-color 0.3s ease;
 }
 
 .about-text a:hover {
-    background-color: #32006a; /* Hover'da butonun koyulaşan rengi */
+    background-color: #32006a;
 }
 
 .about-text p strong {
-    color: #4b0082; /* E-posta ve konum için vurgulu renk */
+    color: #4b0082;
 }
 
 .resume-btn {
@@ -243,7 +244,6 @@ about-image {
     background-color: #ff9800;
 }
 
-/* Sosyal Medya İkonları */
 .social-icons {
     margin-top: 20px;
     display: flex;
@@ -251,7 +251,7 @@ about-image {
 }
 
 .social-icons a {
-    font-size: 2.5rem; /* İkonlar büyütüldü */
+    font-size: 2.5rem;
     color: #333;
     transition: color 0.3s;
 }
@@ -260,7 +260,6 @@ about-image {
     color: #ff9800;
 }
 
-/* Responsive ayarlar */
 @media (max-width: 768px) {
     .home {
         flex-direction: column;
