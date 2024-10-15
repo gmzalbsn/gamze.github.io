@@ -149,32 +149,72 @@ body {
 /* About Section */
 .about-section {
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start; 
+    justify-content: center; /* Centers the image and text horizontally */
+    align-items: center; /* Aligns the items vertically */
     padding: 100px 50px;
     background-color: #f0f0f0;
+    flex-direction: row; /* Ensures the image and text stay side by side */
 }
 
 .about-image {
     flex-shrink: 0; /* Prevents the image from shrinking */
-    width: 150px; /* Set image size to 150px */
+    width: 250px; /* Keep the image at 250px like in the example */
     height: auto;
-    margin-right: 50px; /* Increased margin to move text more to the right */
+    margin-right: 60px; /* Extra space between the image and text */
 }
 
 .about-image img {
     width: 100%;
     height: auto;
-    border-radius: 50%;
+    border-radius: 15px; /* Add slight rounding to the image edges */
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.1); /* Adds a subtle shadow */
 }
 
 .about-text {
-    flex-grow: 1; /* Allows the text container to take the remaining space */
+    flex-grow: 1; /* Allow the text to grow to fill the available space */
     text-align: left;
-    max-width: 70%; /* Ensures the text container does not stretch too much */
+    max-width: 60%; /* Restrict the text width to 60% */
+    line-height: 1.8; /* Add more space between the lines for readability */
+    color: #333; /* Slightly darker text color */
 }
 
-/* Responsive adjustments */
+.about-text h2 {
+    font-size: 2.5rem;
+    color: #6b00b6; /* Purple heading like before */
+}
+
+.about-text h3 {
+    font-size: 1.8rem;
+    color: #333; /* Darker subtitle */
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Updated Button Design */
+.resume-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 40px; /* Larger padding for a prominent button */
+    background-color: #4b0082;
+    color: white;
+    border-radius: 50px; /* Rounded button edges */
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.1); /* Subtle shadow for the button */
+}
+
+.resume-btn:hover {
+    background-color: #32006a;
+    box-shadow: 0px 7px 20px rgba(0,0,0,0.2); /* Hover effect for button */
+}
+
 @media (max-width: 768px) {
     .about-section {
         flex-direction: column; /* Stack image and text vertically on small screens */
@@ -182,67 +222,18 @@ body {
     }
 
     .about-image {
-        margin: 0 0 20px 0;
+        margin: 0 0 20px 0; /* Adjust the margin for small screens */
         width: 100%; /* Allow the image to take full width on smaller screens */
     }
 
     .about-text {
         max-width: 100%; /* Text should take up full width */
     }
-}
 
-.about-text h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #6b00b6;
-    margin-bottom: 20px;
+    .resume-btn {
+        width: 100%; /* Make the button full width on smaller screens */
+    }
 }
-
-.about-text h3 {
-    font-size: 1.8rem;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.about-text p {
-    font-size: 1.2rem;
-    color: #555;
-    margin-bottom: 20px;
-    line-height: 1.6;
-}
-
-.about-text a {
-    font-size: 1.2rem;
-    color: white;
-    background-color: #4b0082;
-    padding: 10px 30px;
-    text-decoration: none;
-    border-radius: 50px;
-    transition: background-color 0.3s ease;
-}
-
-.about-text a:hover {
-    background-color: #32006a;
-}
-
-.about-text p strong {
-    color: #4b0082;
-}
-
-.resume-btn {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #001f59;
-    color: white;
-    border-radius: 50px;
-    text-decoration: none;
-    font-size: 1.2rem;
-}
-
-.resume-btn:hover {
-    background-color: #ff9800;
-}
-
 .social-icons {
     margin-top: 20px;
     display: flex;
