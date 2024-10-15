@@ -52,7 +52,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #001f59;
+    background-color: #f0f0f0;  /* Changed to light background */
     overflow: hidden;
 }
 
@@ -69,13 +69,13 @@ body {
 .content {
     z-index: 2;
     position: relative;
-    color: white;
+    color: #001f59;  /* Dark text color to contrast with light background */
     margin-left: 120px;
 }
 
 .content h1 {
     font-size: 4rem;
-    color: #001f59;
+    color: #001f59; /* Set a visible color for the text */
     margin-bottom: 10px;
 }
 
@@ -121,16 +121,21 @@ body {
 }
 
 /* Social Icons */
+.social-icons {
+    margin-top: 20px; /* Added space between the About Me button and icons */
+    display: flex;
+    gap: 20px; /* Space between the icons */
+}
+
 .social-icons a {
-    color: white;
+    color: #001f59; /* Changed color to dark blue */
     font-size: 2rem;
     padding: 10px;
-    margin-right: 15px;
     transition: color 0.3s ease;
 }
 
 .social-icons a:hover {
-    color: #ff9800;
+    color: #ff9800; /* Hover effect */
 }
 
 /* Image Styling */
