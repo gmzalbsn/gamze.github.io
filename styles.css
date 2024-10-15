@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif; /* Apply the Poppins font globally */
+    font-family: 'Poppins', sans-serif;
     background-color: #f0f0f0;
     overflow-x: hidden;
     scroll-behavior: smooth;
@@ -167,12 +167,6 @@ body {
     z-index: 1;
 }
 
-/* Remove square image below the main image */
-.about-image::after {
-    content: "";
-    display: none !important; /* Ensure no square image is displayed */
-}
-
 /* Text Section */
 .about-text {
     flex-grow: 1;
@@ -191,57 +185,74 @@ body {
     margin-bottom: 10px;
 }
 
-/* Subtitle styling */
-.about-text h3 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.2rem;
-    color: #333; /* Dark text color */
-    margin-bottom: 10px;
+/* Contact Section */
+.contact-section {
+    padding: 100px 50px;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Paragraph styling */
-.about-text p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-    color: #555; /* Lighter text color */
+.contact-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.contact-image img {
+    max-width: 500px;
+    height: auto;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    padding: 20px;
+}
+
+.form-group {
     margin-bottom: 20px;
 }
 
-/* Button Design */
-.resume-btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 15px 40px; /* Larger padding for prominent button */
-    background-color: #001f59; /* Match About Me tones */
-    color: white;
-    border-radius: 50px;
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
     font-size: 1.1rem;
-    font-weight: bold;
-    text-decoration: none;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.form-group textarea {
+    resize: none;
+    height: 150px;
+}
+
+.submit-btn {
+    background-color: #001f59;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
     transition: background-color 0.3s ease;
-    box-shadow: 0px 5px 15px rgba(0,0,0,0.1); /* Button shadow */
 }
 
-.resume-btn:hover {
-    background-color: #ff9800; /* Match hover effect like other buttons */
-    box-shadow: 0px 7px 20px rgba(0,0,0,0.2);
-}
-
-/* Social Icons */
-.social-icons {
-    margin-top: 20px;
-    display: flex;
-    gap: 15px;
-}
-
-.social-icons a {
-    font-size: 2.5rem;
-    color: #333;
-    transition: color 0.3s;
-}
-
-.social-icons a:hover {
-    color: #ff9800;
+.submit-btn:hover {
+    background-color: #ff9800;
 }
 
 /* Responsive adjustments */
@@ -263,19 +274,13 @@ body {
     .resume-btn {
         width: 100%;
     }
-}
 
-@media (max-width: 768px) {
-    .home {
+    .contact-container {
         flex-direction: column;
-        text-align: center;
+        align-items: center;
     }
 
-    .image {
-        margin: 20px 0;
-    }
-
-    .content {
-        margin-left: 0;
+    .contact-form {
+        width: 100%;
     }
 }
