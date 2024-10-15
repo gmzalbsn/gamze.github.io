@@ -186,7 +186,7 @@ body {
 .about-text h2 {
     font-family: 'Poppins', sans-serif;
     font-size: 2.5rem; /* Larger heading size */
-    color: #6b00b6; /* Purple color */
+    color: #001f59; /* Match Hi There heading color */
     font-weight: bold;
     margin-bottom: 10px;
 }
@@ -212,7 +212,7 @@ body {
     display: inline-block;
     margin-top: 20px;
     padding: 15px 40px; /* Larger padding for prominent button */
-    background-color: #4b0082;
+    background-color: #001f59; /* Match About Me tones */
     color: white;
     border-radius: 50px;
     font-size: 1.1rem;
@@ -223,7 +223,7 @@ body {
 }
 
 .resume-btn:hover {
-    background-color: #32006a;
+    background-color: #ff9800; /* Match hover effect like other buttons */
     box-shadow: 0px 7px 20px rgba(0,0,0,0.2);
 }
 
