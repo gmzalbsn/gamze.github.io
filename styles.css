@@ -152,7 +152,7 @@ body {
 .about-section {
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start; /* Align items at the top */
     flex-direction: row;
     padding: 100px 50px;
     background-color: #f0f0f0;
@@ -161,9 +161,7 @@ body {
 .about-image {
     max-width: 30%; 
     height: auto; 
-    margin-right: 20px;
-    position: relative;
-    z-index: 1;
+    margin-right: 20px; /* Space between the image and the text */
 }
 
 .about-image img {
@@ -174,6 +172,7 @@ body {
 
 .about-text {
     max-width: 65%;
+    text-align: left; /* Ensures text is left-aligned */
 }
 
 @media (max-width: 768px) {
