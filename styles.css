@@ -75,7 +75,7 @@ body {
 
 .content h1 {
     font-size: 4rem;
-    color: #001f59; /* Set a visible color for the text */
+    color: #001f59;
     margin-bottom: 10px;
 }
 
@@ -100,7 +100,7 @@ body {
 }
 
 .dynamic-text {
-    border-right: 2px solid #86edbc; /* Caret effect */
+    border-right: 2px solid #86edbc;
     animation: blink-caret 0.7s step-end infinite;
 }
 
@@ -142,42 +142,29 @@ body {
 /* About Section */
 .about-section {
     display: flex;
-    justify-content: center; /* Centers the section horizontally */
-    align-items: center; /* Aligns the items vertically */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
     padding: 100px 50px;
     background-color: #f0f0f0;
-    flex-direction: row;
 }
 
-.about-image {
-    flex-shrink: 0;
-    width: 350px; /* Large image size */
+/* About Me Text and Logo Centered */
+.about-container {
+    display: flex;
+    align-items: center; /* Vertically align the logo and the text */
+    justify-content: center; /* Center the entire container horizontally */
+}
+
+.about-logo {
+    width: 50px; /* Small logo size */
     height: auto;
-    margin-right: 100px; /* Increase the margin to move text further to the right */
-    position: relative;
+    margin-right: 15px; /* Space between the logo and the text */
 }
 
-/* Main Image Styling */
-.about-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 200px; /* Keep the rounded corners */
-    box-shadow: 0px 5px 15px rgba(0,0,0,0.1); /* Subtle shadow */
-    position: relative;
-    z-index: 1;
-}
-
-/* Remove square image below the main image */
-.about-image::after {
-    content: "";
-    display: none !important; /* Ensure no square image is displayed */
-}
-
-/* Text Section */
 .about-text {
-    flex-grow: 1;
-    text-align: left;
-    max-width: 50%;
+    text-align: center;
+    max-width: 50%; /* Reduce text width */
     line-height: 1.6;
     color: #333;
 }
@@ -185,25 +172,27 @@ body {
 /* About Me Heading */
 .about-text h2 {
     font-family: 'Poppins', sans-serif;
-    font-size: 2.5rem; /* Larger heading size */
-    color: #6b00b6; /* Purple color */
+    font-size: 2.5rem;
+    color: #6b00b6;
     font-weight: bold;
     margin-bottom: 10px;
+    display: flex;
+    align-items: center;
 }
 
 /* Subtitle styling */
 .about-text h3 {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.2rem;
-    color: #333; /* Dark text color */
-    margin-bottom: 10px;
+    font-size: 1.7rem;
+    color: #333;
+    margin-bottom: 20px;
 }
 
 /* Paragraph styling */
 .about-text p {
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
-    color: #555; /* Lighter text color */
+    color: #555;
     margin-bottom: 20px;
 }
 
@@ -211,7 +200,7 @@ body {
 .resume-btn {
     display: inline-block;
     margin-top: 20px;
-    padding: 15px 40px; /* Larger padding for prominent button */
+    padding: 15px 40px;
     background-color: #4b0082;
     color: white;
     border-radius: 50px;
@@ -219,7 +208,7 @@ body {
     font-weight: bold;
     text-decoration: none;
     transition: background-color 0.3s ease;
-    box-shadow: 0px 5px 15px rgba(0,0,0,0.1); /* Button shadow */
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
 }
 
 .resume-btn:hover {
@@ -247,13 +236,15 @@ body {
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .about-section {
-        flex-direction: column;
         text-align: center;
     }
 
-    .about-image {
-        margin: 0 0 20px 0;
-        width: 100%;
+    .about-container {
+        flex-direction: column; /* Stack logo and text vertically on smaller screens */
+    }
+
+    .about-logo {
+        margin-bottom: 20px; /* Space between logo and text */
     }
 
     .about-text {
