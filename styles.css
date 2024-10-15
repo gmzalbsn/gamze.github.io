@@ -149,17 +149,17 @@ body {
 /* About Section */
 .about-section {
     display: flex;
-    justify-content: flex-start; /* Aligns items to the left */
-    align-items: flex-start; /* Aligns the items at the top */
+    justify-content: flex-start;
+    align-items: flex-start; 
     padding: 100px 50px;
     background-color: #f0f0f0;
 }
 
 .about-image {
     flex-shrink: 0; /* Prevents the image from shrinking */
-    width: 250px; /* Fixes the image width */
+    width: 150px; /* Set image size to 150px */
     height: auto;
-    margin-right: 30px; /* Adds space between image and text */
+    margin-right: 50px; /* Increased margin to move text more to the right */
 }
 
 .about-image img {
@@ -171,7 +171,7 @@ body {
 .about-text {
     flex-grow: 1; /* Allows the text container to take the remaining space */
     text-align: left;
-    max-width: 70%; /* Restrict the width of the text to prevent it from becoming too wide */
+    max-width: 70%; /* Ensures the text container does not stretch too much */
 }
 
 /* Responsive adjustments */
