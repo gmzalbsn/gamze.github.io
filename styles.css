@@ -194,9 +194,9 @@ body {
 /* Subtitle styling */
 .about-text h3 {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.7rem;
+    font-size: 1.2rem;
     color: #333; /* Dark text color */
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 /* Paragraph styling */
