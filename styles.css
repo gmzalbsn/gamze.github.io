@@ -149,43 +149,42 @@ body {
 /* About Section */
 .about-section {
     display: flex;
-    justify-content: flex-start; /* Align items starting from the left */
-    align-items: flex-start; /* Aligns the items at the top of the container */
-    flex-direction: row; /* Make sure image and text are side by side */
+    flex-direction: row; /* Ensures horizontal layout */
+    justify-content: flex-start; /* Align items to the left */
+    align-items: flex-start; /* Align items at the top */
     padding: 100px 50px;
     background-color: #f0f0f0;
 }
 
 .about-image {
-    flex: 0 0 30%; /* Ensures the image takes up 30% of the width */
-    max-width: 30%; /* Ensures the image doesn't grow beyond 30% */
-    height: auto;
-    margin-right: 20px; /* Space between the image and the text */
+    flex: 0 0 auto; /* Make sure the image container does not grow */
+    max-width: 250px; /* Limit the size of the image container */
+    margin-right: 30px; /* Create space between the image and text */
 }
 
 .about-image img {
     width: 100%;
     height: auto;
-    border-radius: 50%;
+    border-radius: 50%; /* Keep the image rounded */
 }
 
 .about-text {
-    flex: 1; /* This ensures the text takes up the rest of the space */
-    text-align: left; /* Align text to the left */
+    flex: 1; /* Allow the text to take up the remaining space */
+    text-align: left; /* Ensure the text is aligned to the left */
 }
 @media (max-width: 768px) {
     .about-section {
-        flex-direction: column;
+        flex-direction: column; /* Stack image and text vertically on small screens */
         text-align: center;
     }
 
     .about-image {
-        max-width: 100%;
-        margin: 0 0 20px 0;
+        margin: 0 0 20px 0; /* Add space below the image */
+        max-width: 100%; /* Allow image to take full width on smaller screens */
     }
 
     .about-text {
-        max-width: 100%;
+        max-width: 100%; /* Text should take up full width */
     }
 }
 
