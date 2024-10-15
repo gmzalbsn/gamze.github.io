@@ -120,6 +120,19 @@ body {
     transform: scale(1.1);
 }
 
+/* Social Icons */
+.social-icons a {
+    color: white;
+    font-size: 2rem;
+    padding: 10px;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ff9800;
+}
+
 /* Image Styling */
 .image {
     display: flex;
@@ -142,8 +155,8 @@ body {
 /* About Section */
 .about-section {
     display: flex;
-    justify-content: center; /* Centers the section horizontally */
-    align-items: center; /* Aligns the items vertically */
+    justify-content: center;
+    align-items: center;
     padding: 100px 50px;
     background-color: #f0f0f0;
     flex-direction: row;
@@ -151,23 +164,18 @@ body {
 
 .about-image {
     flex-shrink: 0;
-    width: 350px; /* Large image size */
+    width: 350px;
     height: auto;
-    margin-right: 100px; /* Increase the margin to move text further to the right */
-    position: relative;
+    margin-right: 100px;
 }
 
-/* Main Image Styling */
 .about-image img {
     width: 100%;
     height: auto;
-    border-radius: 200px; /* Keep the rounded corners */
-    box-shadow: 0px 5px 15px rgba(0,0,0,0.1); /* Subtle shadow */
-    position: relative;
-    z-index: 1;
+    border-radius: 200px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
 }
 
-/* Text Section */
 .about-text {
     flex-grow: 1;
     text-align: left;
@@ -176,13 +184,32 @@ body {
     color: #333;
 }
 
-/* About Me Heading */
 .about-text h2 {
     font-family: 'Poppins', sans-serif;
-    font-size: 2.5rem; /* Larger heading size */
-    color: #001f59; /* Match Hi There heading color */
+    font-size: 2.5rem;
+    color: #001f59;
     font-weight: bold;
     margin-bottom: 10px;
+}
+
+/* Resume Button */
+.resume-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 40px;
+    background-color: #001f59;
+    color: white;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+}
+
+.resume-btn:hover {
+    background-color: #ff9800;
+    box-shadow: 0px 7px 20px rgba(0,0,0,0.2);
 }
 
 /* Contact Section */
