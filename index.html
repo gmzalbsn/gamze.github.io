@@ -11,18 +11,18 @@
     <!-- Particles.js Kütüphanesi -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <style>
-        /* Yumuşak kaydırma efekti */
+        /* Smooth scrolling effect */
         html {
             scroll-behavior: smooth;
         }
 
-        /* Home sayfası (tam ekran) */
+        /* Home page (full screen) */
         .home {
             height: 100vh;
             background-color: #f5f5f5;
         }
 
-        /* About Me sayfası daha büyük */
+        /* About Me section height */
         .about-section {
             min-height: 110vh;
         }
@@ -30,26 +30,25 @@
 </head>
 <body>
 
-    <!-- Navigasyon Menüsü -->
+    <!-- Navigation Menu -->
     <header class="navbar">
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li> <!-- Changed Skills to Portfolio -->
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact">Contact</a></li> <!-- Removed Portfolio button -->
             </ul>
         </nav>
     </header>
 
-    <!-- Hero Bölümü (Home) -->
+    <!-- Hero Section (Home) -->
     <section class="home" id="home">
         <div id="particles-js"></div>
         <div class="content">
             <h1>Hi There, <br> I'm <span class="highlight">Gamze Albasan</span></h1>
             <h2 class="unity-developer"><span class="dynamic-text"></span></h2>
             <a href="#about" class="btn">About Me</a>
-            <a href="#portfolio" class="btn">Portfolio</a> <!-- Added Portfolio button -->
+            <a href="#contact" class="btn">Contact</a> <!-- Kept Contact button only -->
             <div class="social-icons">
                 <a href="https://www.linkedin.com/in/gamze-albasan-1aa346187/" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="https://github.com/gmzalbsn" target="_blank"><i class="fab fa-github"></i></a>
@@ -78,17 +77,38 @@
         </div>
     </section>
 
-    <!-- Portfolio Section (formerly Skills) -->
-    <section id="portfolio" class="portfolio-section">
-        <h2>Portfolio</h2>
-        <div class="portfolio-content">
-            <!-- Portfolio items go here -->
-            <p>Check out my work below:</p>
-            <!-- Add portfolio items or links to projects -->
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2>Contact Me</h2>
+        <div class="contact-container">
+            <div class="contact-image">
+                <img src="Assets/contact-image.png" alt="Contact">
+            </div>
+            <div class="contact-form">
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="name"><i class="fas fa-user"></i> Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone"><i class="fas fa-phone"></i> Phone</label>
+                        <input type="text" id="phone" name="phone" placeholder="Your phone number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message"><i class="fas fa-comment"></i> Message</label>
+                        <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn submit-btn">Submit <i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
         </div>
     </section>
 
-    <!-- Particles.js Ayarları -->
+    <!-- Particles.js Settings -->
     <script>
         particlesJS("particles-js", {
             "particles": {
