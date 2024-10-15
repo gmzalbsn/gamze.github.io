@@ -1,3 +1,4 @@
+/* General reset and styling */
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +6,7 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif; /* Apply the Poppins font globally */
     background-color: #f0f0f0;
     overflow-x: hidden;
     scroll-behavior: smooth;
@@ -74,7 +75,7 @@ body {
 
 .content h1 {
     font-size: 4rem;
-    color: #ffffff;
+    color: #001f59; /* Set a visible color for the text */
     margin-bottom: 10px;
 }
 
@@ -169,7 +170,7 @@ body {
 /* Remove square image below the main image */
 .about-image::after {
     content: "";
-    display: none; /* Hides any unwanted square image */
+    display: none !important; /* Ensure no square image is displayed */
 }
 
 /* Text Section */
@@ -181,28 +182,28 @@ body {
     color: #333;
 }
 
-/* About Me Heading Similar to Example */
+/* About Me Heading */
 .about-text h2 {
     font-family: 'Poppins', sans-serif;
-    font-size: 2.5rem; /* Larger heading size similar to the example */
-    color: #6b00b6;
+    font-size: 2.5rem; /* Larger heading size */
+    color: #6b00b6; /* Purple color */
     font-weight: bold;
     margin-bottom: 10px;
 }
 
-/* Subtitle Styling */
+/* Subtitle styling */
 .about-text h3 {
     font-family: 'Poppins', sans-serif;
     font-size: 1.7rem;
-    color: #333;
+    color: #333; /* Dark text color */
     margin-bottom: 20px;
 }
 
-/* Paragraph Styling */
+/* Paragraph styling */
 .about-text p {
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
-    color: #555;
+    color: #555; /* Lighter text color */
     margin-bottom: 20px;
 }
 
