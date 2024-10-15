@@ -75,7 +75,7 @@ body {
 
 .content h1 {
     font-size: 4rem;
-    color: #001f59;
+    color: #001f59; /* Set a visible color for the text */
     margin-bottom: 10px;
 }
 
@@ -129,9 +129,9 @@ body {
 }
 
 .image img {
-    max-width: 400px;
+    max-width: 250px; /* Fix the image size to prevent it from becoming too large */
     height: auto;
-    border-radius: 50%;
+    border-radius: 50%; /* Keep image rounded */
     transition: transform 0.3s ease;
 }
 
@@ -142,49 +142,35 @@ body {
 /* About Section */
 .about-section {
     display: flex;
-    flex-direction: column; /* Stack content vertically */
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
+    flex-direction: row; /* Align image and text side by side */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Align content vertically */
     padding: 100px 50px;
     background-color: #f0f0f0;
 }
 
-/* About Me Text and Logo Centered */
-.about-container {
-    display: flex;
-    align-items: center; /* Vertically align the logo and the text */
-    justify-content: center; /* Center the entire container horizontally */
-}
-
-.about-logo {
-    width: 50px; /* Small logo size */
-    height: auto;
-    margin-right: 15px; /* Space between the logo and the text */
-}
-
+/* About Text */
 .about-text {
-    text-align: center;
-    max-width: 50%; /* Reduce text width */
-    line-height: 1.6;
+    max-width: 50%; /* Ensure text doesn't stretch too wide */
+    text-align: left;
+    padding-left: 30px; /* Add space between image and text */
     color: #333;
 }
 
 /* About Me Heading */
 .about-text h2 {
     font-family: 'Poppins', sans-serif;
-    font-size: 2.5rem;
-    color: #6b00b6;
+    font-size: 2.5rem; /* Large heading size */
+    color: #6b00b6; /* Purple color */
     font-weight: bold;
     margin-bottom: 10px;
-    display: flex;
-    align-items: center;
 }
 
 /* Subtitle styling */
 .about-text h3 {
     font-family: 'Poppins', sans-serif;
     font-size: 1.7rem;
-    color: #333;
+    color: #333; /* Dark text color */
     margin-bottom: 20px;
 }
 
@@ -192,7 +178,7 @@ body {
 .about-text p {
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
-    color: #555;
+    color: #555; /* Lighter text color */
     margin-bottom: 20px;
 }
 
@@ -200,7 +186,7 @@ body {
 .resume-btn {
     display: inline-block;
     margin-top: 20px;
-    padding: 15px 40px;
+    padding: 15px 40px; /* Larger padding for prominent button */
     background-color: #4b0082;
     color: white;
     border-radius: 50px;
@@ -208,7 +194,7 @@ body {
     font-weight: bold;
     text-decoration: none;
     transition: background-color 0.3s ease;
-    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.1); /* Button shadow */
 }
 
 .resume-btn:hover {
@@ -236,19 +222,17 @@ body {
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .about-section {
+        flex-direction: column; /* Stack image and text vertically */
         text-align: center;
     }
 
-    .about-container {
-        flex-direction: column; /* Stack logo and text vertically on smaller screens */
-    }
-
-    .about-logo {
-        margin-bottom: 20px; /* Space between logo and text */
+    .about-image {
+        margin-bottom: 20px; /* Space between image and text */
+        width: 100%; /* Full width for smaller screens */
     }
 
     .about-text {
-        max-width: 100%;
+        max-width: 100%; /* Allow text to take full width */
     }
 
     .resume-btn {
