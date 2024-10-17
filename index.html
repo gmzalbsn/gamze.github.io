@@ -178,7 +178,7 @@
         });
 
         // JavaScript for dynamic changing text
-        const developerTitles = ["Unity Developer", "Game Developer", "Software Developer"];
+       const developerTitles = ["Unity Developer", "Game Developer", "Software Developer"];
         let index = 0;
         let letterIndex = 0;
         let currentTitle = '';
@@ -211,21 +211,18 @@
             }
         }
 
-       document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function() {
             typeText();
 
-            // Page transition effect
-            const navButtons = document.querySelectorAll('.nav-btn');
-            
-            navButtons.forEach(button => {
-                button.addEventListener('click', function(event) {
+            // Add transition effect for all buttons
+            const allLinks = document.querySelectorAll('a, button');
+            allLinks.forEach(link => {
+                link.addEventListener('click', function(event) {
                     event.preventDefault();
-                    const target = this.getAttribute('href');
                     document.body.classList.add('fade-out');
-
                     setTimeout(() => {
-                        window.location.href = target;
-                    }, 500); // Wait for the transition to complete
+                        window.location.href = link.getAttribute('href');
+                    }, 500);
                 });
             });
         });
