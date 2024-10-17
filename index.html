@@ -17,10 +17,10 @@
     <header class="navbar">
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#home" class="scroll-link">Home</a></li>
+                <li><a href="#about" class="scroll-link">About</a></li>
                 <li><a href="#">Portfolio</a></li> <!-- Portfolio remains but doesn't link anywhere -->
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact" class="scroll-link">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -31,7 +31,7 @@
         <div class="content">
             <h1>Hi There, <br> I'm <span class="highlight">Gamze Albasan</span></h1>
             <h2 class="unity-developer"><span class="dynamic-text"></span></h2>
-            <a href="#about" class="btn">About Me</a> <!-- Only About Me button remains -->
+            <a href="#about" class="btn scroll-link">About Me</a>
             <div class="social-icons">
                 <a href="https://www.linkedin.com/in/gamze-albasan-1aa346187/" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="https://github.com/gmzalbsn" target="_blank"><i class="fab fa-github"></i></a>
@@ -45,7 +45,7 @@
     <!-- About Me Section -->
     <section id="about" class="about-section">
         <div class="about-image">
-            <img src="Assets/myphoto.png" alt="Gamze Albasan"> <!-- Check this image path -->
+            <img src="Assets/myphoto.png" alt="Gamze Albasan">
         </div>
         <div class="about-text">
             <h2>About Me</h2>
@@ -60,7 +60,7 @@
         </div>
     </section>
 
-    <!-- Contact Section (without Contact Me title) -->
+    <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <div class="contact-container">
             <div class="contact-image">
@@ -90,8 +90,9 @@
         </div>
     </section>
 
-    <!-- Particles.js Settings -->
+    <!-- JavaScript for Particles.js and Smooth Scroll -->
     <script>
+        // Particle.js settings
         particlesJS("particles-js", {
             "particles": {
                 "number": {
@@ -177,7 +178,19 @@
             "retina_detect": true
         });
 
-        // JavaScript for dynamic changing text
+        // Custom smooth scroll script
+        document.querySelectorAll('.scroll-link').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                window.scrollTo({
+                    top: target.offsetTop,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Dynamic text change script
         const developerTitles = ["Unity Developer", "Game Developer", "Software Developer"];
         let index = 0;
         let letterIndex = 0;
