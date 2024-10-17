@@ -11,7 +11,7 @@
     <!-- Particles.js Library -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
-<body>
+<body class="fade-in"> <!-- Add fade-in class to body -->
 
     <!-- Navigation Menu -->
     <header class="navbar">
@@ -211,8 +211,23 @@
             }
         }
 
-        document.addEventListener("DOMContentLoaded", function() {
+       document.addEventListener("DOMContentLoaded", function() {
             typeText();
+
+            // Page transition effect
+            const navButtons = document.querySelectorAll('.nav-btn');
+            
+            navButtons.forEach(button => {
+                button.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const target = this.getAttribute('href');
+                    document.body.classList.add('fade-out');
+
+                    setTimeout(() => {
+                        window.location.href = target;
+                    }, 500); // Wait for the transition to complete
+                });
+            });
         });
     </script>
 
