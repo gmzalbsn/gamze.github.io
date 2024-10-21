@@ -62,58 +62,29 @@
     </section>
 
     <!-- Portfolio Section -->
-<section id="portfolio" class="portfolio-section">
-    <h2>Portfolio</h2>
-    <div class="grid-container">
-        <!-- Proje Kartı -->
-        <div class="project-card">
-            <img src="Assets/Portfolio/proje1_1.jpeg" alt="Design Match: Tile Pair Puzzle" class="project-image">
-            <h3>Design Match: Tile Pair Puzzle</h3>
-            <p>Match-3 algoritması ve Firebase entegrasyonu...</p>
-            <button class="btn" onclick="openModal('project1')">Details</button>
-        </div>
-    </div>
-</section>
-
-<!-- Modal for Project 1 with Carousel -->
-<div id="project1" class="modal">
-    <div class="modal-content">
-        <!-- Kapatma X simgesini iptal etmek için kaldırabiliriz -->
-        <h3>Design Match: Tile Pair Puzzle</h3>
-
-        <!-- Carousel Yapısı -->
-        <div class="carousel-container">
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <div class="carousel">
-                <div class="carousel-item">
-                    <img src="Assets/Portfolio/proje1_1.jpeg" alt="Project Image 1">
-                </div>
-                <div class="carousel-item">
-                    <img src="Assets/Portfolio/proje1_2.jpeg" alt="Project Image 2">
-                </div>
-                <div class="carousel-item">
-                    <img src="Assets/Portfolio/proje1_3.jpeg" alt="Project Image 3">
-                </div>
+    <section id="portfolio" class="portfolio-section">
+        <h2>Portfolio</h2>
+        <div class="grid-container">
+            <!-- Proje Kartı -->
+            <div class="project-card">
+                <img src="Assets/Portfolio/proje1.jpeg" alt="Design Match: Tile Pair Puzzle" class="project-image">
+                <h3>Design Match: Tile Pair Puzzle</h3>
+                <p>Match-3 algoritması ve Firebase entegrasyonu...</p>
+                <button class="btn" onclick="openModal('project1')">Details</button>
             </div>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
+    </section>
 
-        <!-- Açıklama ve Google Play Store linki -->
-        <div class="modal-text">
-            <p>Design Match: Tile Pair Puzzle is a match-3 game developed by the Fluffy Fox team, a subsidiary of Machingam, based in the UK. In this project, I worked on the software development team, contributing to the implementation of the Match-3 algorithm and managing user data storage with Firebase.</p>
-
-            <p>For more information about the game: <a href="https://play.google.com/store/apps/details?id=com.crush.design.match" target="_blank">Google Play Store</a></p>
+    <!-- Modal for Project 1 -->
+    <div id="project1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('project1')">&times;</span>
+            <h3>Design Match: Tile Pair Puzzle</h3>
+            <img src="Assets/Portfolio/proje1.jpeg" alt="Design Match: Tile Pair Puzzle" class="modal-image">
+            <p>Match-3 türünde bir oyun olan <strong>Design Match: Tile Pair Puzzle</strong>, Fluffy Fox ekibi tarafından geliştirilmiştir. İngiltere merkezli bu ekip, Machingam şirketinin bir yan kolu olarak faaliyet göstermektedir. Bu projede yazılım geliştirme ekibinde yer aldım ve Match-3 algoritmasının yazılmasına katkı sağladım. Ayrıca Firebase ile kullanıcı bilgilerini güvenli bir şekilde depolama işlemlerini yürüttüm.</p>
+            <p>Oyun hakkında daha fazla bilgi için: <a href="https://play.google.com/store/apps/details?id=com.crush.design.match" target="_blank">Google Play Store</a></p>
         </div>
-
-        <!-- Büyük bir Close butonu (X'i kaldırdık) -->
-        <button class="btn-large-close" onclick="closeModal('project1')">Close</button>
     </div>
-</div>
-        <!-- Carousel Controls -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    </div>
-</div>
 
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
