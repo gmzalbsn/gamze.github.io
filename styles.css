@@ -306,7 +306,20 @@ body {
     font-size: 24px;
     cursor: pointer;
 }
+.modal .btn {
+    margin-top: 20px;
+    background-color: #ff9800;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
 
+.modal .btn:hover {
+    background-color: #ff5722;
+}
 /* Modal Açma-Kapatma Efekti */
 .modal.active {
     display: flex;
