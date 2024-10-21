@@ -1,4 +1,3 @@
-
 function openModal(projectId) {
     document.getElementById(projectId).style.display = 'flex';
 }
@@ -8,10 +7,10 @@ function closeModal(projectId) {
 }
 
 window.addEventListener('scroll', function() {
-    closeModal('project1');
-    closeModal('project2');
-    closeModal('project3');
-    closeModal('project4');
-    closeModal('project5');
-    closeModal('project6');
+    const modals = document.querySelectorAll('.modal');
+    modals.forEach(modal => {
+        if (modal.style.display === 'flex') {
+            modal.style.display = 'none';
+        }
+    });
 });
