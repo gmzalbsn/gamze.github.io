@@ -327,7 +327,8 @@ body {
     display: flex;
     overflow: hidden;
     width: 100%;
-    max-width: 1000px; /* Resimler daha büyük olacak */
+    max-width: 800px; /* Resim genişliği */
+    position: relative; /* Butonların doğru yerleşmesi için relative ayarladık */
 }
 
 .carousel-item {
@@ -349,30 +350,31 @@ body {
     transform: translateY(-50%);
     color: #333;
     font-size: 36px;
-    padding: 20px;
+    padding: 10px;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 50%;
     user-select: none;
-    z-index: 1000; /* Butonların her şeyin üzerinde olmasını sağlıyoruz */
+    z-index: 10; /* Modal içindeki diğer öğelerin üzerinde olacak */
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     transition: background-color 0.3s ease;
 }
 
 .prev {
-    left: -60px; /* Daha doğru bir şekilde yerleştirdik */
+    left: 20px; /* Butonları resmin içine, sol tarafa aldık */
 }
 
 .next {
-    right: -60px; /* Daha doğru bir şekilde yerleştirdik */
+    right: 20px; /* Butonları resmin içine, sağ tarafa aldık */
 }
 
 .prev:hover, .next:hover {
     background-color: rgba(255, 255, 255, 1); /* Hover efekti ile görünürlüğü artır */
 }
+
 /* Modal Açma-Kapatma Efekti */
 .modal.active {
     display: flex;
