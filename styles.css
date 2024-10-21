@@ -6,10 +6,11 @@
 }
 
 body {
-   font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: #f0f0f0;
     overflow-x: hidden;
 }
+
 .fade-out {
     opacity: 0;
     transition: opacity 0.5s ease-out;
@@ -60,7 +61,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f0f0f0;  /* Changed to light background */
+    background-color: #f0f0f0;
     overflow: hidden;
 }
 
@@ -77,13 +78,13 @@ body {
 .content {
     z-index: 2;
     position: relative;
-    color: #001f59;  /* Dark text color to contrast with light background */
+    color: #001f59;
     margin-left: 120px;
 }
 
 .content h1 {
     font-size: 4rem;
-    color: #001f59; /* Set a visible color for the text */
+    color: #001f59;
     margin-bottom: 10px;
 }
 
@@ -108,7 +109,7 @@ body {
 }
 
 .dynamic-text {
-    border-right: 2px solid #86edbc; /* Caret effect */
+    border-right: 2px solid #86edbc;
     animation: blink-caret 0.7s step-end infinite;
 }
 
@@ -130,20 +131,20 @@ body {
 
 /* Social Icons */
 .social-icons {
-    margin-top: 20px; /* Added space between the About Me button and icons */
+    margin-top: 20px;
     display: flex;
-    gap: 20px; /* Space between the icons */
+    gap: 20px;
 }
 
 .social-icons a {
-    color: #001f59; /* Changed color to dark blue */
+    color: #001f59;
     font-size: 2rem;
     padding: 10px;
     transition: color 0.3s ease;
 }
 
 .social-icons a:hover {
-    color: #ff9800; /* Hover effect */
+    color: #ff9800;
 }
 
 /* Image Styling */
@@ -224,6 +225,7 @@ body {
     background-color: #ff9800;
     box-shadow: 0px 7px 20px rgba(0,0,0,0.2);
 }
+
 /* Portfolio Section */
 .portfolio-section {
     padding: 100px 50px;
@@ -233,8 +235,8 @@ body {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 sütun */
-    gap: 20px; /* Kartlar arasında boşluk */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
     padding: 20px;
 }
 
@@ -248,7 +250,7 @@ body {
 }
 
 .project-card:hover {
-    transform: scale(1.05); /* Hover efekti */
+    transform: scale(1.05);
 }
 
 .project-image {
@@ -271,6 +273,7 @@ body {
 .btn:hover {
     background-color: #ff9800;
 }
+
 /* Modal Styling */
 .modal {
     display: none;
@@ -279,37 +282,104 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
     justify-content: center;
     align-items: center;
 }
 
 .modal-content {
     background-color: white;
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
     width: 80%;
-    max-width: 700px;
+    max-width: 1200px;
     text-align: center;
+    position: relative;
 }
 
-.modal-image {
-    width: 100%;
-    border-radius: 10px;
+/* Carousel Styles */
+.carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 20px;
 }
 
-.close {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 24px;
-    cursor: pointer;
+.carousel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1000px;
 }
 
-/* Modal Açma-Kapatma Efekti */
-.modal.active {
+.carousel-item {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Carousel Navigation Buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #333;
+    font-size: 36px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    user-select: none;
+    z-index: 10;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    transition: background-color 0.3s ease;
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+/* Modal text styling */
+.modal-text {
+    margin-top: 20px;
+}
+
+.modal-text p {
+    margin-bottom: 20px;
+}
+
+.btn-large-close {
+    margin-top: 20px;
+    padding: 15px 30px;
+    background-color: #ff9800;
+    color: white;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-large-close:hover {
+    background-color: #ff5722;
 }
 
 /* Contact Section */
