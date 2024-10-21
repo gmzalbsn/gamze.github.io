@@ -62,37 +62,49 @@
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio-section">
-        <h2>Portfolio</h2>
-        <div class="grid-container">
-            <!-- Proje Kartı -->
-            <div class="project-card">
-                <img src="Assets/Portfolio/proje1_1.jpeg" alt="Design Match: Tile Pair Puzzle" class="project-image">
-                <h3>Design Match: Tile Pair Puzzle</h3>
-                <p>Match-3 algoritması ve Firebase entegrasyonu...</p>
-                <button class="btn" onclick="openModal('project1')">Details</button>
-            </div>
+<section id="portfolio" class="portfolio-section">
+    <h2>Portfolio</h2>
+    <div class="grid-container">
+        <!-- Proje Kartı -->
+        <div class="project-card">
+            <img src="Assets/Portfolio/proje1_1.jpeg" alt="Design Match: Tile Pair Puzzle" class="project-image">
+            <h3>Design Match: Tile Pair Puzzle</h3>
+            <p>Match-3 algoritması ve Firebase entegrasyonu...</p>
+            <button class="btn" onclick="openModal('project1')">Details</button>
         </div>
-    </section>
+    </div>
+</section>
 
-   <!-- Modal for Project 1 with Carousel -->
+<!-- Modal for Project 1 with Carousel -->
 <div id="project1" class="modal">
     <div class="modal-content">
         <span class="close" onclick="closeModal('project1')">&times;</span>
         <h3>Design Match: Tile Pair Puzzle</h3>
-        
+
         <!-- Carousel Yapısı -->
-        <div class="carousel">
-            <div class="carousel-item">
-                <img src="Assets/Portfolio/proje1_1.jpeg" alt="Project Image 1">
+        <div class="carousel-container">
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <div class="carousel">
+                <div class="carousel-item">
+                    <img src="Assets/Portfolio/proje1_1.jpeg" alt="Project Image 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="Assets/Portfolio/proje1_2.jpeg" alt="Project Image 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="Assets/Portfolio/proje1_3.jpeg" alt="Project Image 3">
+                </div>
             </div>
-            <div class="carousel-item">
-                <img src="Assets/Portfolio/proje1_2.jpeg" alt="Project Image 2">
-            </div>
-            <div class="carousel-item">
-                <img src="Assets/Portfolio/proje1_3.jpeg" alt="Project Image 3">
-            </div>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
+
+        <!-- Açıklama Kısmı (Kaldırmadım) -->
+        <p>Design Match: Tile Pair Puzzle is a match-3 game developed by the Fluffy Fox team, a subsidiary of Machingam, based in the UK. In this project, I worked on the software development team, contributing to the implementation of the Match-3 algorithm and managing user data storage with Firebase.</p>
+
+        <p>For more information about the game: <a href="https://play.google.com/store/apps/details?id=com.crush.design.match" target="_blank">Google Play Store</a></p>
+        <button class="btn" onclick="closeModal('project1')">Close</button>
+    </div>
+</div>
 
         <!-- Carousel Controls -->
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
