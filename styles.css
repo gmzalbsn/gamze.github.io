@@ -314,21 +314,14 @@ body {
     background-color: #ff5722;
 }
 
-/* Carousel Styles */
-.carousel-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
+/* Carousel Styling */
 .carousel {
     display: flex;
     overflow: hidden;
     width: 100%;
-    max-width: 800px; /* Resim genişliği */
-    position: relative; /* Butonların doğru yerleşmesi için relative ayarladık */
+    max-width: 800px;
+    position: relative;
+    z-index: 1; /* Butonların carousel'in üzerinde olması için düşük z-index */
 }
 
 .carousel-item {
@@ -340,6 +333,7 @@ body {
     width: 100%;
     height: auto;
     border-radius: 10px;
+    pointer-events: none; /* Resmin tıklanmasını devre dışı bırakıyoruz, butonları aktif bırakıyoruz */
 }
 
 /* Carousel Navigation Buttons */
@@ -354,25 +348,26 @@ body {
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 50%;
     user-select: none;
-    z-index: 10; /* Modal içindeki diğer öğelerin üzerinde olacak */
+    z-index: 1000; /* Butonları en üste getirmek için yüksek z-index kullanıyoruz */
     display: flex;
     align-items: center;
     justify-content: center;
     width: 40px;
     height: 40px;
     transition: background-color 0.3s ease;
+    pointer-events: auto; /* Tıklanabilir olmasını sağlıyoruz */
 }
 
 .prev {
-    left: 20px; /* Butonları resmin içine, sol tarafa aldık */
+    left: 20px; /* Sol tarafa yerleştirdik */
 }
 
 .next {
-    right: 20px; /* Butonları resmin içine, sağ tarafa aldık */
+    right: 20px; /* Sağ tarafa yerleştirdik */
 }
 
 .prev:hover, .next:hover {
-    background-color: rgba(255, 255, 255, 1); /* Hover efekti ile görünürlüğü artır */
+    background-color: rgba(255, 255, 255, 1); /* Hover efekti */
 }
 
 /* Modal Açma-Kapatma Efekti */
