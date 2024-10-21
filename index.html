@@ -78,7 +78,7 @@
 <!-- Modal for Project 1 with Carousel -->
 <div id="project1" class="modal">
     <div class="modal-content">
-        <span class="close" onclick="closeModal('project1')">&times;</span>
+        <!-- Kapatma X simgesini iptal etmek için kaldırabiliriz -->
         <h3>Design Match: Tile Pair Puzzle</h3>
 
         <!-- Carousel Yapısı -->
@@ -98,14 +98,15 @@
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
 
-        <!-- Açıklama ve Close Butonu -->
+        <!-- Açıklama ve Google Play Store linki -->
         <div class="modal-text">
             <p>Design Match: Tile Pair Puzzle is a match-3 game developed by the Fluffy Fox team, a subsidiary of Machingam, based in the UK. In this project, I worked on the software development team, contributing to the implementation of the Match-3 algorithm and managing user data storage with Firebase.</p>
 
             <p>For more information about the game: <a href="https://play.google.com/store/apps/details?id=com.crush.design.match" target="_blank">Google Play Store</a></p>
-            
-            <button class="btn" onclick="closeModal('project1')">Close</button>
         </div>
+
+        <!-- Büyük bir Close butonu (X'i kaldırdık) -->
+        <button class="btn-large-close" onclick="closeModal('project1')">Close</button>
     </div>
 </div>
         <!-- Carousel Controls -->
