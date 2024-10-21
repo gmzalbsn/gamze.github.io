@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +12,6 @@
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="portfolio.js"></script>
 </head>
-
 <body>
 
     <!-- Navigation Menu -->
@@ -77,14 +75,32 @@
         </div>
     </section>
 
-    <!-- Modal for Project 1 -->
+    <!-- Modal for Project 1 with Carousel -->
     <div id="project1" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('project1')">&times;</span>
             <h3>Design Match: Tile Pair Puzzle</h3>
-            <img src="Assets/Portfolio/proje1.jpeg" alt="Design Match: Tile Pair Puzzle" class="modal-image">
-            <p>Match-3 türünde bir oyun olan <strong>Design Match: Tile Pair Puzzle</strong>, Fluffy Fox ekibi tarafından geliştirilmiştir. İngiltere merkezli bu ekip, Machingam şirketinin bir yan kolu olarak faaliyet göstermektedir. Bu projede yazılım geliştirme ekibinde yer aldım ve Match-3 algoritmasının yazılmasına katkı sağladım. Ayrıca Firebase ile kullanıcı bilgilerini güvenli bir şekilde depolama işlemlerini yürüttüm.</p>
-            <p>Oyun hakkında daha fazla bilgi için: <a href="https://play.google.com/store/apps/details?id=com.crush.design.match" target="_blank">Google Play Store</a></p>
+
+            <!-- Carousel Yapısı -->
+            <div class="carousel-container">
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <div class="carousel">
+                    <div class="carousel-item">
+                        <img src="Assets/Portfolio/proje1.jpeg" alt="Design Match: Tile Pair Puzzle">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Assets/Portfolio/proje1_2.jpeg" alt="Design Match: Tile Pair Puzzle 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Assets/Portfolio/proje1_3.jpeg" alt="Design Match: Tile Pair Puzzle 3">
+                    </div>
+                </div>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+
+            <p>Design Match: Tile Pair Puzzle is a match-3 game developed by the Fluffy Fox team, a subsidiary of Machingam, based in the UK. In this project, I worked on the software development team, contributing to the implementation of the Match-3 algorithm and managing user data storage with Firebase.</p>
+            <p>For more information about the game: <a href="https://play.google.com/store/apps/details?id=com.crush.design.match" target="_blank">Google Play Store</a></p>
+            <button class="btn-large-close" onclick="closeModal('project1')">Close</button>
         </div>
     </div>
 
@@ -95,7 +111,7 @@
                 <img src="Assets/contact-image.png" alt="Contact">
             </div>
             <div class="contact-form">
-                <form action="https://formspree.io/f/meoqogza" method="POST">
+             <form action="https://formspree.io/f/meoqogza" method="POST">
                     <div class="form-group">
                         <label for="name"><i class="fas fa-user"></i> Name</label>
                         <input type="text" id="name" name="name" placeholder="Your name" required>
@@ -252,7 +268,7 @@
             }
         }
 
-        document.addEventListener("DOMContentLoaded", function () {
+        document.addEventListener("DOMContentLoaded", function() {
             typeText();
         });
 
@@ -264,8 +280,28 @@
         function closeModal(projectId) {
             document.getElementById(projectId).style.display = 'none';
         }
+
+        // Carousel slide control
+        let slideIndex = 0;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            let slides = document.querySelectorAll(".carousel-item");
+            if (n >= slides.length) {
+                slideIndex = 0;
+            }
+            if (n < 0) {
+                slideIndex = slides.length - 1;
+            }
+            slides.forEach((slide, index) => {
+                slide.style.transform = `translateX(${(index - slideIndex) * 100}%)`;
+            });
+        }
     </script>
 
 </body>
-
 </html>
