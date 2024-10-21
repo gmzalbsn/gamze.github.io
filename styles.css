@@ -21,6 +21,14 @@ body {
     transition: opacity 0.5s ease-in;
 }
 
+/* Genel Bölüm Genişlik ve Hizalama Ayarları */
+section {
+    width: 100%; /* Bölümün tam genişlikte görünmesini sağlıyoruz */
+    max-width: 1200px; /* İçerik genişliği maksimum 1200px olacak şekilde ayarlandı */
+    margin: 0 auto; /* Ortaya hizalanıyor */
+    padding: 60px 20px; /* Her bölüm için içerik boşluğu */
+}
+
 /* Navigation Bar */
 .navbar {
     background-color: white;
@@ -56,13 +64,13 @@ body {
 
 /* Home Section */
 .home {
-    position: relative;
-    height: 100vh;
+    height: 100vh; /* Yükseklik tam ekran olacak */
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #f0f0f0;
     overflow: hidden;
+    padding: 20px; /* Ek padding ile içerik genişletebilir */
 }
 
 #particles-js {
@@ -166,12 +174,13 @@ body {
     transform: scale(1.05);
 }
 
-/* About Section */
+/* About Me Section */
 .about-section {
     display: flex;
-    justify-content: center;
+    justify-content: space-between; /* Resim ve yazıyı karşılıklı hizalar */
     align-items: center;
-    padding: 100px 50px;
+    max-width: 100%; /* Tam genişlikte olacak */
+    padding: 100px 50px; /* Kenar boşlukları genişletildi */
     background-color: #f0f0f0;
     flex-direction: row;
 }
@@ -454,13 +463,13 @@ body {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .about-section {
-        flex-direction: column;
-        text-align: center;
+    .about-section, .home {
+        flex-direction: column; /* Mobil için dikey hizalama */
+        text-align: center; /* İçeriği merkezler */
     }
 
     .about-image {
-        margin: 0 0 20px 0;
+        margin: 0 0 20px 0; /* Resim altında boşluk */
         width: 100%;
     }
 
