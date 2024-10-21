@@ -6,11 +6,10 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+   font-family: 'Poppins', sans-serif;
     background-color: #f0f0f0;
     overflow-x: hidden;
 }
-
 .fade-out {
     opacity: 0;
     transition: opacity 0.5s ease-out;
@@ -61,7 +60,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f0f0f0;
+    background-color: #f0f0f0;  /* Changed to light background */
     overflow: hidden;
 }
 
@@ -78,13 +77,13 @@ body {
 .content {
     z-index: 2;
     position: relative;
-    color: #001f59;
+    color: #001f59;  /* Dark text color to contrast with light background */
     margin-left: 120px;
 }
 
 .content h1 {
     font-size: 4rem;
-    color: #001f59;
+    color: #001f59; /* Set a visible color for the text */
     margin-bottom: 10px;
 }
 
@@ -109,7 +108,7 @@ body {
 }
 
 .dynamic-text {
-    border-right: 2px solid #86edbc;
+    border-right: 2px solid #86edbc; /* Caret effect */
     animation: blink-caret 0.7s step-end infinite;
 }
 
@@ -131,20 +130,20 @@ body {
 
 /* Social Icons */
 .social-icons {
-    margin-top: 20px;
+    margin-top: 20px; /* Added space between the About Me button and icons */
     display: flex;
-    gap: 20px;
+    gap: 20px; /* Space between the icons */
 }
 
 .social-icons a {
-    color: #001f59;
+    color: #001f59; /* Changed color to dark blue */
     font-size: 2rem;
     padding: 10px;
     transition: color 0.3s ease;
 }
 
 .social-icons a:hover {
-    color: #ff9800;
+    color: #ff9800; /* Hover effect */
 }
 
 /* Image Styling */
@@ -225,7 +224,6 @@ body {
     background-color: #ff9800;
     box-shadow: 0px 7px 20px rgba(0,0,0,0.2);
 }
-
 /* Portfolio Section */
 .portfolio-section {
     padding: 100px 50px;
@@ -235,8 +233,8 @@ body {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr); /* 3 sütun */
+    gap: 20px; /* Kartlar arasında boşluk */
     padding: 20px;
 }
 
@@ -250,7 +248,7 @@ body {
 }
 
 .project-card:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Hover efekti */
 }
 
 .project-image {
@@ -273,7 +271,6 @@ body {
 .btn:hover {
     background-color: #ff9800;
 }
-
 /* Modal Styling */
 .modal {
     display: none;
@@ -282,92 +279,32 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Arkaplanı biraz daha koyu yaptık */
+    background-color: rgba(0, 0, 0, 0.5);
     justify-content: center;
     align-items: center;
 }
 
 .modal-content {
     background-color: white;
-    padding: 30px;
+    padding: 20px;
     border-radius: 10px;
-    width: 80%; /* Modal genişletildi */
-    max-width: 1200px; /* Daha geniş hale getirildi */
+    width: 80%;
+    max-width: 700px;
     text-align: center;
-    position: relative;
 }
 
-/* Kapatma butonu */
-.btn-large-close {
-    margin-top: 20px;
-    padding: 15px 30px;
-    background-color: #ff9800;
-    color: white;
-    border-radius: 50px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    border: none;
-    transition: background-color 0.3s ease;
-}
-
-.btn-large-close:hover {
-    background-color: #ff5722;
-}
-
-/* Carousel Styling */
-.carousel {
-    display: flex;
-    overflow: hidden;
+.modal-image {
     width: 100%;
-    max-width: 800px;
-    position: relative;
-    z-index: 1; /* Butonların carousel'in üzerinde olması için düşük z-index */
-}
-
-.carousel-item {
-    min-width: 100%;
-    transition: transform 0.5s ease-in-out;
-}
-
-.carousel img {
-    width: 100%;
-    height: auto;
     border-radius: 10px;
-    pointer-events: none; /* Resmin tıklanmasını devre dışı bırakıyoruz, butonları aktif bırakıyoruz */
+    margin-bottom: 20px;
 }
 
-/* Carousel Navigation Buttons */
-.prev, .next {
-    cursor: pointer;
+.close {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #333;
-    font-size: 36px;
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 50%;
-    user-select: none;
-    z-index: 1000; /* Butonları en üste getirmek için yüksek z-index kullanıyoruz */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    transition: background-color 0.3s ease;
-    pointer-events: auto; /* Tıklanabilir olmasını sağlıyoruz */
-}
-
-.prev {
-    left: 20px; /* Sol tarafa yerleştirdik */
-}
-
-.next {
-    right: 20px; /* Sağ tarafa yerleştirdik */
-}
-
-.prev:hover, .next:hover {
-    background-color: rgba(255, 255, 255, 1); /* Hover efekti */
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
 }
 
 /* Modal Açma-Kapatma Efekti */
