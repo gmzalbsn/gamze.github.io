@@ -233,8 +233,8 @@ body {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr); /* 3 sütun */
+    gap: 20px; /* Kartlar arasında boşluk */
     padding: 20px;
 }
 
@@ -248,11 +248,12 @@ body {
 }
 
 .project-card:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Hover efekti */
 }
 
 .project-image {
     width: 100%;
+    height: auto;
     border-radius: 10px;
 }
 
@@ -270,7 +271,6 @@ body {
 .btn:hover {
     background-color: #ff9800;
 }
-
 /* Modal Styling */
 .modal {
     display: none;
