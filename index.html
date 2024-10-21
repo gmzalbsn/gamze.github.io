@@ -75,18 +75,29 @@
         </div>
     </section>
 
-    <!-- Modal for Project 1 -->
+   <!-- Modal for Project 1 with Carousel -->
 <div id="project1" class="modal">
     <div class="modal-content">
         <span class="close" onclick="closeModal('project1')">&times;</span>
         <h3>Design Match: Tile Pair Puzzle</h3>
-        <img src="Assets/Portfolio/proje1.jpeg" alt="Design Match: Tile Pair Puzzle" class="modal-image">
-        <p>
-            <strong>English Description:</strong> <strong>Design Match: Tile Pair Puzzle</strong> is a match-3 game developed 
-            by the Fluffy Fox team. This team is based in England and is a subsidiary of Machingam. In this project, I worked 
-            on the software development team, contributing to the implementation of the Match-3 algorithm and managing the 
-            user data storage via Firebase.
-        </p>
+        
+        <!-- Carousel Yapısı -->
+        <div class="carousel">
+            <div class="carousel-item">
+                <img src="Assets/Portfolio/proje1_1.jpeg" alt="Project Image 1">
+            </div>
+            <div class="carousel-item">
+                <img src="Assets/Portfolio/proje1_2.jpeg" alt="Project Image 2">
+            </div>
+            <div class="carousel-item">
+                <img src="Assets/Portfolio/proje1_3.jpeg" alt="Project Image 3">
+            </div>
+        </div>
+
+        <!-- Carousel Controls -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
         <p>For more information about the game: <a href="https://play.google.com/store/apps/details?id=com.crush.design.match" target="_blank">Google Play Store</a></p>
         <button class="btn" onclick="closeModal('project1')">Close</button>
     </div>
