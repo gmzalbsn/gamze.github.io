@@ -348,22 +348,31 @@ body {
     top: 50%;
     transform: translateY(-50%);
     color: #333;
-    font-size: 36px; /* Butonlar biraz daha büyük yapıldı */
+    font-size: 36px;
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 50%;
     user-select: none;
-    z-index: 10; /* Butonların çalışması için z-index eklendi */
+    z-index: 1000; /* Butonların her şeyin üzerinde olmasını sağlıyoruz */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    transition: background-color 0.3s ease;
 }
 
 .prev {
-    left: -50px; /* Buton konumlandırması ayarlandı */
+    left: -60px; /* Daha doğru bir şekilde yerleştirdik */
 }
 
 .next {
-    right: -50px; /* Buton konumlandırması ayarlandı */
+    right: -60px; /* Daha doğru bir şekilde yerleştirdik */
 }
 
+.prev:hover, .next:hover {
+    background-color: rgba(255, 255, 255, 1); /* Hover efekti ile görünürlüğü artır */
+}
 /* Modal Açma-Kapatma Efekti */
 .modal.active {
     display: flex;
