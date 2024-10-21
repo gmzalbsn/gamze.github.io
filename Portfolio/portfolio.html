@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+
+   <!-- Portfolio Section -->
+   <section id="portfolio" class="portfolio-section">
+       <h2>Portfolio</h2>
+       <div class="grid-container">
+           <!-- Example Project Card -->
+           <div class="project-card">
+               <img src="../Assets/proje1_resim.jpg" alt="Project 1" class="project-image">
+               <h3>Project 1</h3>
+               <p>Short description of the project...</p>
+               <button class="btn" onclick="openModal('project1')">Details</button>
+           </div>
+       </div>
+   </section>
+
+   <!-- Modal for project1 -->
+   <div id="project1" class="modal">
+       <div class="modal-content">
+           <span class="close" onclick="closeModal('project1')">&times;</span>
+           <h3>Project 1</h3>
+           <video controls>
+               <source src="../Assets/proje1_video.mp4" type="video/mp4">
+               Your browser does not support video playback.
+           </video>
+           <p>More detailed description of the project...</p>
+       </div>
+   </div>
+
+   <!-- JavaScript Dosyası -->
+   <script src="portfolio.js"></script>
+
+</body>
+</html>
