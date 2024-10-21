@@ -1,3 +1,7 @@
 [submodule "Contact/PHPMailer"]
 path = Contact/PHPMailer
 url = https://github.com/PHPMailer/PHPMailer.git
+
+[submodule "Contact/phpdotenv"]
+path = Contact/phpdotenv
+url = https://github.com/vlucas/phpdotenv.git
