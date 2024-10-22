@@ -1,36 +1,41 @@
-function openModal(projectId) {
-    document.getElementById(projectId).style.display = 'flex';
-}
+ocument.addEventListener("DOMContentLoaded", function() {
+    let slideIndex = 0;
+    showSlides(slideIndex);
 
-function closeModal(projectId) {
-    document.getElementById(projectId).style.display = 'none';
-}
-
-window.addEventListener('scroll', function() {
-    const modals = document.querySelectorAll('.modal');
-    modals.forEach(modal => {
-        if (modal.style.display === 'flex') {
-            modal.style.display = 'none';
-        }
-    });
-});
-let slideIndex = 0;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-    slideIndex += n;
-
-    if (slideIndex >= totalSlides) {
-        slideIndex = 0;  // Loop back to the first slide
-    } 
-    if (slideIndex < 0) {
-        slideIndex = totalSlides - 1;  // Loop back to the last slide
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
     }
 
-    showSlides(slideIndex);
-}
+    function showSlides(n) {
+        const slides = document.querySelectorAll(".carousel-item");
+        
+        // Check if slides are found
+        if (slides.length === 0) {
+            console.error("No carousel items found.");
+            return;
+        }
 
-function showSlides(n) {
-    const carousel = document.querySelector('.carousel');
-    carousel.style.transform = `translateX(${-n * 100}%)`;  // Move to the correct slide
-}
+        if (n >= slides.length) {
+            slideIndex = 0;
+        }
+        if (n < 0) {
+            slideIndex = slides.length - 1;
+        }
+
+        // Hide all slides
+        slides.forEach((slide) => {
+            slide.style.display = "none";  // Ensure slide exists before trying to access style
+        });
+
+        // Show the current slide
+        slides[slideIndex].style.display = "block";
+    }
+
+    // Event listeners for next/previous controls (if you have buttons)
+    document.querySelector(".prev").addEventListener("click", function() {
+        plusSlides(-1);
+    });
+    document.querySelector(".next").addEventListener("click", function() {
+        plusSlides(1);
+    });
+});
