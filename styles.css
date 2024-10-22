@@ -275,7 +275,7 @@ body {
 }
 
 /* Modal Styling */
-.modal {
+/*.modal {
     display: none;
     position: fixed;
     top: 0;
@@ -283,24 +283,24 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8); /* Arkaplanı koyu yaptık */
-    justify-content: center;
+  /*  justify-content: center;
     align-items: center;
     z-index: 1000; /* Modal'ın en üstte olmasını sağladık */
 }
 
-.modal-content {
+/*.modal-content {
     background-color: white;
     padding: 30px;
     border-radius: 10px;
     width: 80%;
     max-width: 1000px; /* Modal genişliğini ayarladık */
-    text-align: center;
+/*    text-align: center;
     position: relative;
     z-index: 1001; /* İçerik, modalın üstünde olacak */
 }
 
 /* Carousel Styles */
-.carousel-container {
+/*.carousel-container {
     position: relative;
     display: flex;
     align-items: center;
