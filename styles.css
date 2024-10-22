@@ -317,17 +317,17 @@ body {
 }
 
 .carousel-item {
-    display: none;  /* Hide all items initially */
+    display: none;  /* Initially hide all images */
     transition: transform 0.5s ease-in-out;
 }
 
-.carousel-item.active {
-    display: block;  /* Only active item will be shown */
-}
-.carousel img {
-    width: 100%;
+.carousel-item img {
+    width: 100%;  /* Ensure the image stretches properly */
     height: auto;
-    border-radius: 10px;
+}
+
+.carousel-item.active {
+    display: block;  /* Only show the active image */
 }
 
 /* Carousel Navigation Buttons */
