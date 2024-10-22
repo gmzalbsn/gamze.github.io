@@ -323,12 +323,14 @@ body {
 }
 
 .carousel-item img {
-    width: 100%;           /* Ensure the image takes up the full width of the carousel item */
-    max-height: 400px;      /* Limit the height to avoid overflowing */
-    object-fit: cover;      /* Cover the container while maintaining aspect ratio */
+    width: auto;              /* Allows the image to keep its natural width */
+    max-width: 100%;          /* Ensures the image does not overflow horizontally */
+    height: auto;             /* Keeps the aspect ratio */
+    max-height: 300px;        /* Limits the maximum height to prevent the image from overflowing */
+    object-fit: contain;      /* Ensures the image fits within the container without being cropped */
     display: block;
-    border-radius: 10px;
     margin: 0 auto;
+    border-radius: 10px;
 }
 /* Carousel Navigation Buttons */
 .prev, .next {
