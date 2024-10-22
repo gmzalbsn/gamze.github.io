@@ -18,20 +18,19 @@ let slideIndex = 0;
 showSlides(slideIndex);
 
 function plusSlides(n) {
-    showSlides(slideIndex += n);
+    slideIndex += n;
+
+    if (slideIndex >= totalSlides) {
+        slideIndex = 0;  // Loop back to the first slide
+    } 
+    if (slideIndex < 0) {
+        slideIndex = totalSlides - 1;  // Loop back to the last slide
+    }
+
+    showSlides(slideIndex);
 }
 
 function showSlides(n) {
-    let slides = document.querySelectorAll(".carousel-item");
-
-    if (n >= slides.length) {
-        slideIndex = 0;
-    } 
-    if (n < 0) {
-        slideIndex = slides.length - 1;
-    }
-
-    // Move the carousel to show the current slide
     const carousel = document.querySelector('.carousel');
-    carousel.style.transform = `translateX(${-slideIndex * 100}%)`;
+    carousel.style.transform = `translateX(${-n * 100}%)`;  // Move to the correct slide
 }
