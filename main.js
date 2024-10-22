@@ -23,8 +23,18 @@ function plusSlides(n) {
 
 function showSlides(n) {
     let slides = document.querySelectorAll(".carousel-item");
-    slideIndex = (n + slides.length) % slides.length;  // Ensure circular looping
+    // Keep slideIndex within bounds
+    if (n >= slides.length) {
+        slideIndex = 0;
+    } 
+    if (n < 0) {
+        slideIndex = slides.length - 1;
+    }
+
     slides.forEach((slide, index) => {
-        slide.style.transform = `translateX(${(index - slideIndex) * 100}%)`;
+        slide.style.display = "none";  // Hide all slides
     });
+    
+    // Display the current slide
+    slides[slideIndex].style.display = "block";
 }
