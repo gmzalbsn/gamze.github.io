@@ -312,10 +312,12 @@ body {
     transition: transform 0.5s ease-in-out;
 }
 
-.carousel img {
-    width: 100%;   /* This keeps the image responsive */
-    height: auto;  /* Keeps the image’s aspect ratio */
-    border-radius: 10px;
+.carousel-item img {
+    max-width: 100%;   /* Ensure image does not exceed the width of its container */
+    max-height: 100vh; /* Ensure image does not exceed the height of the viewport */
+    object-fit: contain; /* Ensures the image maintains its aspect ratio and fits within the container */
+    margin: 0 auto;    /* Centers the image horizontally */
+    display: block;    /* Ensures no extra space around the image */
 }
 /* Carousel Navigation Buttons */
 .prev, .next {
