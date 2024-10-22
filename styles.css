@@ -322,7 +322,6 @@ body {
     height: auto;
     display: block;
 }
-
 /* Carousel Navigation Buttons */
 .prev, .next {
     cursor: pointer;
