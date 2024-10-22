@@ -23,7 +23,6 @@ function plusSlides(n) {
 
 function showSlides(n) {
     let slides = document.querySelectorAll(".carousel-item");
-    // Keep slideIndex within bounds
     if (n >= slides.length) {
         slideIndex = 0;
     } 
@@ -31,10 +30,9 @@ function showSlides(n) {
         slideIndex = slides.length - 1;
     }
 
-    slides.forEach((slide, index) => {
+    slides.forEach((slide) => {
         slide.style.display = "none";  // Hide all slides
     });
     
-    // Display the current slide
-    slides[slideIndex].style.display = "block";
+    slides[slideIndex].style.display = "block";  // Show the current slide
 }
