@@ -289,16 +289,16 @@ body {
 }
 
 .modal-content {
-    width: 60%;            /* Adjust this to control the overall width of the modal (60% of the viewport) */
-    max-width: 600px;       /* Set a maximum width to ensure it’s not too wide */
-    height: auto;           /* Let the height adjust automatically based on the content */
-    max-height: 80vh;       /* Limit the height to 80% of the viewport height */
+    width: 70%;            /* Increase width to 70% of the viewport */
+    max-width: 800px;       /* Maximum width of the modal set to 800px */
+    height: auto;           /* Adjust height automatically based on content */
+    max-height: 85vh;       /* Limit the height to 85% of the viewport height */
     background-color: white;
-    padding: 20px;          /* Padding inside the modal to give it space */
-    border-radius: 15px;    /* Rounded corners to give it the "card" look */
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);  /* Adds a shadow effect for depth */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
@@ -323,11 +323,12 @@ body {
 }
 
 .carousel-item img {
-    width: 100%;           /* Make the image take up the full width of the modal */
-    height: auto;          /* Maintain the aspect ratio */
-    max-height: 300px;     /* Set a maximum height so the images don't overflow the modal */
-    object-fit: contain;   /* Ensures the image scales correctly inside the modal */
-    border-radius: 10px;   /* Give the images slightly rounded corners */
+    width: 100%;           /* Ensure the image takes up the full width of the carousel item */
+    max-height: 400px;      /* Limit the height to avoid overflowing */
+    object-fit: cover;      /* Cover the container while maintaining aspect ratio */
+    display: block;
+    border-radius: 10px;
+    margin: 0 auto;
 }
 /* Carousel Navigation Buttons */
 .prev, .next {
