@@ -23,16 +23,20 @@ function plusSlides(n) {
 
 function showSlides(n) {
     let slides = document.querySelectorAll(".carousel-item");
+
+    // Reset slideIndex if out of bounds
     if (n >= slides.length) {
         slideIndex = 0;
-    }
+    } 
     if (n < 0) {
         slideIndex = slides.length - 1;
     }
 
+    // Hide all slides
     slides.forEach((slide) => {
-        slide.classList.remove("active");  // Remove active class from all slides
+        slide.style.display = "none"; 
     });
 
-    slides[slideIndex].classList.add("active");  // Add active class to current slide
+    // Show the current slide
+    slides[slideIndex].style.display = "block";  
 }
