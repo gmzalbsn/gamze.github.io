@@ -317,7 +317,7 @@ body {
 }
 
 .carousel-item {
-    display: none;  /* Hide all slides initially */
+    display: content;  /* Hide all slides initially */
 }
 
 .carousel-item img {
