@@ -289,14 +289,14 @@ body {
 }
 
 .modal-content {
-    background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-    width: 80%;
-    max-width: 1000px; /* Modal genişliğini ayarladık */
-   text-align: center;
-    position: relative;
-    z-index: 1001; /* İçerik, modalın üstünde olacak */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    max-width: 90vw;  /* Set a maximum width to ensure the modal doesn’t overflow horizontally */
+    max-height: 90vh; /* Set a maximum height to ensure the modal doesn’t overflow vertically */
+    overflow: auto;   /* Allow scrolling if the image is too large */
+    box-sizing: border-box;
 }
 
 /* Carousel Styles */
