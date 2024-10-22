@@ -288,10 +288,15 @@ body {
     z-index: 1000; /* Modal'ın en üstte olmasını sağladık */
 }
 
-..modal-content {
-    width: 80%;
-    max-width: 1000px;
-    text-align: center;
+.modal-content {
+    max-width: 90vw;    /* Make sure the modal content is responsive and doesn't exceed the viewport width */
+    max-height: 90vh;   /* Limit the height of the modal */
+    overflow: hidden;   /* Prevent overflow issues */
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* Center content */
+    align-items: center;     /* Center content vertically */
+    box-sizing: border-box;
 }
 
 /* Carousel Styles */
