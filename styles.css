@@ -302,27 +302,26 @@ body {
 /* Carousel Styles */
 .carousel-container {
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
+    width: 100%;
+    overflow: hidden; /* Hide overflow so only one image is visible at a time */
 }
 
 .carousel {
     display: flex;
-    overflow: hidden;
-    width: 100%;
-    max-width: 1000px;
-    position: relative;
+    transition: transform 0.5s ease-in-out;
+    width: 100%; /* Make sure the carousel takes the full width */
 }
 
 .carousel-item {
-    display: content;  /* Hide all slides initially */
+    min-width: 100%; /* Ensure each item takes up the full width of the container */
+    box-sizing: border-box;
+    flex-shrink: 0; /* Prevent the items from shrinking */
 }
 
 .carousel-item img {
-    width: 100%;
-    height: auto;
+    width: 100%; /* Make the images take the full width of the carousel */
+    height: auto; /* Maintain the aspect ratio of the images */
+    display: block; /* Ensure the images are treated as block elements */
 }
 
 .carousel-item.active {
