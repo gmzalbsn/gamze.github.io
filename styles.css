@@ -363,18 +363,18 @@ body {
 /* Modal Close Button */
 .btn-large-close {
     margin-top: 20px;
-    padding: 15px 30px;
+    padding: 20px 40px;  /* Larger padding */
     background-color: #ff9800;
     color: white;
     border-radius: 50px;
-    font-size: 1.5rem;
+    font-size: 1.7rem;  /* Slightly larger font */
     cursor: pointer;
     border: none;
     transition: background-color 0.3s ease;
 }
 
 .btn-large-close:hover {
-    background-color: #ff5722;
+    background-color: #ff5722;  /* Change the hover color */
 }
 
 /* Contact Section */
