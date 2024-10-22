@@ -317,10 +317,13 @@ body {
 }
 
 .carousel-item {
-    min-width: 100%;
+    display: none;  /* Hide all items initially */
     transition: transform 0.5s ease-in-out;
 }
 
+.carousel-item.active {
+    display: block;  /* Only active item will be shown */
+}
 .carousel img {
     width: 100%;
     height: auto;
