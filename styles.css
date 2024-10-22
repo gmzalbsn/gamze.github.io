@@ -303,29 +303,24 @@ body {
 .carousel-container {
     position: relative;
     width: 100%;
-    overflow: hidden; /* Hide overflow so only one image is visible at a time */
+    overflow: hidden;  /* Ensure only one image is visible at a time */
 }
 
 .carousel {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    width: 100%; /* Make sure the carousel takes the full width */
+    width: 300%; /* This makes room for 3 images side by side */
 }
 
 .carousel-item {
-    min-width: 100%; /* Ensure each item takes up the full width of the container */
+    min-width: 100%; /* Each carousel item should take up 100% of the carousel container */
     box-sizing: border-box;
-    flex-shrink: 0; /* Prevent the items from shrinking */
 }
 
 .carousel-item img {
-    width: 100%; /* Make the images take the full width of the carousel */
-    height: auto; /* Maintain the aspect ratio of the images */
-    display: block; /* Ensure the images are treated as block elements */
-}
-
-.carousel-item.active {
-    display: block;  /* Only show the active image */
+    width: 100%; /* Ensure the image takes up the full width of the carousel item */
+    height: auto;
+    display: block;
 }
 
 /* Carousel Navigation Buttons */
