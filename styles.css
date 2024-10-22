@@ -289,14 +289,19 @@ body {
 }
 
 .modal-content {
-    max-width: 90vw;    /* Make sure the modal content is responsive and doesn't exceed the viewport width */
-    max-height: 90vh;   /* Limit the height of the modal */
-    overflow: hidden;   /* Prevent overflow issues */
-    padding: 20px;
+    width: 60%;            /* Adjust this to control the overall width of the modal (60% of the viewport) */
+    max-width: 600px;       /* Set a maximum width to ensure it’s not too wide */
+    height: auto;           /* Let the height adjust automatically based on the content */
+    max-height: 80vh;       /* Limit the height to 80% of the viewport height */
+    background-color: white;
+    padding: 20px;          /* Padding inside the modal to give it space */
+    border-radius: 15px;    /* Rounded corners to give it the "card" look */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);  /* Adds a shadow effect for depth */
     display: flex;
-    justify-content: center; /* Center content */
-    align-items: center;     /* Center content vertically */
-    box-sizing: border-box;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 /* Carousel Styles */
@@ -318,11 +323,11 @@ body {
 }
 
 .carousel-item img {
-    max-width: 100%;   /* Ensure image does not exceed the width of its container */
-    max-height: 100vh; /* Ensure image does not exceed the height of the viewport */
-    object-fit: contain; /* Ensures the image maintains its aspect ratio and fits within the container */
-    margin: 0 auto;    /* Centers the image horizontally */
-    display: block;    /* Ensures no extra space around the image */
+    width: 100%;           /* Make the image take up the full width of the modal */
+    height: auto;          /* Maintain the aspect ratio */
+    max-height: 300px;     /* Set a maximum height so the images don't overflow the modal */
+    object-fit: contain;   /* Ensures the image scales correctly inside the modal */
+    border-radius: 10px;   /* Give the images slightly rounded corners */
 }
 /* Carousel Navigation Buttons */
 .prev, .next {
