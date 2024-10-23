@@ -254,9 +254,10 @@ body {
 }
 
 .project-image {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
+   width: 100%;
+    height: 200px; /* Bu değeri istediğiniz gibi ayarlayabilirsiniz */
+    object-fit: cover; /* Resmin ya da videonun bozulmadan alana sığmasını sağlar */
+    border-radius: 10px; /* Köşelerin yuvarlanması */
 }
 
 .btn {
