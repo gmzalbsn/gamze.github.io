@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (index === slideIndex2) {
                 slide.style.transform = "translateX(0)";  // First image is fully visible
             } else if (index === slideIndex2 + 1) {
-                slide.style.transform = "translateX(750px)";  // Second image starts off-screen (on the right)
+                slide.style.transform = "translateX(-750px)";  // Second image starts off-screen (on the right)
             } else {
                 slide.style.transform = "translateX(750px)";  // All other images off-screen
             }
@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (index === slideIndex3) {
                 slide.style.transform = "translateX(0)";  // First image is fully visible
             } else if (index === slideIndex3 + 1) {
-                slide.style.transform = "translateX(750px)";  // Second image starts off-screen (on the right)
+                slide.style.transform = "translateX(-750px)";  // Second image starts off-screen (on the right)
             } else {
                 slide.style.transform = "translateX(750px)";  // All other images off-screen
             }
