@@ -22,11 +22,15 @@ document.addEventListener("DOMContentLoaded", function() {
             slideIndex2 = slides.length - 1;
         }
 
-        slides.forEach((slide) => {
-            slide.style.display = "none";  // Hide all slides
+        slides.forEach((slide, index) => {
+            if (index === slideIndex2) {
+                slide.style.transform = "translateX(0)";  // Show current slide
+            } else if (index < slideIndex2) {
+                slide.style.transform = "translateX(-100%)";  // Previous slide to the left
+            } else {
+                slide.style.transform = "translateX(100%)";  // Next slides to the right
+            }
         });
-
-        slides[slideIndex2].style.display = "block"; // Show current slide
     }
 
     document.querySelector("#project2 .prev").addEventListener("click", function() {
@@ -59,11 +63,15 @@ document.addEventListener("DOMContentLoaded", function() {
             slideIndex3 = slides.length - 1;
         }
 
-        slides.forEach((slide) => {
-            slide.style.display = "none";  // Hide all slides
+        slides.forEach((slide, index) => {
+            if (index === slideIndex3) {
+                slide.style.transform = "translateX(0)";  // Show current slide
+            } else if (index < slideIndex3) {
+                slide.style.transform = "translateX(-100%)";  // Previous slide to the left
+            } else {
+                slide.style.transform = "translateX(100%)";  // Next slides to the right
+            }
         });
-
-        slides[slideIndex3].style.display = "block"; // Show current slide
     }
 
     document.querySelector("#project3 .prev").addEventListener("click", function() {
