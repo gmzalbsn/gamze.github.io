@@ -1,44 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Carousel control for Project 1 - NO CHANGE
-    let slideIndex1 = 0;
-    showSlides1(slideIndex1);
-
-    function plusSlides1(n) {
-        showSlides1(slideIndex1 += n);
-    }
-
-    function showSlides1(n) {
-        const slides = document.querySelectorAll("#project1 .carousel-item");
-
-        if (slides.length === 0) {
-            console.error("No carousel items found in Project 1.");
-            return;
-        }
-
-        if (n >= slides.length) {
-            slideIndex1 = 0;
-        }
-        if (n < 0) {
-            slideIndex1 = slides.length - 1;
-        }
-
-        // Hide all slides
-        slides.forEach((slide) => {
-            slide.style.display = "none";
-        });
-
-        // Show the current slide
-        slides[slideIndex1].style.display = "block";
-    }
-
-    document.querySelector("#project1 .prev").addEventListener("click", function() {
-        plusSlides1(-1);
-    });
-    document.querySelector("#project1 .next").addEventListener("click", function() {
-        plusSlides1(1);
-    });
-
-    // Carousel control for Project 2 - Initially only the first image visible
+    // Proje 2 için kaydırma kontrolü - Başlangıçta sadece 1. resim görünür
     let slideIndex2 = 0;
     showSlides2(slideIndex2);
 
@@ -50,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const slides = document.querySelectorAll("#project2 .carousel-item");
 
         if (slides.length === 0) {
-            console.error("No carousel items found in Project 2.");
+            console.error("Proje 2'de slayt bulunamadı.");
             return;
         }
 
@@ -63,11 +24,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
         slides.forEach((slide, index) => {
             if (index === slideIndex2) {
-                slide.style.transform = "translateX(0)";  // First image is fully visible
+                slide.style.transform = "translateX(0)";  // İlk resim ekranda görünür
             } else if (index === slideIndex2 + 1) {
-                slide.style.transform = "translateX(-750px)";  // Second image starts off-screen (on the right)
+                slide.style.transform = "translateX(750px)";  // İkinci resim sağa gizlenmiş
+            } else if (index === slideIndex2 - 1) {
+                slide.style.transform = "translateX(-750px)";  // Önceki resim sola dışarıda
             } else {
-                slide.style.transform = "translateX(750px)";  // All other images off-screen
+                slide.style.transform = "translateX(750px)";  // Diğer resimler dışarıda
             }
         });
     }
@@ -76,10 +39,18 @@ document.addEventListener("DOMContentLoaded", function() {
         plusSlides2(-1);
     });
     document.querySelector("#project2 .next").addEventListener("click", function() {
+        // İleri butonuna tıklandığında ikinci resim -750px'e gider, birinci resim 750px'e kayar
+        slides.forEach((slide, index) => {
+            if (index === slideIndex2) {
+                slide.style.transform = "translateX(750px)";  // İlk resim sağa dışarı çıkar
+            } else if (index === slideIndex2 + 1) {
+                slide.style.transform = "translateX(-750px)";  // İkinci resim sola kayar
+            }
+        });
         plusSlides2(1);
     });
 
-    // Carousel control for Project 3 - Similar behavior as Project 2
+    // Proje 3 için aynı mantık
     let slideIndex3 = 0;
     showSlides3(slideIndex3);
 
@@ -91,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const slides = document.querySelectorAll("#project3 .carousel-item");
 
         if (slides.length === 0) {
-            console.error("No carousel items found in Project 3.");
+            console.error("Proje 3'te slayt bulunamadı.");
             return;
         }
 
@@ -104,11 +75,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
         slides.forEach((slide, index) => {
             if (index === slideIndex3) {
-                slide.style.transform = "translateX(0)";  // First image is fully visible
+                slide.style.transform = "translateX(0)";  // İlk resim ekranda görünür
             } else if (index === slideIndex3 + 1) {
-                slide.style.transform = "translateX(-750px)";  // Second image starts off-screen (on the right)
+                slide.style.transform = "translateX(750px)";  // İkinci resim sağda gizlenmiş
+            } else if (index === slideIndex3 - 1) {
+                slide.style.transform = "translateX(-750px)";  // Önceki resim sola dışarıda
             } else {
-                slide.style.transform = "translateX(750px)";  // All other images off-screen
+                slide.style.transform = "translateX(750px)";  // Diğer resimler dışarıda
             }
         });
     }
@@ -116,7 +89,15 @@ document.addEventListener("DOMContentLoaded", function() {
     document.querySelector("#project3 .prev").addEventListener("click", function() {
         plusSlides3(-1);
     });
+
     document.querySelector("#project3 .next").addEventListener("click", function() {
+        slides.forEach((slide, index) => {
+            if (index === slideIndex3) {
+                slide.style.transform = "translateX(750px)";  // İlk resim sağa dışarı çıkar
+            } else if (index === slideIndex3 + 1) {
+                slide.style.transform = "translateX(-750px)";  // İkinci resim sola kayar
+            }
+        });
         plusSlides3(1);
     });
 });
