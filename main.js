@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Carousel control for Project 1
+    // Carousel control for Project 1 - NO CHANGE
     let slideIndex1 = 0;
     showSlides1(slideIndex1);
 
@@ -22,15 +22,13 @@ document.addEventListener("DOMContentLoaded", function() {
             slideIndex1 = slides.length - 1;
         }
 
-        slides.forEach((slide, index) => {
-            if (index === slideIndex1) {
-                slide.style.transform = "translateX(0)";  // Show current slide
-            } else if (index < slideIndex1) {
-                slide.style.transform = `translateX(-${(slideIndex1 - index) * 100}%)`;  // Previous slides
-            } else {
-                slide.style.transform = `translateX(${(index - slideIndex1) * 100}%)`;  // Next slides
-            }
+        // Hide all slides
+        slides.forEach((slide) => {
+            slide.style.display = "none";
         });
+
+        // Show the current slide
+        slides[slideIndex1].style.display = "block";
     }
 
     document.querySelector("#project1 .prev").addEventListener("click", function() {
@@ -40,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
         plusSlides1(1);
     });
 
-    // Carousel control for Project 2
+    // Carousel control for Project 2 - Updated Transform to 0 and -600px
     let slideIndex2 = 0;
     showSlides2(slideIndex2);
 
@@ -65,11 +63,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
         slides.forEach((slide, index) => {
             if (index === slideIndex2) {
-                slide.style.transform = "translateX(0)";  // Show current slide
-            } else if (index < slideIndex2) {
-                slide.style.transform = `translateX(-${(slideIndex2 - index) * 100}%)`;  // Previous slides
+                slide.style.transform = "translateX(0)";  // First image
+            } else if (index === slideIndex2 + 1) {
+                slide.style.transform = "translateX(-600px)";  // Second image
             } else {
-                slide.style.transform = `translateX(${(index - slideIndex2) * 100}%)`;  // Next slides
+                slide.style.transform = "translateX(600px)";  // Reset other slides to be off-screen
             }
         });
     }
@@ -81,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function() {
         plusSlides2(1);
     });
 
-    // Carousel control for Project 3
+    // Carousel control for Project 3 - Updated Transform to 0 and -600px
     let slideIndex3 = 0;
     showSlides3(slideIndex3);
 
@@ -106,11 +104,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
         slides.forEach((slide, index) => {
             if (index === slideIndex3) {
-                slide.style.transform = "translateX(0)";  // Show current slide
-            } else if (index < slideIndex3) {
-                slide.style.transform = `translateX(-${(slideIndex3 - index) * 100}%)`;  // Previous slides
+                slide.style.transform = "translateX(0)";  // First image
+            } else if (index === slideIndex3 + 1) {
+                slide.style.transform = "translateX(-600px)";  // Second image
             } else {
-                slide.style.transform = `translateX(${(index - slideIndex3) * 100}%)`;  // Next slides
+                slide.style.transform = "translateX(600px)";  // Reset other slides to be off-screen
             }
         });
     }
