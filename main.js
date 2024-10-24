@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
         plusSlides1(1);
     });
 
-    // Carousel control for Project 2 - Updated Transform to 0 and -600px
+    // Carousel control for Project 2 - Initially both images visible (0 and -750px)
     let slideIndex2 = 0;
     showSlides2(slideIndex2);
 
@@ -63,11 +63,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
         slides.forEach((slide, index) => {
             if (index === slideIndex2) {
-                slide.style.transform = "translateX(0)";  // First image
+                slide.style.transform = "translateX(0)";  // First image visible
             } else if (index === slideIndex2 + 1) {
-                slide.style.transform = "translateX(-600px)";  // Second image
+                slide.style.transform = "translateX(-750px)";  // Second image slightly visible (next in line)
             } else {
-                slide.style.transform = "translateX(600px)";  // Reset other slides to be off-screen
+                slide.style.transform = "translateX(750px)";  // All other images off-screen
             }
         });
     }
@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function() {
         plusSlides2(1);
     });
 
-    // Carousel control for Project 3 - Updated Transform to 0 and -600px
+    // Carousel control for Project 3 - Same behavior as Project 2
     let slideIndex3 = 0;
     showSlides3(slideIndex3);
 
@@ -104,11 +104,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
         slides.forEach((slide, index) => {
             if (index === slideIndex3) {
-                slide.style.transform = "translateX(0)";  // First image
+                slide.style.transform = "translateX(0)";  // First image visible
             } else if (index === slideIndex3 + 1) {
-                slide.style.transform = "translateX(-600px)";  // Second image
+                slide.style.transform = "translateX(-750px)";  // Second image slightly visible (next in line)
             } else {
-                slide.style.transform = "translateX(600px)";  // Reset other slides to be off-screen
+                slide.style.transform = "translateX(750px)";  // All other images off-screen
             }
         });
     }
