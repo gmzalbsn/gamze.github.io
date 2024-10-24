@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Carousel slide control for Project 1
+    // Carousel slide control for Project 1 - Değiştirilmeden kalıyor
     let slideIndex1 = 0;
     showSlides1(slideIndex1);
 
@@ -15,17 +15,12 @@ document.addEventListener("DOMContentLoaded", function() {
         if (n < 0) {
             slideIndex1 = slides1.length - 1;
         }
-
         slides1.forEach((slide, index) => {
-            if (index === slideIndex1) {
-                slide.style.transform = "translateX(0)";  // Aktif resim ekranda olacak
-            } else {
-                slide.style.transform = "translateX(-750px)";  // Diğer resimler ekranın dışında olacak
-            }
+            slide.style.transform = `translateX(${(index - slideIndex1) * 100}%)`;
         });
     }
 
-    // Carousel slide control for Project 2
+    // Carousel slide control for Project 2 - 1. resim: 0, 2. resim: -100%
     let slideIndex2 = 0;
     showSlides2(slideIndex2);
 
@@ -44,14 +39,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
         slides2.forEach((slide, index) => {
             if (index === slideIndex2) {
-                slide.style.transform = "translateX(0)";  // Aktif resim ekranda olacak
-            } else {
-                slide.style.transform = "translateX(-750px)";  // Diğer resimler ekranın dışında olacak
+                slide.style.transform = "translateX(0)";  // 1. resim tam görünür
+            } else if (index === slideIndex2 + 1) {
+                slide.style.transform = "translateX(-100%)";  // 2. resim sola kaydırılmış
             }
         });
     }
 
-    // Carousel slide control for Project 3
+    // Carousel slide control for Project 3 - 1. resim: 0, 2. resim: -100%
     let slideIndex3 = 0;
     showSlides3(slideIndex3);
 
@@ -70,9 +65,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
         slides3.forEach((slide, index) => {
             if (index === slideIndex3) {
-                slide.style.transform = "translateX(0)";  // Aktif resim ekranda olacak
-            } else {
-                slide.style.transform = "translateX(-750px)";  // Diğer resimler ekranın dışında olacak
+                slide.style.transform = "translateX(0)";  // 1. resim tam görünür
+            } else if (index === slideIndex3 + 1) {
+                slide.style.transform = "translateX(-100%)";  // 2. resim sola kaydırılmış
             }
         });
     }
