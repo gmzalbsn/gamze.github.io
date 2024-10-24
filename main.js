@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
             } else if (index === n - 1 || (n === 0 && index === slides.length - 1)) {
                 slide.style.transform = "translateX(-750px)";  // Önceki resim solda gizlenmiş olur
             } else {
-                slide.style.transform = "translateX(750px)";  // Diğer tüm resimler dışarıda kalır
+                slide.style.transform = "translateX(-750px)";  // Diğer tüm resimler dışarıda kalır
             }
         });
     }
