@@ -68,39 +68,34 @@ body {
 /* Mobil için Home Düzenlemesi */
 @media (max-width: 768px) {
     .home {
-        flex-direction: column;      /* Dikey yerleşim */
+        flex-direction: column;      /* Mobilde dikey yerleşim */
         padding: 20px;
         text-align: center;
     }
 
-    .content {
-        margin: 0;                   /* İçerik etrafında boşlukları kaldır */
-    }
-
     .content h1 {
-        font-size: 2rem;             /* Başlığı küçült */
+        font-size: 1.5rem;           /* Başlığı daha da küçültme */
         line-height: 1.2;
         margin-bottom: 10px;
     }
 
     .unity-developer {
-        font-size: 1.4rem;           /* Alt başlığı küçült */
+        font-size: 1rem;             /* Alt başlığı yarıya düşürme */
         margin-bottom: 20px;
     }
 
     .btn {
-        font-size: 1rem;
-        padding: 8px 16px;
+        font-size: 0.8rem;           /* Buton yazı boyutunu küçültme */
+        padding: 6px 12px;
     }
 
-    /* Görsel boyutunu ayarla */
     .image {
         margin: 20px 0;
     }
 
     .image img {
-        width: 150px;                /* Görsel boyutunu küçült */
-        height: 150px;
+        width: 120px;                /* Görsel boyutunu daha da küçült */
+        height: 120px;
         border-radius: 50%;
     }
 }
