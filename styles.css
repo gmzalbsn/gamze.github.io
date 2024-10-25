@@ -79,17 +79,17 @@ body {
 
     .content h1 {
         font-size: 0.1rem;             /* "Hi there" yazısını iki kat küçültme */
-        line-height: 1;
-        margin-bottom: 8px;
+        line-height: 0.2;
+        margin-bottom: 3px;
     }
 
     .unity-developer {
-        font-size: 0.2rem;           /* Alt başlığı küçültme */
-        margin-bottom: 5px;
+        font-size: 0.1rem;           /* Alt başlığı küçültme */
+        margin-bottom: 1px;
     }
 
     .btn {
-        font-size: 0.4rem;           /* Buton yazı boyutunu küçültme */
+        font-size: 0.2rem;           /* Buton yazı boyutunu küçültme */
         padding: 2px 4px;            /* Butonun boyutunu daha küçük yapma */
     }
 
