@@ -6,35 +6,38 @@ document.addEventListener("DOMContentLoaded", function() {
         showSlides(slideIndex += n);
     }
 
-   function showSlides(n) {
-    const slides = document.querySelectorAll("#project1 .carousel-item");
+    function showSlides(n) {
+        const slides = document.querySelectorAll("#project1 .carousel-item");
+        
+        if (slides.length === 0) {
+            console.error("No carousel items found.");
+            return;
+        }
 
-    // Adjust slideIndex to prevent going out of bounds
-    if (n >= slides.length) {
-        slideIndex = slides.length - 1;  // Stop at the last slide
-    } else if (n < 0) {
-        slideIndex = 0;  // Reset to the first slide if out of bounds
+        // Adjust slideIndex to prevent going out of bounds
+        if (n >= slides.length) {
+            slideIndex = slides.length - 1;
+        } else if (n < 0) {
+            slideIndex = 0;
+        }
+
+        // Hide all slides
+        slides.forEach((slide) => {
+            slide.style.display = "none";
+        });
+
+        // Show the current slide
+        slides[slideIndex].style.display = "block";
     }
 
-    // Hide all slides
-    slides.forEach((slide) => {
-        slide.style.display = "none";
-    });
-
-    // Show the current slide
-    slides[slideIndex].style.display = "block";
-}
-
-
-    // Event listeners for next/previous controls (if you have buttons)
-    document.querySelector(".prev").addEventListener("click", function() {
+    document.querySelector("#project1 .prev").addEventListener("click", function() {
         plusSlides(-1);
     });
-    document.querySelector(".next").addEventListener("click", function() {
+    document.querySelector("#project1 .next").addEventListener("click", function() {
         plusSlides(1);
     });
 
-    // 2. Proje için slayt kontrolü - 1. resim: 0, 2. resim: -100%
+    // Project 2 Slide Control
     let slideIndex2 = 0;
     showSlides2(slideIndex2);
 
@@ -45,33 +48,30 @@ document.addEventListener("DOMContentLoaded", function() {
     function showSlides2(n) {
         const slides2 = document.querySelectorAll("#project2 .carousel-item");
 
+        // Adjust slideIndex2 to prevent going out of bounds
         if (n >= slides2.length) {
+            slideIndex2 = slides2.length - 1;
+        } else if (n < 0) {
             slideIndex2 = 0;
         }
-        if (n < 0) {
-            slideIndex2 = slides2.length - 1;
-        }
 
-        slides2.forEach((slide, index) => {
-            if (index === slideIndex2) {
-                slide.style.transform = "translateX(0)";  // 1. resim tam görünür
-            } else if (index === slideIndex2 + 1) {
-                slide.style.transform = "translateX(-100%)";  // 2. resim sola kaydırılmış
-            } else {
-                slide.style.transform = "translateX(100%)";  // Diğer resimler sağda gizlenmiş olur
-            }
+        // Hide all slides for Project 2
+        slides2.forEach((slide) => {
+            slide.style.display = "none";
         });
+
+        // Show the current slide for Project 2
+        slides2[slideIndex2].style.display = "block";
     }
 
     document.querySelector("#project2 .prev").addEventListener("click", function() {
         plusSlides2(-1);
     });
-
     document.querySelector("#project2 .next").addEventListener("click", function() {
         plusSlides2(1);
     });
 
-    // 3. Proje için slayt kontrolü - 1. resim: 0, 2. resim: -100%
+    // Project 3 Slide Control
     let slideIndex3 = 0;
     showSlides3(slideIndex3);
 
@@ -82,28 +82,25 @@ document.addEventListener("DOMContentLoaded", function() {
     function showSlides3(n) {
         const slides3 = document.querySelectorAll("#project3 .carousel-item");
 
+        // Adjust slideIndex3 to prevent going out of bounds
         if (n >= slides3.length) {
+            slideIndex3 = slides3.length - 1;
+        } else if (n < 0) {
             slideIndex3 = 0;
         }
-        if (n < 0) {
-            slideIndex3 = slides3.length - 1;
-        }
 
-        slides3.forEach((slide, index) => {
-            if (index === slideIndex3) {
-                slide.style.transform = "translateX(0)";  // 1. resim tam görünür
-            } else if (index === slideIndex3 + 1) {
-                slide.style.transform = "translateX(-100%)";  // 2. resim sola kaydırılmış
-            } else {
-                slide.style.transform = "translateX(100%)";  // Diğer resimler sağda gizlenmiş olur
-            }
+        // Hide all slides for Project 3
+        slides3.forEach((slide) => {
+            slide.style.display = "none";
         });
+
+        // Show the current slide for Project 3
+        slides3[slideIndex3].style.display = "block";
     }
 
     document.querySelector("#project3 .prev").addEventListener("click", function() {
         plusSlides3(-1);
     });
-
     document.querySelector("#project3 .next").addEventListener("click", function() {
         plusSlides3(1);
     });
