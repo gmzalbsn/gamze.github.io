@@ -456,37 +456,35 @@ body {
     background-color: #ff9800;
 }
 
-/* Masaüstü (1025px ve üzeri) */
-@media (min-width: 1025px) {
-    .about-section {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about-image {
-        margin: 0 0 20px 0;
-        width: 100%;
-    }
-
-    .about-text {
-        max-width: 100%;
-    }
-
-    .resume-btn {
-        width: 100%;
-    }
-
-    .contact-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .contact-form {
-        width: 100%;
-    }
+/* Varsayılan masaüstü stilleri - herhangi bir media query eklemiyoruz */
+.about-section {
+    flex-direction: row; /* Masaüstü için varsayılan */
+    text-align: left;
 }
 
-/* Tablet (769px - 1024px arası) */
+.about-image {
+    width: 40%; /* Masaüstü için uygun genişlik */
+    margin: 0 20px 0 0;
+}
+
+.about-text {
+    max-width: 60%;
+}
+
+.resume-btn {
+    width: auto;
+}
+
+.contact-container {
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.contact-form {
+    width: 50%;
+}
+
+/* Tablet uyumu (769px - 1024px arası) */
 @media (min-width: 769px) and (max-width: 1024px) {
     .about-section {
         flex-direction: row;
@@ -516,16 +514,15 @@ body {
     }
 }
 
-/* Mobil (768px ve altı) */
+/* Mobil uyum (768px ve altı) */
 @media (max-width: 768px) {
     .about-section {
         flex-direction: column;
-        text-align: left;
-        padding: 10px;
+        text-align: center;
     }
 
     .about-image {
-        margin: 0;
+        margin: 0 0 20px 0;
         width: 100%;
     }
 
