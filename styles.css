@@ -69,38 +69,37 @@ body {
 @media (max-width: 768px) {
     .home {
         flex-direction: column;      /* Mobilde dikey yerleşim */
-        padding: 5px;                /* Daha az boşluk kullanımı */
+        padding: 20px;
         text-align: center;
     }
 
     .content {
-        margin: 0;                   /* İçerik boşluklarını kaldır */
-        padding: 0;
+        margin-top: 50px;            /* İçeriği aşağı kaydırmak için üst marjin ekle */
     }
 
     .content h1 {
-        font-size: 1rem;             /* Başlığı oldukça küçült */
-        line-height: 1.1;
-        margin-bottom: 5px;
+        font-size: 1rem;             /* "Hi there" yazısını iki kat küçültme */
+        line-height: 1.2;
+        margin-bottom: 10px;
     }
 
     .unity-developer {
-        font-size: 0.8rem;           /* Alt başlığı daha da küçültme */
+        font-size: 0.8rem;           /* Alt başlığı küçültme */
         margin-bottom: 8px;
     }
 
     .btn {
         font-size: 0.6rem;           /* Buton yazı boyutunu küçültme */
-        padding: 4px 8px;            /* Butonun boyutunu daha da küçültme */
+        padding: 4px 8px;            /* Butonun boyutunu daha küçük yapma */
     }
 
     .image {
-        margin: 10px 0;              /* Görsel için daha az boşluk */
+        margin: 15px 0;              /* Görsel için daha az boşluk */
     }
 
     .image img {
-        width: 80px;                 /* Görsel boyutunu iyice küçültme */
-        height: 80px;
+        width: 60px;                 /* Görsel boyutunu iyice küçültme */
+        height: 60px;
         border-radius: 50%;
     }
 
@@ -109,11 +108,10 @@ body {
     }
 
     .social-icons a {
-        font-size: 1rem;             /* Sosyal simgeleri küçültme */
+        font-size: 0.8rem;           /* Sosyal simgeleri küçültme */
         padding: 4px;
     }
 }
-
 #particles-js {
     position: absolute;
     width: 100%;
