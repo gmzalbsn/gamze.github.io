@@ -1,4 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
+const videos = document.querySelectorAll("video");
+    videos.forEach(video => {
+        if (video.querySelector("source").getAttribute("src") === "Assets/Portfolio/proje7_3_Video.mp4") {
+            video.muted = true;  // Bu videonun sesini kapatır
+        }
     // Project 1 Slide Control
     let slideIndex1 = 0;
     showSlides1(slideIndex1);
