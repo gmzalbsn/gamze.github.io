@@ -232,16 +232,22 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById(projectId).style.display = 'flex';
     }
 
-    function closeModal(projectId) {
-        const modal = document.getElementById(projectId);
-        modal.style.display = 'none';
+   function closeModal(projectId) {
+    const modal = document.getElementById(projectId);
+    modal.style.display = 'none';
 
-        const videos = modal.querySelectorAll("video");
-        videos.forEach(video => {
-            video.pause();
-            video.currentTime = 0;
-        });
-    }
+    // Modal içindeki tüm videoları duraklatır ve sesini kapatır
+    const videos = modal.querySelectorAll("video");
+    videos.forEach(video => {
+        video.pause();
+        video.currentTime = 0;
+
+        // Videonun sesini tamamen kapatmak için geçici olarak src'yi kaldırıp yeniden ekleyin
+        const src = video.src; // Mevcut src'yi kaydet
+        video.src = '';        // src'yi boş yaparak videoyu tamamen durdurun
+        video.src = src;       // src'yi yeniden ekleyerek videoyu sıfırlayın
+    });
+}
 
     window.closeModal = closeModal;
 });
