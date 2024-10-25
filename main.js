@@ -227,14 +227,16 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function closeModal(projectId) {
-        const modal = document.getElementById(projectId);
-        modal.style.display = 'none';
-        const videos = modal.querySelectorAll("video");
-        videos.forEach(video => {
-            video.pause();
-            video.currentTime = 0;
-        });
-    }
+    const modal = document.getElementById(projectId);
+    modal.style.display = 'none';
+
+    // Pause and reset videos (if any) inside the modal
+    const videos = modal.querySelectorAll("video");
+    videos.forEach(video => {
+        video.pause();
+        video.currentTime = 0;
+    });
+}
 
     // Expose closeModal function globally
     window.closeModal = closeModal;
