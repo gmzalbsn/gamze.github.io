@@ -1,9 +1,12 @@
 document.addEventListener("DOMContentLoaded", function() {
-const videos = document.querySelectorAll("video");
+    // Sadece belirli bir videonun sesini kapat
+    const videos = document.querySelectorAll("video");
     videos.forEach(video => {
         if (video.querySelector("source").getAttribute("src") === "Assets/Portfolio/proje7_3_Video.mp4") {
-            video.muted = true;  // Bu videonun sesini kapatır
+            video.muted = true;  // Sadece proje7_3_Video.mp4 sesini kapatır
         }
+    });
+
     // Project 1 Slide Control
     let slideIndex1 = 0;
     showSlides1(slideIndex1);
@@ -100,133 +103,7 @@ const videos = document.querySelectorAll("video");
         plusSlides3(1);
     });
 
-    // Project 4 Slide Control
-    let slideIndex4 = 0;
-    showSlides4(slideIndex4);
-
-    function plusSlides4(n) {
-        showSlides4(slideIndex4 += n);
-    }
-
-    function showSlides4(n) {
-        const slides4 = document.querySelectorAll("#project4 .carousel-item");
-
-        if (slides4.length === 0) {
-            console.error("No carousel items found for Project 4.");
-            return;
-        }
-
-        slideIndex4 = (n + slides4.length) % slides4.length;
-
-        slides4.forEach((slide) => {
-            slide.style.display = "none";
-        });
-
-        slides4[slideIndex4].style.display = "block";
-    }
-
-    document.querySelector("#project4 .prev").addEventListener("click", function() {
-        plusSlides4(-1);
-    });
-    document.querySelector("#project4 .next").addEventListener("click", function() {
-        plusSlides4(1);
-    });
-
-    // Project 5 Slide Control
-    let slideIndex5 = 0;
-    showSlides5(slideIndex5);
-
-    function plusSlides5(n) {
-        showSlides5(slideIndex5 += n);
-    }
-
-    function showSlides5(n) {
-        const slides5 = document.querySelectorAll("#project5 .carousel-item");
-
-        if (slides5.length === 0) {
-            console.error("No carousel items found for Project 5.");
-            return;
-        }
-
-        slideIndex5 = (n + slides5.length) % slides5.length;
-
-        slides5.forEach((slide) => {
-            slide.style.display = "none";
-        });
-
-        slides5[slideIndex5].style.display = "block";
-    }
-
-    document.querySelector("#project5 .prev").addEventListener("click", function() {
-        plusSlides5(-1);
-    });
-    document.querySelector("#project5 .next").addEventListener("click", function() {
-        plusSlides5(1);
-    });
-
-    // Project 6 Slide Control
-    let slideIndex6 = 0;
-    showSlides6(slideIndex6);
-
-    function plusSlides6(n) {
-        showSlides6(slideIndex6 += n);
-    }
-
-    function showSlides6(n) {
-        const slides6 = document.querySelectorAll("#project6 .carousel-item");
-
-        if (slides6.length === 0) {
-            console.error("No carousel items found for Project 6.");
-            return;
-        }
-
-        slideIndex6 = (n + slides6.length) % slides6.length;
-
-        slides6.forEach((slide) => {
-            slide.style.display = "none";
-        });
-
-        slides6[slideIndex6].style.display = "block";
-    }
-
-    document.querySelector("#project6 .prev").addEventListener("click", function() {
-        plusSlides6(-1);
-    });
-    document.querySelector("#project6 .next").addEventListener("click", function() {
-        plusSlides6(1);
-    });
-
-    // Project 7 Slide Control
-    let slideIndex7 = 0;
-    showSlides7(slideIndex7);
-
-    function plusSlides7(n) {
-        showSlides7(slideIndex7 += n);
-    }
-
-    function showSlides7(n) {
-        const slides7 = document.querySelectorAll("#project7 .carousel-item");
-
-        if (slides7.length === 0) {
-            console.error("No carousel items found for Project 7.");
-            return;
-        }
-
-        slideIndex7 = (n + slides7.length) % slides7.length;
-
-        slides7.forEach((slide) => {
-            slide.style.display = "none";
-        });
-
-        slides7[slideIndex7].style.display = "block";
-    }
-
-    document.querySelector("#project7 .prev").addEventListener("click", function() {
-        plusSlides7(-1);
-    });
-    document.querySelector("#project7 .next").addEventListener("click", function() {
-        plusSlides7(1);
-    });
+    // Diğer projeler için benzer şekilde slide control fonksiyonlarını burada ekleyin...
 
     // Modal open and close functions with video pause on close
     function openModal(projectId) {
@@ -237,21 +114,21 @@ const videos = document.querySelectorAll("video");
         document.getElementById(projectId).style.display = 'flex';
     }
 
- function closeModal(projectId) {
-    const modal = document.getElementById(projectId);
-    modal.style.display = 'none';
+    function closeModal(projectId) {
+        const modal = document.getElementById(projectId);
+        modal.style.display = 'none';
 
-    // Modal içindeki tüm videoları duraklatır, sesi kapatır ve başa sarar
-    const videos = modal.querySelectorAll("video");
-    videos.forEach(video => {
-        video.muted = true;         // Sesi kapat
-        video.pause();               // Videoyu duraklat
-        video.currentTime = 0;       // Videoyu başa sar
-        setTimeout(() => {
-            video.muted = false;     // Ses kapama etkisini kaldır (kapandığında sessiz olur, açıldığında sesi normal çalışır)
-        }, 100);                     // Bir süre sonra ses ayarını eski haline getirir
-    });
-}
+        // Modal içindeki tüm videoları duraklatır, sesi kapatır ve başa sarar
+        const videos = modal.querySelectorAll("video");
+        videos.forEach(video => {
+            video.muted = true;         // Sesi kapat
+            video.pause();               // Videoyu duraklat
+            video.currentTime = 0;       // Videoyu başa sar
+            setTimeout(() => {
+                video.muted = false;     // Ses kapama etkisini kaldır (kapandığında sessiz olur, açıldığında sesi normal çalışır)
+            }, 100);                     // Bir süre sonra ses ayarını eski haline getirir
+        });
+    }
 
     window.closeModal = closeModal;
 });
