@@ -65,6 +65,32 @@ body {
     background-color: #f0f0f0;
     overflow: hidden;
 }
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column; /* Dikey yerleşim */
+        text-align: center; /* Merkezi hizalama */
+        padding: 20px;
+    }
+
+    .content h1 {
+        font-size: 2.5rem; /* Yazı boyutunu küçült */
+        margin-bottom: 20px;
+    }
+
+    .content .unity-developer {
+        font-size: 1.8rem; /* Yazı boyutunu küçült */
+    }
+
+    .image {
+        margin: 20px 0;
+    }
+
+    .image img {
+        width: 150px; /* Görsel boyutunu küçült */
+        height: 150px;
+        border-radius: 50%;
+    }
+}
 
 #particles-js {
     position: absolute;
