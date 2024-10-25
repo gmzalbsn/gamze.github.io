@@ -14,19 +14,16 @@ document.addEventListener("DOMContentLoaded", function() {
             return;
         }
 
-        // Adjust slideIndex to prevent going out of bounds
         if (n >= slides.length) {
             slideIndex = slides.length - 1;
         } else if (n < 0) {
             slideIndex = 0;
         }
 
-        // Hide all slides
         slides.forEach((slide) => {
             slide.style.display = "none";
         });
 
-        // Show the current slide
         slides[slideIndex].style.display = "block";
     }
 
@@ -37,7 +34,6 @@ document.addEventListener("DOMContentLoaded", function() {
         plusSlides(1);
     });
 
-    // Project 2 Slide Control
     let slideIndex2 = 0;
     showSlides2(slideIndex2);
 
@@ -48,19 +44,16 @@ document.addEventListener("DOMContentLoaded", function() {
     function showSlides2(n) {
         const slides2 = document.querySelectorAll("#project2 .carousel-item");
 
-        // Adjust slideIndex2 to prevent going out of bounds
         if (n >= slides2.length) {
             slideIndex2 = slides2.length - 1;
         } else if (n < 0) {
             slideIndex2 = 0;
         }
 
-        // Hide all slides for Project 2
         slides2.forEach((slide) => {
             slide.style.display = "none";
         });
 
-        // Show the current slide for Project 2
         slides2[slideIndex2].style.display = "block";
     }
 
@@ -71,7 +64,6 @@ document.addEventListener("DOMContentLoaded", function() {
         plusSlides2(1);
     });
 
-    // Project 3 Slide Control
     let slideIndex3 = 0;
     showSlides3(slideIndex3);
 
@@ -82,19 +74,16 @@ document.addEventListener("DOMContentLoaded", function() {
     function showSlides3(n) {
         const slides3 = document.querySelectorAll("#project3 .carousel-item");
 
-        // Adjust slideIndex3 to prevent going out of bounds
         if (n >= slides3.length) {
             slideIndex3 = slides3.length - 1;
         } else if (n < 0) {
             slideIndex3 = 0;
         }
 
-        // Hide all slides for Project 3
         slides3.forEach((slide) => {
             slide.style.display = "none";
         });
 
-        // Show the current slide for Project 3
         slides3[slideIndex3].style.display = "block";
     }
 
@@ -104,4 +93,25 @@ document.addEventListener("DOMContentLoaded", function() {
     document.querySelector("#project3 .next").addEventListener("click", function() {
         plusSlides3(1);
     });
+
+    // Function to open modal
+    function openModal(projectId) {
+        document.getElementById(projectId).style.display = 'flex';
+    }
+
+    // Function to close modal and pause videos
+    function closeModal(projectId) {
+        const modal = document.getElementById(projectId);
+        modal.style.display = 'none';
+
+        // Pause all videos inside the closed modal
+        const videos = modal.querySelectorAll("video");
+        videos.forEach(video => {
+            video.pause();
+            video.currentTime = 0; // Reset video to the start
+        });
+    }
+
+    // Make closeModal function accessible in the HTML button
+    window.closeModal = closeModal;
 });
