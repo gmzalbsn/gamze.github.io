@@ -232,20 +232,19 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById(projectId).style.display = 'flex';
     }
 
-   function closeModal(projectId) {
+ function closeModal(projectId) {
     const modal = document.getElementById(projectId);
     modal.style.display = 'none';
 
-    // Modal içindeki tüm videoları duraklatır ve sesini kapatır
+    // Modal içindeki tüm videoları duraklatır, sesi kapatır ve başa sarar
     const videos = modal.querySelectorAll("video");
     videos.forEach(video => {
-        video.pause();
-        video.currentTime = 0;
-
-        // Videonun sesini tamamen kapatmak için geçici olarak src'yi kaldırıp yeniden ekleyin
-        const src = video.src; // Mevcut src'yi kaydet
-        video.src = '';        // src'yi boş yaparak videoyu tamamen durdurun
-        video.src = src;       // src'yi yeniden ekleyerek videoyu sıfırlayın
+        video.muted = true;         // Sesi kapat
+        video.pause();               // Videoyu duraklat
+        video.currentTime = 0;       // Videoyu başa sar
+        setTimeout(() => {
+            video.muted = false;     // Ses kapama etkisini kaldır (kapandığında sessiz olur, açıldığında sesi normal çalışır)
+        }, 100);                     // Bir süre sonra ses ayarını eski haline getirir
     });
 }
 
