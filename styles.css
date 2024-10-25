@@ -66,43 +66,51 @@ body {
     overflow: hidden;
 }
 /* Mobil için Home Düzenlemesi */
-/* Mobil için Home Düzenlemesi */
 @media (max-width: 768px) {
     .home {
         flex-direction: column;      /* Mobilde dikey yerleşim */
-        padding: 10px;               /* Daha az boşluk kullanımı */
+        padding: 5px;                /* Daha az boşluk kullanımı */
         text-align: center;
     }
 
+    .content {
+        margin: 0;                   /* İçerik boşluklarını kaldır */
+        padding: 0;
+    }
+
     .content h1 {
-        font-size: 1.2rem;           /* Başlığı çok daha küçültme */
+        font-size: 1rem;             /* Başlığı oldukça küçült */
         line-height: 1.1;
         margin-bottom: 5px;
     }
 
     .unity-developer {
-        font-size: 0.9rem;           /* Alt başlığı çok daha küçültme */
-        margin-bottom: 10px;
+        font-size: 0.8rem;           /* Alt başlığı daha da küçültme */
+        margin-bottom: 8px;
     }
 
     .btn {
-        font-size: 0.7rem;           /* Buton yazı boyutunu küçültme */
-        padding: 5px 10px;           /* Buton boyutlarını daha küçük yapma */
+        font-size: 0.6rem;           /* Buton yazı boyutunu küçültme */
+        padding: 4px 8px;            /* Butonun boyutunu daha da küçültme */
     }
 
     .image {
-        margin: 15px 0;
+        margin: 10px 0;              /* Görsel için daha az boşluk */
     }
 
     .image img {
-        width: 100px;                /* Görsel boyutunu daha da küçült */
-        height: 100px;
+        width: 80px;                 /* Görsel boyutunu iyice küçültme */
+        height: 80px;
         border-radius: 50%;
     }
 
+    .social-icons {
+        margin-top: 10px;
+    }
+
     .social-icons a {
-        font-size: 1.5rem;           /* Sosyal simgeleri küçültme */
-        padding: 5px;
+        font-size: 1rem;             /* Sosyal simgeleri küçültme */
+        padding: 4px;
     }
 }
 
