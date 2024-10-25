@@ -167,7 +167,7 @@ body {
     transform: scale(1.05);
 }
 .image {
-    position: relative; /* Resim konumlandırmasını sağlar */
+    position: relative;
     display: inline-block;
 }
 
@@ -175,27 +175,67 @@ body {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 12px;
     font-weight: bold;
     text-align: center;
 }
 
-/* Her bir kutucuk için farklı konumlandırma */
+/* Her kutuyu resmin etrafına yerleştirme */
 .skill-box-1 {
-    top: -20px; /* Yukarıda pozisyon */
-    left: 150px; /* Sağda pozisyon */
+    top: -40px;
+    left: 50px;
 }
 
 .skill-box-2 {
-    top: 80px; /* Orta sağda pozisyon */
-    right: -120px;
+    top: -60px;
+    right: 50px;
 }
 
 .skill-box-3 {
-    bottom: -50px; /* Altta pozisyon */
-    left: 80px;
+    top: 20px;
+    left: -150px;
+}
+
+.skill-box-4 {
+    top: 20px;
+    right: -150px;
+}
+
+.skill-box-5 {
+    top: 120px;
+    left: -170px;
+}
+
+.skill-box-6 {
+    top: 120px;
+    right: -170px;
+}
+
+.skill-box-7 {
+    top: 220px;
+    left: -150px;
+}
+
+.skill-box-8 {
+    top: 220px;
+    right: -150px;
+}
+
+.skill-box-9 {
+    bottom: -50px;
+    left: 50px;
+}
+
+.skill-box-10 {
+    bottom: -50px;
+    right: 50px;
+}
+
+.skill-box-11 {
+    bottom: 10px;
+    left: calc(50% - 60px); /* Ortada konumlandır */
 }
 /* About Section */
 .about-section {
