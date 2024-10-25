@@ -77,11 +77,11 @@ body {
         margin-top: 50px;            /* İçeriği aşağı kaydırmak için üst marjin ekle */
     }
 
-    .content h1 {
-        font-size: 0.1rem;             /* "Hi there" yazısını iki kat küçültme */
-        line-height: 0.2;
-        margin-bottom: 3px;
-    }
+   .content h1 {
+    font-size: 0.5rem !important; /* Font boyutunu kesin olarak belirleme */
+    line-height: 0.8;
+    margin-bottom: 10px;
+}
 
     .unity-developer {
         font-size: 0.1rem;           /* Alt başlığı küçültme */
