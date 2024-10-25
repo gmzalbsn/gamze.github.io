@@ -386,12 +386,13 @@ body {
 .contact-section {
     padding: 100px 50px;
     background-color: #f0f0f0;
-    display: flex; /* Görünürlüğü sağlamak için display’i flex yapalım */
+    display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     position: relative; /* Varsayılan pozisyona getiriyoruz */
-    z-index: 1; /* `portfolio` bölümü ile çakışmayı önlemek için düşük z-index */
+    z-index: 1; /* Contact'ın üstte kalmasını sağlıyoruz */
+    height: auto; /* Yüksekliği içeriğe göre ayarlıyoruz */
 }
 
 .contact-container {
