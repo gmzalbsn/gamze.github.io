@@ -175,28 +175,14 @@ body {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
-    padding: 15px;
-    border-radius: 50%; /* Kutuları yuvarlak yapar */
+    padding: 8px 12px;
+    border-radius: 8px;
     font-size: 12px;
     font-weight: bold;
     text-align: center;
-    width: 80px; /* Sabit genişlik */
-    height: 80px; /* Sabit yükseklik */
-    line-height: 50px; /* Metni dikeyde ortalamak için */
-    transition: transform 0.3s ease; /* Hover animasyonu */
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-/* Hover animasyonu */
-.skill-box:hover {
-    transform: scale(1.2); /* Üzerine gelindiğinde %20 büyüt */
-    background-color: #ffa500; /* Üzerine gelindiğinde arka plan rengini değiştir */
-    cursor: pointer;
-}
-
-/* Her bir kutunun farklı pozisyonunu ayarlıyoruz */
+/* Her kutuyu resmin etrafına yerleştirme */
 .skill-box-1 {
     top: -40px;
     left: 50px;
@@ -249,7 +235,7 @@ body {
 
 .skill-box-11 {
     bottom: 10px;
-    left: calc(50% - 40px); /* Ortada konumlandır */
+    left: calc(50% - 60px); /* Ortada konumlandır */
 }
 /* About Section */
 .about-section {
