@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
+    // Project 1 Slide Control
     let slideIndex = 0;
     showSlides(slideIndex);
 
@@ -34,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
         plusSlides(1);
     });
 
+    // Project 2 Slide Control
     let slideIndex2 = 0;
     showSlides2(slideIndex2);
 
@@ -64,6 +66,7 @@ document.addEventListener("DOMContentLoaded", function() {
         plusSlides2(1);
     });
 
+    // Project 3 Slide Control
     let slideIndex3 = 0;
     showSlides3(slideIndex3);
 
@@ -94,24 +97,145 @@ document.addEventListener("DOMContentLoaded", function() {
         plusSlides3(1);
     });
 
-    // Function to open modal
+    // Project 4 Slide Control
+    let slideIndex4 = 0;
+    showSlides4(slideIndex4);
+
+    function plusSlides4(n) {
+        showSlides4(slideIndex4 += n);
+    }
+
+    function showSlides4(n) {
+        const slides4 = document.querySelectorAll("#project4 .carousel-item");
+
+        if (n >= slides4.length) {
+            slideIndex4 = slides4.length - 1;
+        } else if (n < 0) {
+            slideIndex4 = 0;
+        }
+
+        slides4.forEach((slide) => {
+            slide.style.display = "none";
+        });
+
+        slides4[slideIndex4].style.display = "block";
+    }
+
+    document.querySelector("#project4 .prev").addEventListener("click", function() {
+        plusSlides4(-1);
+    });
+    document.querySelector("#project4 .next").addEventListener("click", function() {
+        plusSlides4(1);
+    });
+
+    // Project 5 Slide Control
+    let slideIndex5 = 0;
+    showSlides5(slideIndex5);
+
+    function plusSlides5(n) {
+        showSlides5(slideIndex5 += n);
+    }
+
+    function showSlides5(n) {
+        const slides5 = document.querySelectorAll("#project5 .carousel-item");
+
+        if (n >= slides5.length) {
+            slideIndex5 = slides5.length - 1;
+        } else if (n < 0) {
+            slideIndex5 = 0;
+        }
+
+        slides5.forEach((slide) => {
+            slide.style.display = "none";
+        });
+
+        slides5[slideIndex5].style.display = "block";
+    }
+
+    document.querySelector("#project5 .prev").addEventListener("click", function() {
+        plusSlides5(-1);
+    });
+    document.querySelector("#project5 .next").addEventListener("click", function() {
+        plusSlides5(1);
+    });
+
+    // Project 6 Slide Control
+    let slideIndex6 = 0;
+    showSlides6(slideIndex6);
+
+    function plusSlides6(n) {
+        showSlides6(slideIndex6 += n);
+    }
+
+    function showSlides6(n) {
+        const slides6 = document.querySelectorAll("#project6 .carousel-item");
+
+        if (n >= slides6.length) {
+            slideIndex6 = slides6.length - 1;
+        } else if (n < 0) {
+            slideIndex6 = 0;
+        }
+
+        slides6.forEach((slide) => {
+            slide.style.display = "none";
+        });
+
+        slides6[slideIndex6].style.display = "block";
+    }
+
+    document.querySelector("#project6 .prev").addEventListener("click", function() {
+        plusSlides6(-1);
+    });
+    document.querySelector("#project6 .next").addEventListener("click", function() {
+        plusSlides6(1);
+    });
+
+    // Project 7 Slide Control
+    let slideIndex7 = 0;
+    showSlides7(slideIndex7);
+
+    function plusSlides7(n) {
+        showSlides7(slideIndex7 += n);
+    }
+
+    function showSlides7(n) {
+        const slides7 = document.querySelectorAll("#project7 .carousel-item");
+
+        if (n >= slides7.length) {
+            slideIndex7 = slides7.length - 1;
+        } else if (n < 0) {
+            slideIndex7 = 0;
+        }
+
+        slides7.forEach((slide) => {
+            slide.style.display = "none";
+        });
+
+        slides7[slideIndex7].style.display = "block";
+    }
+
+    document.querySelector("#project7 .prev").addEventListener("click", function() {
+        plusSlides7(-1);
+    });
+    document.querySelector("#project7 .next").addEventListener("click", function() {
+        plusSlides7(1);
+    });
+
+    // Modal open and close functions with video pause
     function openModal(projectId) {
         document.getElementById(projectId).style.display = 'flex';
     }
 
-    // Function to close modal and pause videos
     function closeModal(projectId) {
         const modal = document.getElementById(projectId);
         modal.style.display = 'none';
-
-        // Pause all videos inside the closed modal
         const videos = modal.querySelectorAll("video");
         videos.forEach(video => {
             video.pause();
-            video.currentTime = 0; // Reset video to the start
+            video.currentTime = 0;
         });
     }
 
-    // Make closeModal function accessible in the HTML button
+    // Expose closeModal function globally
     window.closeModal = closeModal;
 });
