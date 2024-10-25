@@ -78,23 +78,23 @@ body {
     }
 
     .content h1 {
-        font-size: 0.5rem;             /* "Hi there" yazısını iki kat küçültme */
-        line-height: 1.2;
-        margin-bottom: 10px;
-    }
-
-    .unity-developer {
-        font-size: 0.3rem;           /* Alt başlığı küçültme */
+        font-size: 0.1rem;             /* "Hi there" yazısını iki kat küçültme */
+        line-height: 1;
         margin-bottom: 8px;
     }
 
+    .unity-developer {
+        font-size: 0.2rem;           /* Alt başlığı küçültme */
+        margin-bottom: 5px;
+    }
+
     .btn {
-        font-size: 0.6rem;           /* Buton yazı boyutunu küçültme */
-        padding: 4px 8px;            /* Butonun boyutunu daha küçük yapma */
+        font-size: 0.4rem;           /* Buton yazı boyutunu küçültme */
+        padding: 2px 4px;            /* Butonun boyutunu daha küçük yapma */
     }
 
     .image {
-        margin: 15px 0;              /* Görsel için daha az boşluk */
+        margin: 5px 0;              /* Görsel için daha az boşluk */
     }
 
     .image img {
