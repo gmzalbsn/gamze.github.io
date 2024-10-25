@@ -265,8 +265,6 @@ body {
     border-radius: 200px;
     box-shadow: 0px 10px 100px rgba(0, 0, 0, 0.1);
 }
-}
-
 .about-text {
     flex-grow: 1;
     text-align: left;
