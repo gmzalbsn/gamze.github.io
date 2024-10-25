@@ -181,6 +181,12 @@ body {
     font-weight: bold;
     text-align: center;
 }
+.skill-box:hover {
+    box-shadow: 0 0 15px rgba(255, 165, 0, 0.8); /* Parlak turuncu bir parlama efekti */
+    transform: scale(1.2); /* Büyütme animasyonu */
+    background-color: #ffa500; /* Arka plan rengini turuncuya değiştir */
+    cursor: pointer;
+}
 
 /* Her kutuyu resmin etrafına yerleştirme */
 .skill-box-1 {
