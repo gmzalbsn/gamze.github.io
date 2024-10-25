@@ -456,8 +456,8 @@ body {
     background-color: #ff9800;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
+/* Masaüstü (1025px ve üzeri) */
+@media (min-width: 1025px) {
     .about-section {
         flex-direction: column;
         text-align: center;
@@ -465,6 +465,67 @@ body {
 
     .about-image {
         margin: 0 0 20px 0;
+        width: 100%;
+    }
+
+    .about-text {
+        max-width: 100%;
+    }
+
+    .resume-btn {
+        width: 100%;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+}
+
+/* Tablet (769px - 1024px arası) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .about-section {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .about-image {
+        width: 50%;
+        margin: 0 20px;
+    }
+
+    .about-text {
+        max-width: 50%;
+    }
+
+    .resume-btn {
+        width: auto;
+    }
+
+    .contact-container {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .contact-form {
+        width: 75%;
+    }
+}
+
+/* Mobil (768px ve altı) */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        text-align: left;
+        padding: 10px;
+    }
+
+    .about-image {
+        margin: 0;
         width: 100%;
     }
 
