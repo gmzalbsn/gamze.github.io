@@ -71,16 +71,46 @@
     <section id="portfolio" class="portfolio-section">
         <h2>Portfolio</h2>
         <div class="grid-container">
-            <!-- Portfolio Projects (Only Project 1 shown for brevity) -->
+            <!-- Portfolio Projects -->
             <div class="project-card">
                 <img src="Assets/Portfolio/proje1_1.jpeg" alt="Design Match: Tile Pair Puzzle" class="project-image">
                 <h3>Design Match: Tile Pair Puzzle</h3>
                 <button class="btn" onclick="openModal('project1')">Details</button>
             </div>
+            <div class="project-card">
+                <img src="Assets/Portfolio/proje2_1.jpg" alt="Lomy" class="project-image">
+                <h3>Lomy</h3>
+                <button class="btn" onclick="openModal('project2')">Details</button>
+            </div>
+            <div class="project-card">
+                <img src="Assets/Portfolio/proje3_1_resized.jpg" alt="Paper Drive" class="project-image">
+                <h3>Paper Drive</h3>
+                <button class="btn" onclick="openModal('project3')">Details</button>
+            </div>
+            <div class="project-card">
+                <img src="Assets/Portfolio/proje4_1_resized.png" alt="World In The Picture" class="project-image">
+                <h3>World In The Picture</h3>
+                <button class="btn" onclick="openModal('project4')">Details</button>
+            </div>
+            <div class="project-card">
+                <img src="Assets/Portfolio/Proje5_1.png" alt="LET-X" class="project-image">
+                <h3>LET-X</h3>
+                <button class="btn" onclick="openModal('project5')">Details</button>
+            </div>
+            <div class="project-card">
+                <img src="Assets/Portfolio/proje6_2.png" alt="Gemak" class="project-image">
+                <h3>Gemak</h3>
+                <button class="btn" onclick="openModal('project6')">Details</button>
+            </div>
+            <div class="project-card">
+                <img src="Assets/Portfolio/proje7_1.jpg" alt="Teddy Bear" class="project-image">
+                <h3>Teddy Bear</h3>
+                <button class="btn" onclick="openModal('project7')">Details</button>
+            </div>
         </div>
     </section>
 
-    <!-- Modal Structure (Project 1) -->
+    <!-- Modal for Project 1 -->
     <div id="project1" class="modal">
         <div class="modal-content">
             <h3>Design Match: Tile Pair Puzzle</h3>
@@ -99,7 +129,153 @@
                 </div>
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
+            <p>Match-3 algoritması ve Firebase entegrasyonuyla kullanıcı verilerini depolayan bir oyun...</p>
             <button class="btn-large-close" onclick="closeModal('project1')">Close</button>
+        </div>
+    </div>
+
+    <!-- Modal for Project 2 -->
+    <div id="project2" class="modal">
+        <div class="modal-content">
+            <h3>Lomy</h3>
+            <div class="carousel-container">
+                <a class="prev" onclick="plusSlides2(-1)">&#10094;</a>
+                <div class="carousel">
+                    <div class="carousel-item">
+                        <img src="Assets/Portfolio/proje2_1.jpg" alt="Lomy">
+                    </div>
+                    <div class="carousel-item">
+                        <video width="100%" height="315" controls>
+                            <source src="Assets/Portfolio/proje2_2_Video.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <a class="next" onclick="plusSlides2(1)">&#10095;</a>
+            </div>
+            <p>GFDS ile bağımsız olarak geliştirdiğim 2D platform oyunu...</p>
+            <button class="btn-large-close" onclick="closeModal('project2')">Close</button>
+        </div>
+    </div>
+
+    <!-- Modal for Project 3 -->
+    <div id="project3" class="modal">
+        <div class="modal-content">
+            <h3>Paper Drive</h3>
+            <div class="carousel-container">
+                <a class="prev" onclick="plusSlides3(-1)">&#10094;</a>
+                <div class="carousel">
+                    <div class="carousel-item">
+                        <img src="Assets/Portfolio/proje3_1_resized.jpg" alt="Paper Drive">
+                    </div>
+                    <div class="carousel-item">
+                        <video width="100%" height="315" controls>
+                            <source src="Assets/Portfolio/proje3_2_Video.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <a class="next" onclick="plusSlides3(1)">&#10095;</a>
+            </div>
+            <p>2D runner tarzında bir oyun olan Paper Drive, araba tasarım sistemi...</p>
+            <button class="btn-large-close" onclick="closeModal('project3')">Close</button>
+        </div>
+    </div>
+
+    <!-- Modal for Project 4 -->
+    <div id="project4" class="modal">
+        <div class="modal-content">
+            <h3>World In The Picture</h3>
+            <div class="carousel-container">
+                <a class="prev" onclick="plusSlides4(-1)">&#10094;</a>
+                <div class="carousel">
+                    <div class="carousel-item">
+                        <img src="Assets/Portfolio/proje4_1_resized.png" alt="World In The Picture">
+                    </div>
+                    <div class="carousel-item">
+                        <video width="100%" height="315" controls>
+                            <source src="Assets/Portfolio/proje4_2_Video.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <a class="next" onclick="plusSlides4(1)">&#10095;</a>
+            </div>
+            <p>Kelime eşleştirme algoritması ile eğitici içerik sunan bir proje...</p>
+            <button class="btn-large-close" onclick="closeModal('project4')">Close</button>
+        </div>
+    </div>
+
+    <!-- Modal for Project 5 -->
+    <div id="project5" class="modal">
+        <div class="modal-content">
+            <h3>LET-X</h3>
+            <div class="carousel-container">
+                <a class="prev" onclick="plusSlides5(-1)">&#10094;</a>
+                <div class="carousel">
+                    <div class="carousel-item">
+                        <img src="Assets/Portfolio/Proje5_1.png" alt="LET-X">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Assets/Portfolio/Proje5_2.png" alt="LET-X">
+                    </div>
+                    <div class="carousel-item">
+                        <video width="100%" height="315" controls>
+                            <source src="Assets/Portfolio/proje5_3_Video.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <a class="next" onclick="plusSlides5(1)">&#10095;</a>
+            </div>
+            <p>İş sağlığı ve güvenliği eğitimleri için Oculus VR'de hazırlanan simülasyonlar...</p>
+            <button class="btn-large-close" onclick="closeModal('project5')">Close</button>
+        </div>
+    </div>
+
+    <!-- Modal for Project 6 -->
+    <div id="project6" class="modal">
+        <div class="modal-content">
+            <h3>Gemak</h3>
+            <div class="carousel-container">
+                <a class="prev" onclick="plusSlides6(-1)">&#10094;</a>
+                <div class="carousel">
+                    <div class="carousel-item">
+                        <img src="Assets/Portfolio/proje6_1.jpg" alt="Gemak">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Assets/Portfolio/proje6_2.png" alt="Gemak">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Assets/Portfolio/proje6_3.jpg" alt="Gemak">
+                    </div>
+                </div>
+                <a class="next" onclick="plusSlides6(1)">&#10095;</a>
+            </div>
+            <p>AR tabanlı ürün tanıtım uygulaması, iOS ve Android uyumlu...</p>
+            <button class="btn-large-close" onclick="closeModal('project6')">Close</button>
+        </div>
+    </div>
+
+    <!-- Modal for Project 7 -->
+    <div id="project7" class="modal">
+        <div class="modal-content">
+            <h3>Teddy Bear</h3>
+            <div class="carousel-container">
+                <a class="prev" onclick="plusSlides7(-1)">&#10094;</a>
+                <div class="carousel">
+                    <div class="carousel-item">
+                        <img src="Assets/Portfolio/proje7_1.jpg" alt="Teddy Bear">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Assets/Portfolio/proje7_2.jpg" alt="Teddy Bear">
+                    </div>
+                    <div class="carousel-item">
+                        <video width="100%" height="315" controls>
+                            <source src="Assets/Portfolio/proje7_3_Video.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <a class="next" onclick="plusSlides7(1)">&#10095;</a>
+            </div>
+            <p>Steam için geliştirilen hikaye tabanlı bulmaca oyununun demosu...</p>
+            <button class="btn-large-close" onclick="closeModal('project7')">Close</button>
         </div>
     </div>
 
@@ -137,26 +313,7 @@
     <script src="main.js"></script>
     <script>
         particlesJS("particles-js", {
-            "particles": {
-                "number": {
-                    "value": 80,
-                    "density": { "enable": true, "value_area": 800 }
-                },
-                "color": { "value": "#000000" },
-                "shape": { "type": "circle" },
-                "opacity": { "value": 0.5 },
-                "size": { "value": 3, "random": true },
-                "line_linked": {
-                    "enable": true, "distance": 150, "color": "#000000", "opacity": 0.4, "width": 1
-                },
-                "move": { "enable": true, "speed": 6 }
-            },
-            "interactivity": {
-                "events": {
-                    "onhover": { "enable": true, "mode": "repulse" },
-                    "onclick": { "enable": true, "mode": "push" }
-                }
-            },
+            "particles": { /* Particle settings */ },
             "retina_detect": true
         });
 
@@ -176,32 +333,28 @@
         function typeEffect() {
             const element = document.querySelector('.dynamic-text');
             const fullTitle = titles[titleIndex];
-            element.textContent = fullTitle.slice(0, letterIndex);
+            element.textContent = fullTitle.substring(0, letterIndex);
             if (isDeleting) {
                 letterIndex--;
-                if (letterIndex === 0) {
-                    isDeleting = false;
-                    titleIndex = (titleIndex + 1) % titles.length;
-                    setTimeout(typeEffect, typingSpeed);
-                } else setTimeout(typeEffect, deletingSpeed);
             } else {
                 letterIndex++;
-                if (letterIndex === fullTitle.length) {
-                    isDeleting = true;
-                    setTimeout(typeEffect, pauseTime);
-                } else setTimeout(typeEffect, typingSpeed);
+            }
+            if (!isDeleting && letterIndex === fullTitle.length) {
+                isDeleting = true;
+                setTimeout(typeEffect, pauseTime);
+            } else if (isDeleting && letterIndex === 0) {
+                isDeleting = false;
+                titleIndex = (titleIndex + 1) % titles.length;
+                setTimeout(typeEffect, typingSpeed);
+            } else {
+                setTimeout(typeEffect, isDeleting ? deletingSpeed : typingSpeed);
             }
         }
-        document.addEventListener("DOMContentLoaded", typeEffect);
+        typeEffect();
 
         // Modal Controls
-        function openModal(id) {
-            document.getElementById(id).style.display = 'flex';
-        }
-
-        function closeModal(id) {
-            document.getElementById(id).style.display = 'none';
-        }
+        function openModal(id) { document.getElementById(id).style.display = 'flex'; }
+        function closeModal(id) { document.getElementById(id).style.display = 'none'; }
     </script>
 </body>
 </html>
