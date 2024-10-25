@@ -456,64 +456,6 @@ body {
     background-color: #ff9800;
 }
 
-/* Varsayılan masaüstü stilleri - herhangi bir media query eklemiyoruz */
-.about-section {
-    flex-direction: row; /* Masaüstü için varsayılan */
-    text-align: left;
-}
-
-.about-image {
-    width: 40%; /* Masaüstü için uygun genişlik */
-    margin: 0 20px 0 0;
-}
-
-.about-text {
-    max-width: 60%;
-}
-
-.resume-btn {
-    width: auto;
-}
-
-.contact-container {
-    flex-direction: row;
-    align-items: flex-start;
-}
-
-.contact-form {
-    width: 50%;
-}
-
-/* Tablet uyumu (769px - 1024px arası) */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .about-section {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .about-image {
-        width: 50%;
-        margin: 0 20px;
-    }
-
-    .about-text {
-        max-width: 50%;
-    }
-
-    .resume-btn {
-        width: auto;
-    }
-
-    .contact-container {
-        flex-direction: row;
-        justify-content: space-around;
-    }
-
-    .contact-form {
-        width: 75%;
-    }
-}
-
 /* Mobil uyum (768px ve altı) */
 @media (max-width: 768px) {
     .about-section {
