@@ -78,13 +78,13 @@ body {
     }
 
     .content h1 {
-        font-size: 1rem;             /* "Hi there" yazısını iki kat küçültme */
+        font-size: 0.5rem;             /* "Hi there" yazısını iki kat küçültme */
         line-height: 1.2;
         margin-bottom: 10px;
     }
 
     .unity-developer {
-        font-size: 0.8rem;           /* Alt başlığı küçültme */
+        font-size: 0.3rem;           /* Alt başlığı küçültme */
         margin-bottom: 8px;
     }
 
