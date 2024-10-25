@@ -182,7 +182,7 @@ body {
     text-align: center;
 }
 .skill-box:hover {
-    box-shadow: 0 0 15px rgba(255, 165, 0, 0.8); /* Parlak turuncu bir parlama efekti */
+    box-shadow: 0 0 15px rgba(128, 128, 128, 0.6); /* Parlak turuncu bir parlama efekti */
     transform: scale(1.1); /* Büyütme animasyonu */
     cursor: pointer;
 }
