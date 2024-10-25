@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const slides = document.querySelectorAll("#project1 .carousel-item");
 
         if (slides.length === 0) {
-            console.error("No carousel items found.");
+            console.error("No carousel items found for Project 1.");
             return;
         }
 
@@ -46,6 +46,11 @@ document.addEventListener("DOMContentLoaded", function() {
     function showSlides2(n) {
         const slides2 = document.querySelectorAll("#project2 .carousel-item");
 
+        if (slides2.length === 0) {
+            console.error("No carousel items found for Project 2.");
+            return;
+        }
+
         if (n >= slides2.length) {
             slideIndex2 = slides2.length - 1;
         } else if (n < 0) {
@@ -78,6 +83,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function showSlides7(n) {
         const slides7 = document.querySelectorAll("#project7 .carousel-item");
+
+        if (slides7.length === 0) {
+            console.error("No carousel items found for Project 7.");
+            return;
+        }
 
         if (n >= slides7.length) {
             slideIndex7 = slides7.length - 1;
