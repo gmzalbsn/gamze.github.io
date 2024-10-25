@@ -183,8 +183,7 @@ body {
 }
 .skill-box:hover {
     box-shadow: 0 0 15px rgba(255, 165, 0, 0.8); /* Parlak turuncu bir parlama efekti */
-    transform: scale(1.2); /* Büyütme animasyonu */
-    background-color: #ffa500; /* Arka plan rengini turuncuya değiştir */
+    transform: scale(1.1); /* Büyütme animasyonu */
     cursor: pointer;
 }
 
@@ -241,7 +240,7 @@ body {
 
 .skill-box-11 {
     bottom: 50px;
-    left: 400; 
+    right: -80px; 
 }
 /* About Section */
 .about-section {
