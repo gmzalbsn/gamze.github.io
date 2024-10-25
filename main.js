@@ -6,30 +6,25 @@ document.addEventListener("DOMContentLoaded", function() {
         showSlides(slideIndex += n);
     }
 
-    function showSlides(n) {
-        const slides = document.querySelectorAll(".carousel-item");
-        
-        // Check if slides are found
-        if (slides.length === 0) {
-            console.error("No carousel items found.");
-            return;
-        }
+   function showSlides(n) {
+    const slides = document.querySelectorAll("#project1 .carousel-item");
 
-        if (n >= slides.length) {
-            slideIndex = 0;
-        }
-        if (n < 0) {
-            slideIndex = slides.length - 1;
-        }
-
-        // Hide all slides
-        slides.forEach((slide) => {
-            slide.style.display = "none";  // Ensure slide exists before trying to access style
-        });
-
-        // Show the current slide
-        slides[slideIndex].style.display = "block";
+    // Adjust slideIndex to prevent going out of bounds
+    if (n >= slides.length) {
+        slideIndex = slides.length - 1;  // Stop at the last slide
+    } else if (n < 0) {
+        slideIndex = 0;  // Reset to the first slide if out of bounds
     }
+
+    // Hide all slides
+    slides.forEach((slide) => {
+        slide.style.display = "none";
+    });
+
+    // Show the current slide
+    slides[slideIndex].style.display = "block";
+}
+
 
     // Event listeners for next/previous controls (if you have buttons)
     document.querySelector(".prev").addEventListener("click", function() {
