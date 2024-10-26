@@ -599,7 +599,7 @@ body {
         margin-top: 15px;
     }
 }
-/* Tablet ve mobil cihazlar (1280px ve altı) için home sayfasını gizleme */
+/* Tablet ve mobil (1280px)  */
 @media (orientation: landscape) and (max-width: 1280px) {
     .home {
         display: none;
@@ -613,10 +613,10 @@ body {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 90vw;              /* Ekranın %90'ını kapsayacak şekilde genişlik ayarı */
-        height: 105vh;             /* Yüksekliği de ekranın %90'ını kapsayacak şekilde */
-        max-width: 600px;         /* İsteğe göre maksimum genişlik ayarı */
-        max-height: 105vh;         /* Ekranı aşmayacak şekilde maksimum yükseklik */
+        width: 90vw;             
+        height: 105vh;            
+        max-width: 600px;        
+        max-height: 105vh;        
         padding: 5px;
         overflow-y: auto;
         box-sizing: border-box;
@@ -645,7 +645,7 @@ body {
     }
 }
 
-/* Telefon ekranları (768px ve altı) için düzenlemeler */
+/* Telefon (768px )  */
 @media (max-width: 768px) {
     /* Navigation */
     .navbar {
@@ -715,7 +715,7 @@ body {
 
     .modal-content p, .modal-content h3 {
         text-align: center;
-        margin-top: 10px;            /* Metin ve görsel arasındaki boşluk */
+        margin-top: 10px;           
     }
 
     .grid-container {
