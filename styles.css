@@ -33,7 +33,6 @@ body {
     justify-content: flex-end;
     z-index: 1000;
     border-bottom: 5px solid #f8f8f8;
-    justify-content: center; /* Menüyü ortalar */
 }
 
 .navbar nav ul {
