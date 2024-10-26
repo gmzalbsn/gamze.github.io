@@ -619,11 +619,12 @@ body {
         padding: 20px;
     }
       .modal-content {
-        width: 100%;            /* Genişliği %95 yaparak artırır */
-        max-width: 1000px;      /* İsteğe göre maksimum genişliği ayarlayın */
-        max-height: 110vh;      /* Yüksekliği ayarlama, içeriğe göre kaydırma sağlar */
-        overflow-y: auto;      /* İçerik sığmazsa dikey kaydırma sağlar */
-        margin: 0 auto;        /* Ekranın ortasında hizalar */
+        width: 100%;            
+        max-width: 1000px;     
+        max-height: 110vh;    
+        overflow-y: auto;     
+        margin: 0 auto; 
+        padding: 20px;       
     }
     .grid-container {
         display: flex;
