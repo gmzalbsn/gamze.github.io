@@ -94,13 +94,12 @@ body {
     }
 
     .image {
-        margin: 90px 320px;
-text-align: center;              /* Görsel için daha az boşluk */
+        margin: 90px 320px;            /* Görsel için daha az boşluk */
     }
 
     .image img {
-        width: 60px;                 /* Görsel boyutunu iyice küçültme */
-        height: 60px;
+        width: 120px;                 /* Görsel boyutunu iyice küçültme */
+        height: 120px;
         border-radius: 50%;
     }
 
