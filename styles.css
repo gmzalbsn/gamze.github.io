@@ -574,12 +574,18 @@ body {
     .navbar nav ul li:first-child {
         display: none;
     }
- .modal-content {
+    .modal-content {
         display: flex;
-        flex-direction: column;     
+        flex-direction: column;
         align-items: center;
-        padding: 20px;
-        overflow-y: auto;           
+        justify-content: center;
+        width: 90vw;              /* Ekranın %90'ını kapsayacak şekilde genişlik ayarı */
+        height: 90vh;             /* Yüksekliği de ekranın %90'ını kapsayacak şekilde */
+        max-width: 600px;         /* İsteğe göre maksimum genişlik ayarı */
+        max-height: 90vh;         /* Ekranı aşmayacak şekilde maksimum yükseklik */
+        padding: 15px;
+        overflow-y: auto;
+        box-sizing: border-box;
     }
 
     .modal-content img {
