@@ -236,15 +236,14 @@ document.addEventListener("DOMContentLoaded", function() {
     const modal = document.getElementById(projectId);
     modal.style.display = 'none';
 
-    // Modal içindeki tüm videoları duraklatır, sesi kapatır ve başa sarar
     const videos = modal.querySelectorAll("video");
     videos.forEach(video => {
-        video.muted = true;         // Sesi kapat
-        video.pause();               // Videoyu duraklat
-        video.currentTime = 0;       // Videoyu başa sar
+        video.muted = true;         
+        video.pause();              
+        video.currentTime = 0;      
         setTimeout(() => {
-            video.muted = false;     // Ses kapama etkisini kaldır (kapandığında sessiz olur, açıldığında sesi normal çalışır)
-        }, 100);                     // Bir süre sonra ses ayarını eski haline getirir
+            video.muted = false;    
+        }, 100);                    
     });
 }
 
