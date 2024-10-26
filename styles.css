@@ -65,57 +65,9 @@ body {
     background-color: #f0f0f0;
     overflow: hidden;
 }
-/* Mobil için Home Düzenlemesi */
 @media (max-width: 768px) {
     .home {
-        flex-direction: column;      /* Mobilde dikey yerleşim */
-        padding: 20px;
-        text-align: center;
-    }
-
-    .content {
-        width: 50%;
-        padding: 0 15px; /* Kenarlardan boşluk */
-    }
-
-   .content h1 {
-    font-size: 2.5rem !important; /* Font boyutunu kesin olarak belirleme */
-    line-height: 0.8;
-    margin-bottom: 10px;
-}
-
-    .unity-developer {
-        font-size: 1.2rem !important;        /* Alt başlığı küçültme */
-        margin-bottom: 1px;
-    }
-
-    .btn {
-        font-size: 1rem !important;           /* Buton yazı boyutunu küçültme */
-        padding: 10px 8px !important;            /* Butonun boyutunu daha küçük yapma */
-    }
-
-    .image {
-        margin: 90px 320px;            /* Görsel için daha az boşluk */
-    }
-
-    .image img {
-        width: 120px;                 /* Görsel boyutunu iyice küçültme */
-        height: 120px;
-        border-radius: 50%;
-    }
-
-    .social-icons {
-        margin-top: 8px;
-    }
-
-    .social-icons a {
-        font-size: 0.8rem;           /* Sosyal simgeleri küçültme */
-        padding: 2px;
-    }
-}
-@media (max-width: 768px) {
-    .skill-box {
-        display: none; /* Skills kısmını tamamen gizler */
+        display: none;
     }
 }
 #particles-js {
