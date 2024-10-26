@@ -623,7 +623,8 @@ body {
         max-height: 110vh;    
         overflow-y: auto;     
         margin: 0 auto; 
-        padding: 20px;       
+        padding: 20px;  
+        display: block;     
     }
     .grid-container {
         display: flex;
