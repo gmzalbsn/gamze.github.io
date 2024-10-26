@@ -94,7 +94,7 @@ body {
     }
 
     .image {
-        margin: 90px 320;              /* Görsel için daha az boşluk */
+        margin: 90px 320px;              /* Görsel için daha az boşluk */
     }
 
     .image img {
