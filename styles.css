@@ -658,5 +658,8 @@ body {
     .home {
         display: none;
     }
-  }
+
+    .navbar nav ul li:first-child {
+        display: none;
+    }
 }
