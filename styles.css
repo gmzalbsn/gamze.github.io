@@ -565,46 +565,58 @@ body {
         width: 100%;
     }
 }
-/*Mobil size*/
+/* Tablet ve mobil cihazlar (1280px ve altı) için home sayfasını gizleme */
+@media (max-width: 1280px) {
+    .home {
+        display: none;
+    }
+
+    .navbar nav ul li:first-child {
+        display: none;
+    }
+}
+
+/* Telefon ekranları (768px ve altı) için düzenlemeler */
 @media (max-width: 768px) {
-/* Home Section */
-.navbar {
-    display: flex;
-    justify-content: center; 
-}
+    /* Navigation */
+    .navbar {
+        display: flex;
+        justify-content: center;
+    }
 
-.navbar nav ul {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-    padding: 0;
-}
+    .navbar nav ul {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+        padding: 0;
+    }
 
-.navbar nav ul li {
-    display: inline-block;
-}
+    .navbar nav ul li {
+        display: inline-block;
+    }
 
-.navbar nav ul li a {
-    text-decoration: none;
-    font-size: 1.2rem;
-    color: #001f59;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-align: center; 
-}
+    .navbar nav ul li a {
+        text-decoration: none;
+        font-size: 1.2rem;
+        color: #001f59;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-align: center;
+    }
+
     /* About Section */
     .about-section {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        margin-top: 50px; 
-        padding: 20px; 
+        margin-top: 50px;
+        padding: 20px;
     }
 
     .about-image {
         margin: 0 0 20px 0;
         width: 80%;
-        max-width: 300px; 
+        max-width: 300px;
         border-radius: 300px;
     }
 
@@ -617,15 +629,17 @@ body {
         text-align: center;
         padding: 20px;
     }
-      .modal-content {
-        width: 100%;            
-        max-width: 1000px;     
-        max-height: 110vh;    
-        overflow-y: auto;     
-        margin: 0 auto; 
-        padding: 20px;  
-        display: block;     
+
+    .modal-content {
+        width: 100%;
+        max-width: 1000px;
+        max-height: 110vh;
+        overflow-y: auto;
+        margin: 0 auto;
+        padding: 20px;
+        display: block;
     }
+
     .grid-container {
         display: flex;
         flex-direction: column;
@@ -640,10 +654,11 @@ body {
         text-align: center;
         padding: 20px;
     }
-     .contact-image img {
-      max-width: 300px; 
-      width: 100%;
-      height: auto; 
+
+    .contact-image img {
+        max-width: 300px;
+        width: 100%;
+        height: auto;
     }
 
     .contact-container {
@@ -655,13 +670,4 @@ body {
         width: 90%;
         max-width: 400px;
     }
-@media (max-width: 1280px) {
-    .home {
-        display: none;
-    }
-
-    .navbar nav ul li:first-child {
-        display: none;
-    }
-}
 }
