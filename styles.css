@@ -618,11 +618,12 @@ body {
         text-align: center;
         padding: 20px;
     }
-       .project-card {
-        width: 100%;             /* Kart genişliğini ayarlar */
-        max-width: 400px;       /* Maksimum genişliği ayarlama */
-        max-height: 100px;      /* Kartların maksimum yüksekliğini belirleyin */
-        overflow-y: auto;       /* İçerik uzun olursa kaydırma sağlar */
+       .modal-content {
+        max-width: 100%;       
+        max-height: 100vh;      
+        overflow-y: auto;     
+        margin: 0 auto;       
+    }
     }
     .grid-container {
         display: flex;
