@@ -576,32 +576,32 @@ body {
     }
  .modal-content {
         display: flex;
-        flex-direction: column;      /* İçeriğin üst üste yerleşmesini sağlar */
+        flex-direction: column;     
         align-items: center;
         padding: 20px;
-        overflow-y: auto;            /* Dikeyde kaydırmayı etkinleştirir */
+        overflow-y: auto;           
     }
 
     .modal-content img {
-        max-width: 100%;             /* Görselin genişliğini modal içinde sınırlar */
-        height: auto;                /* Yüksekliği orantılı olarak ayarlar */
-        margin-bottom: 15px;         /* Görselle metin arasında boşluk bırakır */
+        max-width: 100%;            
+        height: auto;                
+        margin-bottom: 30px;      
     }
 
      .modal-content h3 {
-        font-size: 1.2rem; /* Başlık yazı boyutunu küçült */
+        font-size: 1.2rem; 
         margin-top: 10px;
     }
 
     .modal-content p {
-        font-size: 0.9rem; /* Paragraf yazı boyutunu küçült */
+        font-size: 0.6rem; 
         text-align: center;
-        line-height: 1.4; /* Okunabilirliği artırmak için satır yüksekliği */
+        line-height: 1.4; 
     }
 
     .btn-large-close {
-        font-size: 1rem; /* Kapatma butonunun yazı boyutunu küçült */
-        padding: 8px 16px;
+        font-size: 0.8rem;
+        padding: 4px 8px;
     }
 }
 
@@ -661,16 +661,16 @@ body {
 
     .modal-content {
         display: flex;
-        flex-direction: column;      /* İçeriğin üst üste yerleşmesini sağlar */
+        flex-direction: column;     
         align-items: center;
         padding: 20px;
-        overflow-y: auto;            /* Dikeyde kaydırmayı etkinleştirir */
+        overflow-y: auto;          
     }
 
     .modal-content img {
-        max-width: 100%;             /* Görselin genişliğini modal içinde sınırlar */
-        height: auto;                /* Yüksekliği orantılı olarak ayarlar */
-        margin-bottom: 15px;         /* Görselle metin arasında boşluk bırakır */
+        max-width: 100%;             
+        height: auto;            
+        margin-bottom: 15px;       
     }
 
     .modal-content p, .modal-content h3 {
