@@ -568,6 +568,31 @@ body {
 }
 /*Mobil size*/
 @media (max-width: 768px) {
+/* Home Section */
+.navbar {
+    display: flex;
+    justify-content: center; /* Menüyü ortalar */
+}
+
+.navbar nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.navbar nav ul li {
+    display: inline-block;
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #001f59;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center; /* Linkleri ortalar */
+}
     /* About Section */
     .about-section {
         flex-direction: column;
