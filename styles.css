@@ -580,10 +580,10 @@ body {
         align-items: center;
         justify-content: center;
         width: 90vw;              /* Ekranın %90'ını kapsayacak şekilde genişlik ayarı */
-        height: 90vh;             /* Yüksekliği de ekranın %90'ını kapsayacak şekilde */
+        height: 105vh;             /* Yüksekliği de ekranın %90'ını kapsayacak şekilde */
         max-width: 600px;         /* İsteğe göre maksimum genişlik ayarı */
-        max-height: 90vh;         /* Ekranı aşmayacak şekilde maksimum yükseklik */
-        padding: 15px;
+        max-height: 105vh;         /* Ekranı aşmayacak şekilde maksimum yükseklik */
+        padding: 5px;
         overflow-y: auto;
         box-sizing: border-box;
     }
@@ -600,7 +600,7 @@ body {
     }
 
     .modal-content p {
-        font-size: 1rem; 
+        font-size: 0.8rem; 
         text-align: center;
         line-height: 1.4; 
     }
