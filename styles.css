@@ -588,9 +588,20 @@ body {
         margin-bottom: 15px;         /* Görselle metin arasında boşluk bırakır */
     }
 
-    .modal-content p, .modal-content h3 {
+     .modal-content h3 {
+        font-size: 1.2rem; /* Başlık yazı boyutunu küçült */
+        margin-top: 10px;
+    }
+
+    .modal-content p {
+        font-size: 0.9rem; /* Paragraf yazı boyutunu küçült */
         text-align: center;
-        margin-top: 10px;            /* Metin ve görsel arasındaki boşluk */
+        line-height: 1.4; /* Okunabilirliği artırmak için satır yüksekliği */
+    }
+
+    .btn-large-close {
+        font-size: 1rem; /* Kapatma butonunun yazı boyutunu küçült */
+        padding: 8px 16px;
     }
 }
 
