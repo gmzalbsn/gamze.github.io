@@ -89,12 +89,12 @@ body {
     }
 
     .btn {
-        font-size: 0.2rem !important;           /* Buton yazı boyutunu küçültme */
-        padding: 8px 5px !important;            /* Butonun boyutunu daha küçük yapma */
+        font-size: 1rem !important;           /* Buton yazı boyutunu küçültme */
+        padding: 10px 8px !important;            /* Butonun boyutunu daha küçük yapma */
     }
 
     .image {
-        margin: 5px 0;              /* Görsel için daha az boşluk */
+        margin: 80px 0;              /* Görsel için daha az boşluk */
     }
 
     .image img {
@@ -104,12 +104,12 @@ body {
     }
 
     .social-icons {
-        margin-top: 10px;
+        margin-top: 8px;
     }
 
     .social-icons a {
         font-size: 0.8rem;           /* Sosyal simgeleri küçültme */
-        padding: 4px;
+        padding: 2px;
     }
 }
 #particles-js {
