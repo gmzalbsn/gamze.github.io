@@ -113,6 +113,11 @@ text-align: center;              /* Görsel için daha az boşluk */
         padding: 2px;
     }
 }
+@media (max-width: 768px) {
+    .skill-box {
+        display: none; /* Skills kısmını tamamen gizler */
+    }
+}
 #particles-js {
     position: absolute;
     width: 100%;
