@@ -248,4 +248,47 @@ document.addEventListener("DOMContentLoaded", function() {
 }
 
     window.closeModal = closeModal;
+function pauseAndResetVideos(projectId) {
+    const modal = document.getElementById(projectId);
+    const videos = modal.querySelectorAll("video");
+    videos.forEach(video => {
+        video.muted = true;
+        video.pause();
+        video.currentTime = 0;
+        setTimeout(() => {
+            video.muted = false;
+        }, 100);
+    });
+}
+
+// Modify each project slide control to include video reset on slide change
+document.querySelector("#project1 .prev").addEventListener("click", function() {
+    pauseAndResetVideos('project1');
+    plusSlides1(-1);
+});
+document.querySelector("#project1 .next").addEventListener("click", function() {
+    pauseAndResetVideos('project1');
+    plusSlides1(1);
+});
+
+document.querySelector("#project2 .prev").addEventListener("click", function() {
+    pauseAndResetVideos('project2');
+    plusSlides2(-1);
+});
+document.querySelector("#project2 .next").addEventListener("click", function() {
+    pauseAndResetVideos('project2');
+    plusSlides2(1);
+});
+
+// Repeat for each project slide control as needed
+
+// For example, for project 3
+document.querySelector("#project3 .prev").addEventListener("click", function() {
+    pauseAndResetVideos('project3');
+    plusSlides3(-1);
+});
+document.querySelector("#project3 .next").addEventListener("click", function() {
+    pauseAndResetVideos('project3');
+    plusSlides3(1);
+});
 });
