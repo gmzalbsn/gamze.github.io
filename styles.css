@@ -618,7 +618,12 @@ body {
         text-align: center;
         padding: 20px;
     }
-
+       .project-card {
+        width: 100%;             /* Kart genişliğini ayarlar */
+        max-width: 400px;       /* Maksimum genişliği ayarlama */
+        max-height: 100px;      /* Kartların maksimum yüksekliğini belirleyin */
+        overflow-y: auto;       /* İçerik uzun olursa kaydırma sağlar */
+    }
     .grid-container {
         display: flex;
         flex-direction: column;
