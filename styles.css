@@ -68,17 +68,13 @@ body {
 /* Mobil için Home Düzenlemesi */
 @media (max-width: 768px) {
     .home {
-        display: flex;
-        flex-direction: column; /* Dikey yerleşim */
-        align-items: center; /* Tüm öğeleri ortalar */
-        justify-content: center;
-        text-align: center; /* Yazıları ortalar */
-        padding: 10px 0; /* Üst ve alt boşluk */
-        margin: 0 auto; /* Bölümü ortalar */
+        flex-direction: column;      /* Mobilde dikey yerleşim */
+        padding: 20px;
+        text-align: center;
     }
 
     .content {
-        width: 100%;
+        width: 50%;
         padding: 0 15px; /* Kenarlardan boşluk */
     }
 
