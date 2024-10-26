@@ -621,7 +621,7 @@ body {
       .modal-content {
         width: 95%;            /* Genişliği %95 yaparak artırır */
         max-width: 500px;      /* İsteğe göre maksimum genişliği ayarlayın */
-        max-height: 80vh;      /* Yüksekliği ayarlama, içeriğe göre kaydırma sağlar */
+        max-height: 110vh;      /* Yüksekliği ayarlama, içeriğe göre kaydırma sağlar */
         overflow-y: auto;      /* İçerik sığmazsa dikey kaydırma sağlar */
         margin: 0 auto;        /* Ekranın ortasında hizalar */
     }
