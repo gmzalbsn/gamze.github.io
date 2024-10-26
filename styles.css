@@ -78,19 +78,19 @@ body {
     }
 
    .content h1 {
-    font-size: 2rem !important; /* Font boyutunu kesin olarak belirleme */
+    font-size: 2.5rem !important; /* Font boyutunu kesin olarak belirleme */
     line-height: 0.8;
     margin-bottom: 10px;
 }
 
     .unity-developer {
-        font-size: 1rem !important;        /* Alt başlığı küçültme */
+        font-size: 1.5rem !important;        /* Alt başlığı küçültme */
         margin-bottom: 1px;
     }
 
     .btn {
-        font-size: 0.2rem;           /* Buton yazı boyutunu küçültme */
-        padding: 2px 4px;            /* Butonun boyutunu daha küçük yapma */
+        font-size: 0.2rem !important;           /* Buton yazı boyutunu küçültme */
+        padding: 8px 5px !important;            /* Butonun boyutunu daha küçük yapma */
     }
 
     .image {
