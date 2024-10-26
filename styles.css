@@ -574,6 +574,24 @@ body {
     .navbar nav ul li:first-child {
         display: none;
     }
+ .modal-content {
+        display: flex;
+        flex-direction: column;      /* İçeriğin üst üste yerleşmesini sağlar */
+        align-items: center;
+        padding: 20px;
+        overflow-y: auto;            /* Dikeyde kaydırmayı etkinleştirir */
+    }
+
+    .modal-content img {
+        max-width: 100%;             /* Görselin genişliğini modal içinde sınırlar */
+        height: auto;                /* Yüksekliği orantılı olarak ayarlar */
+        margin-bottom: 15px;         /* Görselle metin arasında boşluk bırakır */
+    }
+
+    .modal-content p, .modal-content h3 {
+        text-align: center;
+        margin-top: 10px;            /* Metin ve görsel arasındaki boşluk */
+    }
 }
 
 /* Telefon ekranları (768px ve altı) için düzenlemeler */
