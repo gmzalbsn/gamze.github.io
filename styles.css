@@ -189,12 +189,11 @@ body {
     text-align: center;
 }
 .skill-box:hover {
-    box-shadow: 0 0 15px rgba(128, 128, 128, 0.6); /* Parlak turuncu bir parlama efekti */
-    transform: scale(1.1); /* Büyütme animasyonu */
+    box-shadow: 0 0 15px rgba(128, 128, 128, 0.6);
+    transform: scale(1.1); 
     cursor: pointer;
 }
 
-/* Her kutuyu resmin etrafına yerleştirme */
 .skill-box-1 {
     top: -40px;
     left: 50px;
@@ -313,7 +312,7 @@ body {
     padding: 100px 50px;
     background-color: #f0f0f0;
     text-align: center;
-    margin-bottom: 150px; /* Alt marjı artırarak contact kısmına yer açalım */
+    margin-bottom: 150px;
 }
 
 .grid-container {
@@ -338,9 +337,9 @@ body {
 
 .project-image {
    width: 100%;
-    height: 200px; /* Bu değeri istediğiniz gibi ayarlayabilirsiniz */
-    object-fit: cover; /* Resmin ya da videonun bozulmadan alana sığmasını sağlar */
-    border-radius: 10px; /* Köşelerin yuvarlanması */
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 10px;
 }
 
 .btn {
@@ -366,17 +365,17 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Arkaplanı koyu yaptık */
+    background-color: rgba(0, 0, 0, 0.8); 
     justify-content: center;
     align-items: center;
-    z-index: 1000; /* Modal'ın en üstte olmasını sağladık */
+    z-index: 1000; 
 }
 
 .modal-content {
-    width: 70%;            /* Increase width to 70% of the viewport */
-    max-width: 800px;       /* Maximum width of the modal set to 800px */
-    height: auto;           /* Adjust height automatically based on content */
-    max-height: 85vh;       /* Limit the height to 85% of the viewport height */
+    width: 70%;           
+    max-width: 800px;      
+    height: auto;          
+    max-height: 85vh;       
     background-color: white;
     padding: 20px;
     border-radius: 15px;
@@ -397,22 +396,22 @@ body {
 
 .carousel {
     display: flex;
-    overflow: hidden;          /* Ensures that only one image is visible at a time */
+    overflow: hidden;     
 }
 
 .carousel-item {
-    min-width: 100%;           /* Makes sure each image takes up the full width of the container */
-    transition: transform 0.5s ease-in-out;  /* Smooth transition when switching images */
+    min-width: 100%;          
+    transition: transform 0.5s ease-in-out; 
 }
 
 .carousel-item img {
-    width: 100%;               /* Ensures the image takes the full width of the container */
-    height: auto;              /* Keeps the aspect ratio */
-    max-height: 400px;         /* Limits the height to prevent it from becoming too large */
-    object-fit: contain;       /* Ensures the entire image is visible without cropping */
+    width: 100%;               
+    height: auto;             
+    max-height: 400px;       
+    object-fit: contain;      
     display: block;
-    margin: 0 auto;            /* Centers the image horizontally */
-    border-radius: 10px;       /* Matches the modal’s rounded corners */
+    margin: 0 auto;           
+    border-radius: 10px;       
 }
 /* Carousel Navigation Buttons */
 .prev, .next {
@@ -426,7 +425,7 @@ body {
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 50%;
     user-select: none;
-    z-index: 1002; /* Butonlar carousel'in üstünde olacak */
+    z-index: 1002; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -471,9 +470,9 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    position: relative; /* Varsayılan pozisyona getiriyoruz */
-    z-index: 1; /* Contact'ın üstte kalmasını sağlıyoruz */
-    height: auto; /* Yüksekliği içeriğe göre ayarlıyoruz */
+    position: relative;
+    z-index: 1; 
+    height: auto;
 }
 
 .contact-container {
@@ -571,7 +570,7 @@ body {
 /* Home Section */
 .navbar {
     display: flex;
-    justify-content: center; /* Menüyü ortalar */
+    justify-content: center; 
 }
 
 .navbar nav ul {
@@ -591,7 +590,7 @@ body {
     color: #001f59;
     padding: 10px 20px;
     border-radius: 5px;
-    text-align: center; /* Linkleri ortalar */
+    text-align: center; 
 }
     /* About Section */
     .about-section {
@@ -599,13 +598,13 @@ body {
         align-items: center;
         text-align: center;
         margin-top: 50px; 
-        padding: 20px; /* Daha dar bir kenar boşluğu için */
+        padding: 20px; 
     }
 
     .about-image {
         margin: 0 0 20px 0;
-        width: 80%; /* Genişlik için ayarlama */
-        max-width: 300px; /* Maksimum genişliği ayarlama */
+        width: 80%;
+        max-width: 300px; 
         border-radius: 300px;
     }
 
@@ -641,9 +640,9 @@ body {
         padding: 20px;
     }
      .contact-image img {
-      max-width: 300px; /* İstediğiniz maksimum genişliği burada ayarlayın */
+      max-width: 300px; 
       width: 100%;
-      height: auto; /* Oranları koruyarak yüksekliği otomatik ayarlar */
+      height: auto; 
     }
 
     .contact-container {
