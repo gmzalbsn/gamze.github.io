@@ -538,7 +538,7 @@ body {
     background-color: #ff9800;
 }
 
-/* Mobil uyum (768px ve altı) */
+/* Computer size (768px ve altı) */
 @media (max-width: 768px) {
     .about-section {
         flex-direction: column;
@@ -565,5 +565,56 @@ body {
 
     .contact-form {
         width: 100%;
+    }
+}
+/*Mobil size*/
+@media (max-width: 768px) {
+    /* About Section */
+    .about-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px; /* Daha dar bir kenar boşluğu için */
+    }
+
+    .about-image {
+        margin: 0 0 20px 0;
+        width: 80%; /* Genişlik için ayarlama */
+        max-width: 300px; /* Maksimum genişliği ayarlama */
+    }
+
+    .about-text {
+        max-width: 90%;
+    }
+
+    /* Portfolio Section */
+    .portfolio-section {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* Contact Section */
+    .contact-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-form, .contact-image {
+        width: 90%;
+        max-width: 400px;
     }
 }
