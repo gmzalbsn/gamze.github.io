@@ -608,6 +608,11 @@ body {
         text-align: center;
         padding: 20px;
     }
+     .contact-image img {
+      max-width: 300px; /* İstediğiniz maksimum genişliği burada ayarlayın */
+      width: 100%;
+      height: auto; /* Oranları koruyarak yüksekliği otomatik ayarlar */
+    }
 
     .contact-container {
         flex-direction: column;
