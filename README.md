@@ -1,1 +1,1 @@
-# gamze.github.io
+https://gmzalbsn.github.io/gamze.github.io/
