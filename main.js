@@ -149,32 +149,37 @@ document.addEventListener("DOMContentLoaded", function () {
   let titleIndex = 0, letterIndex = 0, isDeleting = false;
   const typingSpeed = 150, deletingSpeed = 100, pauseTime = 2000;
 
-  function typeEffect() {
-    const element = document.querySelector(".dynamic-text");
-    if (!element) return;
+function typeEffect() {
+  const element = document.querySelector(".dynamic-text");
+  if (!element) return;
 
-    const fullTitle = titles[titleIndex];
-    element.textContent = fullTitle.slice(0, letterIndex);
+  const fullTitle = titles[titleIndex];
 
-    if (isDeleting) {
-      letterIndex--;
-      if (letterIndex === 0) {
-        isDeleting = false;
-        titleIndex = (titleIndex + 1) % titles.length;
-        setTimeout(typeEffect, typingSpeed);
-      } else {
-        setTimeout(typeEffect, deletingSpeed);
-      }
-    } else {
-      letterIndex++;
-      if (letterIndex === fullTitle.length) {
+  if (!isDeleting) {
+    // typing
+    element.textContent = fullTitle.substring(0, letterIndex + 1);
+    letterIndex++;
+
+    if (letterIndex === fullTitle.length) {
+      setTimeout(() => {
         isDeleting = true;
-        setTimeout(typeEffect, pauseTime);
-      } else {
-        setTimeout(typeEffect, typingSpeed);
-      }
+      }, pauseTime);
+    }
+  } else {
+    // deleting
+    element.textContent = fullTitle.substring(0, letterIndex - 1);
+    letterIndex--;
+
+    if (letterIndex === 0) {
+      isDeleting = false;
+      titleIndex = (titleIndex + 1) % titles.length;
     }
   }
+
+  const speed = isDeleting ? deletingSpeed : typingSpeed;
+  setTimeout(typeEffect, speed);
+}
+
   typeEffect();
 
   // -----------------------------
