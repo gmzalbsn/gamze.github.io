@@ -251,6 +251,28 @@ document.addEventListener("DOMContentLoaded", function() {
         plusSlides7(1);
     });
 
+    let slideIndex8 = 0;
+showSlides8(slideIndex8);
+
+function plusSlides8(n) {
+    showSlides8(slideIndex8 += n);
+}
+
+function showSlides8(n) {
+    const slides = document.querySelectorAll("#project8 .carousel-item");
+
+    slideIndex8 = (n + slides.length) % slides.length;
+    slides.forEach(slide => slide.style.display = "none");
+    slides[slideIndex8].style.display = "block";
+}
+
+document.querySelector("#project8 .prev").addEventListener("click", function() {
+    plusSlides8(-1);
+});
+document.querySelector("#project8 .next").addEventListener("click", function() {
+    plusSlides8(1);
+});
+
     // Modal open and close functions with video pause on close
     function openModal(projectId) {
         document.querySelectorAll('.modal').forEach(modal => {
