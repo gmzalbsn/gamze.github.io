@@ -1,11 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // -----------------------------
-  // 1) EASY PROJECT MANAGEMENT
-  // -----------------------------
-  // Add new projects ONLY here. Order = display order.
-  // media items: { type: "image" | "video", src: "...", alt?: "..." }
+  
   const projects = [
-    // NEW #1 (previously your project8)
     {
       id: "project8",
       title: "Disc Arena",
@@ -14,8 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
       modalText: "Disc Arena detailed description goes here. Add your role, tech, platform, and achievements.",
       media: [
         { type: "image", src: "Assets/Portfolio/proje8_1.jpg", alt: "Disc Arena 1" },
-        // { type: "image", src: "Assets/Portfolio/proje8_2.jpg", alt: "Disc Arena 2" },
-        // { type: "video", src: "Assets/Portfolio/proje8_2_Video.mp4" },
+        { type: "image", src: "Assets/Portfolio/proje8_2.jpg", alt: "Disc Arena 2" },
+        { type: "video", src: "Assets/Portfolio/proje8_2_Video.mp4" },
       ],
     },
 
