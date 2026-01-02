@@ -250,28 +250,40 @@ document.addEventListener("DOMContentLoaded", function() {
         pauseAndResetVideos('project7');
         plusSlides7(1);
     });
-
+ // Project 8 Slide Control
     let slideIndex8 = 0;
-showSlides8(slideIndex8);
+    showSlides7(slideIndex8);
 
-function plusSlides8(n) {
-    showSlides8(slideIndex8 += n);
-}
+    function plusSlides8(n) {
+        showSlides7(slideIndex8 += n);
+    }
 
-function showSlides8(n) {
-    const slides = document.querySelectorAll("#project8 .carousel-item");
+    function showSlides8(n) {
+        const slides = document.querySelectorAll("#project8 .carousel-item");
 
-    slideIndex8 = (n + slides.length) % slides.length;
-    slides.forEach(slide => slide.style.display = "none");
-    slides[slideIndex8].style.display = "block";
-}
+        if (slides.length === 0) {
+            console.error("No carousel items found for Project 8.");
+            return;
+        }
 
-document.querySelector("#project8 .prev").addEventListener("click", function() {
-    plusSlides8(-1);
-});
-document.querySelector("#project8 .next").addEventListener("click", function() {
-    plusSlides8(1);
-});
+        slideIndex8 = (n + slides.length) % slides.length;
+
+        slides.forEach((slide) => {
+            slide.style.display = "none";
+        });
+
+        slides[slideIndex8].style.display = "block";
+    }
+
+    document.querySelector("#project8 .prev").addEventListener("click", function() {
+        pauseAndResetVideos('project8');
+        plusSlides8(-1);
+    });
+    document.querySelector("#project8 .next").addEventListener("click", function() {
+        pauseAndResetVideos('project8');
+        plusSlides8(1);
+    });
+
 
     // Modal open and close functions with video pause on close
     function openModal(projectId) {
