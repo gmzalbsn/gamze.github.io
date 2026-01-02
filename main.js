@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
       media: [
         { type: "image", src: "Assets/Portfolio/proje8_1.jpg", alt: "Disc Arena 1" },
         { type: "image", src: "Assets/Portfolio/proje8_2.jpg", alt: "Disc Arena 2" },
-        { type: "video", src: "Assets/Portfolio/proje8_2_Video.mp4" },
+        { type: "video", src: "Assets/Portfolio/proje8_3_Video.mp4" },
       ],
     },
 
