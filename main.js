@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Function to pause and reset videos in the modal
     function pauseAndResetVideos(projectId) {
         const modal = document.getElementById(projectId);
+        if (!modal) return;
         const videos = modal.querySelectorAll("video");
         videos.forEach(video => {
             video.muted = true;
@@ -11,6 +12,15 @@ document.addEventListener("DOMContentLoaded", function() {
                 video.muted = false;
             }, 100);
         });
+    }
+
+
+    // Helper: safely bind carousel arrows (prevents JS crash if a project modal is missing)
+    function bindCarouselArrows(projectId, onPrev, onNext) {
+        const prevBtn = document.querySelector(`#${projectId} .prev`);
+        const nextBtn = document.querySelector(`#${projectId} .next`);
+        if (prevBtn) prevBtn.addEventListener("click", onPrev);
+        if (nextBtn) nextBtn.addEventListener("click", onNext);
     }
 
     // Project 1 Slide Control
@@ -38,12 +48,11 @@ document.addEventListener("DOMContentLoaded", function() {
         slides[slideIndex1].style.display = "block";
     }
 
-    document.querySelector("#project1 .prev").addEventListener("click", function() {
-        pauseAndResetVideos('project1');
+        bindCarouselArrows("project1", function() {
+        pauseAndResetVideos("project1");
         plusSlides1(-1);
-    });
-    document.querySelector("#project1 .next").addEventListener("click", function() {
-        pauseAndResetVideos('project1');
+    }, function() {
+        pauseAndResetVideos("project1");
         plusSlides1(1);
     });
 
@@ -72,12 +81,11 @@ document.addEventListener("DOMContentLoaded", function() {
         slides[slideIndex2].style.display = "block";
     }
 
-    document.querySelector("#project2 .prev").addEventListener("click", function() {
-        pauseAndResetVideos('project2');
+        bindCarouselArrows("project2", function() {
+        pauseAndResetVideos("project2");
         plusSlides2(-1);
-    });
-    document.querySelector("#project2 .next").addEventListener("click", function() {
-        pauseAndResetVideos('project2');
+    }, function() {
+        pauseAndResetVideos("project2");
         plusSlides2(1);
     });
 
@@ -106,12 +114,11 @@ document.addEventListener("DOMContentLoaded", function() {
         slides[slideIndex3].style.display = "block";
     }
 
-    document.querySelector("#project3 .prev").addEventListener("click", function() {
-        pauseAndResetVideos('project3');
+        bindCarouselArrows("project3", function() {
+        pauseAndResetVideos("project3");
         plusSlides3(-1);
-    });
-    document.querySelector("#project3 .next").addEventListener("click", function() {
-        pauseAndResetVideos('project3');
+    }, function() {
+        pauseAndResetVideos("project3");
         plusSlides3(1);
     });
 
@@ -140,12 +147,11 @@ document.addEventListener("DOMContentLoaded", function() {
         slides[slideIndex4].style.display = "block";
     }
 
-    document.querySelector("#project4 .prev").addEventListener("click", function() {
-        pauseAndResetVideos('project4');
+        bindCarouselArrows("project4", function() {
+        pauseAndResetVideos("project4");
         plusSlides4(-1);
-    });
-    document.querySelector("#project4 .next").addEventListener("click", function() {
-        pauseAndResetVideos('project4');
+    }, function() {
+        pauseAndResetVideos("project4");
         plusSlides4(1);
     });
 
@@ -174,12 +180,11 @@ document.addEventListener("DOMContentLoaded", function() {
         slides[slideIndex5].style.display = "block";
     }
 
-    document.querySelector("#project5 .prev").addEventListener("click", function() {
-        pauseAndResetVideos('project5');
+        bindCarouselArrows("project5", function() {
+        pauseAndResetVideos("project5");
         plusSlides5(-1);
-    });
-    document.querySelector("#project5 .next").addEventListener("click", function() {
-        pauseAndResetVideos('project5');
+    }, function() {
+        pauseAndResetVideos("project5");
         plusSlides5(1);
     });
 
@@ -208,12 +213,11 @@ document.addEventListener("DOMContentLoaded", function() {
         slides[slideIndex6].style.display = "block";
     }
 
-    document.querySelector("#project6 .prev").addEventListener("click", function() {
-        pauseAndResetVideos('project6');
+        bindCarouselArrows("project6", function() {
+        pauseAndResetVideos("project6");
         plusSlides6(-1);
-    });
-    document.querySelector("#project6 .next").addEventListener("click", function() {
-        pauseAndResetVideos('project6');
+    }, function() {
+        pauseAndResetVideos("project6");
         plusSlides6(1);
     });
 
@@ -242,14 +246,46 @@ document.addEventListener("DOMContentLoaded", function() {
         slides[slideIndex7].style.display = "block";
     }
 
-    document.querySelector("#project7 .prev").addEventListener("click", function() {
-        pauseAndResetVideos('project7');
+        bindCarouselArrows("project7", function() {
+        pauseAndResetVideos("project7");
         plusSlides7(-1);
-    });
-    document.querySelector("#project7 .next").addEventListener("click", function() {
-        pauseAndResetVideos('project7');
+    }, function() {
+        pauseAndResetVideos("project7");
         plusSlides7(1);
     });
+ // Project 8 Slide Control
+    let slideIndex8 = 0;
+    showSlides8(slideIndex8);
+
+    function plusSlides8(n) {
+        showSlides8(slideIndex8 += n);
+    }
+
+    function showSlides8(n) {
+        const slides = document.querySelectorAll("#project8 .carousel-item");
+
+        if (slides.length === 0) {
+            console.error("No carousel items found for Project 8.");
+            return;
+        }
+
+        slideIndex8 = (n + slides.length) % slides.length;
+
+        slides.forEach((slide) => {
+            slide.style.display = "none";
+        });
+
+        slides[slideIndex8].style.display = "block";
+    }
+
+        bindCarouselArrows("project8", function() {
+        pauseAndResetVideos("project8");
+        plusSlides8(-1);
+    }, function() {
+        pauseAndResetVideos("project8");
+        plusSlides8(1);
+    });
+
 
     // Modal open and close functions with video pause on close
     function openModal(projectId) {
@@ -257,11 +293,14 @@ document.addEventListener("DOMContentLoaded", function() {
             modal.style.display = 'none';
         });
 
-        document.getElementById(projectId).style.display = 'flex';
+        const target = document.getElementById(projectId);
+        if (!target) return;
+        target.style.display = 'flex';
     }
 
     function closeModal(projectId) {
         const modal = document.getElementById(projectId);
+        if (!modal) return;
         modal.style.display = 'none';
 
         const videos = modal.querySelectorAll("video");
