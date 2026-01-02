@@ -4,9 +4,11 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       id: "project8",
       title: "Disc Arena",
-      cardText: "Fast-paced arena gameplay with disc mechanics...",
+      cardText: "Fast-paced arena game built around physics-based collision mechanics...",
       coverImage: "Assets/Portfolio/proje8_1.jpg",
-      modalText: "Disc Arena detailed description goes here. Add your role, tech, platform, and achievements.",
+      modalText: "Disc Arena is a fast-paced arena game with physics-based gameplay. I worked on this project in collaboration with Toros Studio, contributing to the development of core gameplay systems such as character movement, dash, collision, and power-up mechanics.
+      Gameplay Video:
+      https://www.youtube.com/watch?v=c9fZJLcSP48",
       media: [
         { type: "image", src: "Assets/Portfolio/proje8_1.jpg", alt: "Disc Arena 1" },
         { type: "image", src: "Assets/Portfolio/proje8_2.jpg", alt: "Disc Arena 2" },
